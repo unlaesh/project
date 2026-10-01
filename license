@@ -1,11 +1,45 @@
-Copyright (c) 2026 Denis Revyagin. All rights reserved.
+YuUrGU.Pary — Source-Available License
 
-This software and associated documentation files (the "Software") are the intellectual 
-property of Denis Revyagin. 
+Copyright (c) 2026 Denis Revyagin.
+All rights reserved.
 
-Permission is hereby granted to view the source code for educational and evaluation 
-purposes only. Any commercial use, reproduction, modification, distribution, or 
-deployment of this Software, in whole or in part, without the prior written consent 
-of the copyright holder is strictly prohibited.
+1. Grant of permission
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+   Permission is granted, free of charge, to any person to view, download and
+   run the source code and associated documentation (the "Software") solely:
+
+   a) for personal, non-commercial educational purposes; and
+   b) for the purpose of reviewing and evaluating the project, including
+      evaluation by instructors of South Ural State University (SUSU).
+
+2. Restrictions
+
+   Without the prior written consent of the copyright holder, you may not:
+
+   a) use the Software, in whole or in part, for any commercial purpose;
+   b) distribute, publish, sublicense or sell copies of the Software or of
+      modified versions of it;
+   c) deploy the Software, or a modified version of it, as a publicly
+      accessible service (including a public Telegram bot).
+
+3. Contributions
+
+   By submitting a contribution to this repository, you agree that your
+   contribution is provided under the terms of this license, and you grant the
+   copyright holder a perpetual, irrevocable right to use, modify and license
+   your contribution, including under other license terms.
+
+4. Third-party components
+
+   Third-party libraries used by the Software are governed by their own
+   licenses. This license does not apply to them.
+
+5. Disclaimer of warranty
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+   SOFTWARE.

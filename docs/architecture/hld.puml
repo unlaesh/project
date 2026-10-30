@@ -1,0 +1,70 @@
+@startuml
+title ЮУрГУ.Пары — High-Level Design
+
+skinparam componentStyle rectangle
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam nodesep 60
+skinparam ranksep 60
+
+actor "Студент" as student
+actor "Администратор" as admin
+
+cloud "Telegram" {
+  [Telegram Bot API] as tgapi
+}
+
+cloud "Внешние сервисы" {
+  [online.susu.ru\n(расписание)] as susu
+  [UptimeRobot\n(мониторинг)] as monitor
+  [Внешнее хранилище\nрезервных копий (S3)] as s3
+}
+
+node "VPS (Docker Compose)" as vps {
+  [Nginx\nTLS, обратный прокси] as nginx
+
+  package "Сервис бота" {
+    [FastAPI\nприём вебхука, /health] as api
+    [aiogram\nобработчики команд] as bot
+  }
+
+  [Парсер расписания\nPlaywright + BeautifulSoup] as parser
+  [Планировщик уведомлений] as notifier
+  [Резервное копирование\npg_dump по расписанию] as backup
+  database "PostgreSQL\nпользователи, группы,\nзанятия, заметки,\nнастройки, журналы" as db
+}
+
+node "GitHub" {
+  [Репозиторий\nunlaesh/project] as repo
+  [GitHub Actions\nCI/CD] as ci
+}
+
+student --> tgapi : команды и кнопки
+admin --> tgapi : /users, /stats, /update
+
+tgapi --> nginx : вебхук (HTTPS)
+nginx --> api
+api --> bot : входящие обновления
+bot --> db : расписание, заметки,\nнастройки, задачи парсеру
+bot --> tgapi : ответы (HTTPS)
+
+parser --> susu : HTTPS, не чаще 1 раза\nв час на группу
+parser --> db : группы, занятия,\nжурнал обновлений
+
+notifier --> db : пары, начинающиеся\nчерез N минут
+notifier --> tgapi : уведомления\n(не более 30 сообщ./с)
+
+backup --> db : ежедневный дамп
+backup --> s3 : хранение 7 копий
+
+monitor --> nginx : GET /health\nкаждые 5 мин
+
+repo --> ci : push в main
+ci --> vps : тесты, сборка образов,\nдеплой по SSH
+
+note bottom of db
+  Сервисы не вызывают друг друга напрямую:
+  обмен данными идёт только через PostgreSQL.
+  Брокер сообщений не используется.
+end note
+@enduml

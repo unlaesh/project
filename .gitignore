@@ -18,3 +18,9 @@ htmlcov/
 
 # Секреты
 .env
+
+# Локальные снимки и планы подготовки GitHub Issues
+.backlog-preparation/
+
+# Claude
+Claude outputs/

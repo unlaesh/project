@@ -339,6 +339,8 @@ def test_successful_creation_resolves_missing_summary(tmp_path):
 
 
 def test_management_parameters_remain_visible_until_supplied():
-    plan = mod.build_plan([issue(code="1.3.1")], catalog("1.3.1"), live=True)
+    incomplete = catalog("1.3.1")
+    incomplete["entries"][0]["estimation_inputs"] = ["Указать число оставшихся итераций."]
+    plan = mod.build_plan([issue(code="1.3.1")], incomplete, live=True)
     assert len(plan["operations"]) == 1
     assert any(row["status"] == "parameters" for row in plan["rows"])

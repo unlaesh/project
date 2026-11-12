@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "step": 12,
+  "as_of": "2026-11-12",
+  "selected_tasks": [
+    {
+      "issue": 13,
+      "title": "[2.1.3] Исследование источника расписания ЮУрГУ",
+      "estimate_hours_before": 9,
+      "priority": "must",
+      "iteration": "Итерация 1",
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq7qM",
+      "actual_hours": null,
+      "actual_hours_basis": "Awaiting user record of human work, testing and review; AI elapsed runtime is not team person-hours.",
+      "deviation_percent": null,
+      "deviation_over_20_percent": null,
+      "issue_comment_url": null,
+      "acceptance_status": "prepared_locally_awaiting_pr_and_classmate_review",
+      "project_status_verified": "In progress",
+      "evidence": [
+        "docs/source-research-step12.md",
+        "docs/fixtures/schedule-example.html",
+        "docs/fixtures/source-research-metadata.json"
+      ]
+    },
+    {
+      "issue": 25,
+      "title": "[3.2.2] Главное меню бота на кнопках",
+      "estimate_hours_before": 4.17,
+      "priority": "must",
+      "iteration": "Итерация 1",
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq8JI",
+      "actual_hours": null,
+      "actual_hours_basis": "Awaiting user record of human work, testing and review; AI elapsed runtime is not team person-hours.",
+      "deviation_percent": null,
+      "deviation_over_20_percent": null,
+      "issue_comment_url": null,
+      "acceptance_status": "prepared_locally_awaiting_pr_and_classmate_review",
+      "project_status_verified": "In progress",
+      "evidence": [
+        "src/pary/bot/navigation.py",
+        "src/pary/bot/keyboards.py",
+        "tests/test_bot_navigation.py"
+      ]
+    }
+  ],
+  "baseline_frozen_at": "2026-11-12T17:59:05.784186+00:00",
+  "published_before_step": {
+    "main": "23d87c4156bea6b9bf4073d55f4407a733dfff20",
+    "wiki_master": "fa5077e5111e5d17a0594da8bfae64ff9f1487b9"
+  },
+  "open_prs_before_step": [],
+  "planned_feature_branch": "feature/lab5-increment",
+  "commits_by": "user",
+  "push_by": "user",
+  "peer_review": {
+    "required": "classmate review per assignment; automated assistant review is additional",
+    "completed": false,
+    "reviewer": null,
+    "url": null
+  },
+  "pull_request_url": null,
+  "merged_to_main": false,
+  "calibration": {
+    "status": "awaiting actual effort and completion evidence",
+    "formula": "100 * (actual_hours - estimate_hours_before) / estimate_hours_before",
+    "flag_if": "abs(deviation_percent) > 20",
+    "remaining_estimates_changed": false,
+    "reason": "No actual effort comparison exists yet; do not adjust remaining estimates without evidence."
+  },
+  "completion_status": "in_progress",
+  "local_validation": {
+    "checked_at": "2026-11-12T18:10:48.230609+00:00",
+    "environment": "Clean temporary virtual environment; project installed with pip install .[dev]",
+    "python": "3.14.3",
+    "pytest": "8.4.2",
+    "aiogram": "3.31.0",
+    "tests_passed": 52,
+    "tests_failed": 0,
+    "navigation_tests_passed": 22,
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "warnings": [
+      "StarletteDeprecationWarning about httpx TestClient integration; no failing tests"
+    ],
+    "github_ci_for_new_changes": "pending user push; CI targets Python 3.12",
+    "live_telegram_tested": false
+  },
+  "assistant_technical_review": {
+    "completed": true,
+    "replaces_classmate_review": false,
+    "resolved_findings": [
+      "Normalize async callable instances to bound __call__ so aiogram awaits the handler; two regression cases pass.",
+      "Trace the four-week horizon to Feature-Parser / UC-06 / #21, not FR-4 (lesson display fields)."
+    ],
+    "source_evidence_verified": "Raw response hashes and size, 62 lessons on 12 dates, five selected fixture records, anonymization and absence of active resources checked independently.",
+    "remaining_actionable_findings": []
+  },
+  "open_dependencies": [
+    {
+      "id": "SRC-4W",
+      "affects": [
+        "Feature-Parser / UC-06",
+        "WBS 3.1.2 / issue #21"
+      ],
+      "status": "open",
+      "detail": "Only two teaching weeks observed in the public response; a way to obtain the required four calendar weeks remains unconfirmed. No scope reduction approved."
+    }
+  ],
+  "github_readback": {
+    "checked_at": "2026-11-12T18:10:48.230665+00:00",
+    "project_items_compared": 63,
+    "only_changes": [
+      {
+        "issue": 13,
+        "field": "status",
+        "before": "To Do",
+        "after": "In progress"
+      },
+      {
+        "issue": 25,
+        "field": "status",
+        "before": "To Do",
+        "after": "In progress"
+      }
+    ],
+    "estimates_unchanged": true,
+    "other_project_item_fields_unchanged": true
+  },
+  "local_git_state": {
+    "branch": "main",
+    "feature_branch_created": false,
+    "committed": false,
+    "pushed": false,
+    "reason": "Branch creation and commit/push to be performed by repository owner."
+  }
+}

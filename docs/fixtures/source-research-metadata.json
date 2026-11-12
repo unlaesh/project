@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "issue": 13,
+  "wbs": "2.1.3",
+  "purpose": "Source research evidence; no production parser implemented",
+  "generated_at_utc": "2026-11-12T18:02:08.509341+00:00",
+  "preferred_candidate": "https://new.susu.ru/students/schedules",
+  "candidate_condition": "Four-calendar-week coverage and a public week-selection mechanism remain unconfirmed; this is not approval of a two-week product scope.",
+  "source_affiliation": {
+    "evidence": "Subdomain of susu.ru; university name, address and contacts in footer match https://www.susu.ru/ru/; footer links to https://www.susu.ru/.",
+    "production_status": "No claim that new.susu.ru is the production replacement for the main site."
+  },
+  "group": {
+    "source_id": "2905",
+    "institute_source_id": "859",
+    "name": "ЕТ-143",
+    "institute_name": "Институт естественных и точных наук",
+    "url": "https://new.susu.ru/students/schedules/859/group/2905"
+  },
+  "requests": [
+    {
+      "http_code": 200,
+      "url_effective": "https://new.susu.ru/students/schedules/859",
+      "content_type": "text/html; charset=utf-8",
+      "size_download": 269862,
+      "url": "https://new.susu.ru/students/schedules/859",
+      "started_at": "2026-11-12T17:58:51.051947+00:00",
+      "finished_at": "2026-11-12T17:58:59.383424+00:00",
+      "exit_code": 0,
+      "error": "",
+      "sha256": "d4aaf353bc40925980b4813b0acea036963571aa0f3d826198cb77f1e64297e9",
+      "authentication": "none; no Authorization, Cookie, client certificate or browser session supplied"
+    },
+    {
+      "http_code": 200,
+      "url_effective": "https://new.susu.ru/students/schedules",
+      "content_type": "text/html; charset=utf-8",
+      "size_download": 253388,
+      "url": "https://new.susu.ru/students/schedules",
+      "started_at": "2026-11-12T17:58:59.384154+00:00",
+      "finished_at": "2026-11-12T17:59:06.064011+00:00",
+      "exit_code": 0,
+      "error": "",
+      "sha256": "92d84316f91f3f1697c97bc4d92a825cad338a98a0a4385be54c53037f2cdbb6",
+      "authentication": "none; no Authorization, Cookie, client certificate or browser session supplied"
+    },
+    {
+      "http_code": 200,
+      "url_effective": "https://new.susu.ru/students/schedules/859/group/2905",
+      "content_type": "text/html; charset=utf-8",
+      "size_download": 403824,
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "url": "https://new.susu.ru/students/schedules/859/group/2905",
+      "started_at": "2026-11-12T17:59:39.667436+00:00",
+      "finished_at": "2026-11-12T17:59:46.161064+00:00",
+      "exit_code": 0,
+      "error": "",
+      "sha256": "8a1fa45974cc7f885ecf2bc2761c410dcf8d7dc86159ca6345b4163385aaa9b7",
+      "authentication": "none; no Authorization, Cookie, client certificate or browser session supplied"
+    },
+    {
+      "http_code": 200,
+      "url_effective": "https://new.susu.ru/robots.txt",
+      "content_type": "text/plain",
+      "size_download": 24,
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "url": "https://new.susu.ru/robots.txt",
+      "started_at": "2026-11-12T17:59:46.162030+00:00",
+      "finished_at": "2026-11-12T17:59:51.934472+00:00",
+      "exit_code": 0,
+      "error": "",
+      "sha256": "e5c4b84484ee4216e9373be99380320c25dd94805f99f0a805846f087636553f",
+      "authentication": "none; no Authorization, Cookie, client certificate or browser session supplied"
+    },
+    {
+      "http_code": 200,
+      "url_effective": "https://www.susu.ru/ru/",
+      "content_type": "text/html; charset=utf-8",
+      "size_download": 96497,
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "url": "https://www.susu.ru/ru/",
+      "started_at": "2026-11-12T17:59:51.934770+00:00",
+      "finished_at": "2026-11-12T17:59:58.402448+00:00",
+      "exit_code": 0,
+      "error": "",
+      "sha256": "b994e60ef15d6f3c184bf3e189cced2c7a22a0b0e4ae149b9463229941e4d09e",
+      "authentication": "none; no Authorization, Cookie, client certificate or browser session supplied"
+    },
+    {
+      "http_code": 200,
+      "url_effective": "https://www.univeris.susu.ru/page_data/personal-area/personal-area-student/",
+      "content_type": "text/html; charset=UTF-8",
+      "size_download": 140762,
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "url": "https://www.univeris.susu.ru/page_data/personal-area/personal-area-student/",
+      "started_at": "2026-11-12T17:59:58.403010+00:00",
+      "finished_at": "2026-11-12T18:00:18.321477+00:00",
+      "exit_code": 0,
+      "error": "",
+      "sha256": "4496554e9b4fcb9dfee57d5aaedd9725c94cebdcefe3395aade44983883b48ee",
+      "authentication": "none; no Authorization, Cookie, client certificate or browser session supplied"
+    }
+  ],
+  "catalog_observations": {
+    "institute_links": 19,
+    "group_links_in_institute_859": 95
+  },
+  "raw_schedule": {
+    "sha256": "8a1fa45974cc7f885ecf2bc2761c410dcf8d7dc86159ca6345b4163385aaa9b7",
+    "bytes": 403824,
+    "stored_in_repository": false,
+    "http_method": "GET",
+    "date_format": "%d.%m.%Y",
+    "time_format": "HH:MM - HH:MM",
+    "days": 12,
+    "lesson_nodes": 62,
+    "dates": [
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21"
+    ],
+    "empty_type_nodes": 4,
+    "empty_subgroup_nodes": 62,
+    "explicit_source_timezone": null,
+    "source_last_updated_at": null,
+    "week_navigation_in_returned_main_html": null,
+    "javascript_executed": false
+  },
+  "time_policy": {
+    "project_timezone": "Asia/Yekaterinburg",
+    "offset_on_observation_date": "+05:00",
+    "basis": "Existing project requirement, not an explicit timezone field in the source HTML",
+    "observed_local_date": "2026-11-12"
+  },
+  "fixture": {
+    "path": "docs/fixtures/schedule-example.html",
+    "sha256": "688c1d60b09497c3aa16af57285fffdf436cb27cf46501813f7d82129027a473",
+    "bytes": 5647,
+    "days": 4,
+    "lesson_nodes": 5,
+    "selected_indices_zero_based": {
+      "09.11.2026": [
+        2,
+        3
+      ],
+      "12.11.2026": [
+        0
+      ],
+      "13.11.2026": [
+        7
+      ],
+      "16.11.2026": [
+        0
+      ]
+    },
+    "transformations": [
+      "Retained the observed group heading and selected real .schedule-group__day/.schedule-group__pair nodes only",
+      "Removed the site shell, scripts, styles, assets, links and all unselected days/lessons",
+      "Replaced professor names with deterministic aliases within this fixture; no alias mapping saved",
+      "Normalized whitespace; added a standalone HTML wrapper and provenance comment"
+    ],
+    "expected_records": [
+      {
+        "date": "2026-11-09",
+        "pair": "3 пара",
+        "time": "11:30 - 13:05",
+        "discipline": "Иностранный язык (подгр.)",
+        "type": "Практические занятия и семинары",
+        "teacher": "Преподаватель 01",
+        "room": "344/3"
+      },
+      {
+        "date": "2026-11-09",
+        "pair": "3 пара",
+        "time": "11:30 - 13:05",
+        "discipline": "Иностранный язык (подгр.)",
+        "type": "Практические занятия и семинары",
+        "teacher": "Преподаватель 02",
+        "room": "464/2"
+      },
+      {
+        "date": "2026-11-12",
+        "pair": "1 пара",
+        "time": "08:00 - 09:35",
+        "discipline": "История России",
+        "type": "Лекции",
+        "teacher": "Преподаватель 03",
+        "room": "202/3г"
+      },
+      {
+        "date": "2026-11-13",
+        "pair": "5 пара",
+        "time": "15:20 - 16:55",
+        "discipline": "Лекция доп.образование \"Введение в спортивное программирование\" (1 уровень)",
+        "type": null,
+        "teacher": "Преподаватель 04",
+        "room": "801/3б"
+      },
+      {
+        "date": "2026-11-16",
+        "pair": "1 пара",
+        "time": "08:00 - 09:35",
+        "discipline": "Физическая культура и спорт",
+        "type": "Практические занятия и семинары",
+        "teacher": "Преподаватель 05",
+        "room": "101/ДС"
+      }
+    ]
+  },
+  "open_dependency": {
+    "id": "SRC-4W",
+    "affects": [
+      "Feature-Parser: four-calendar-week contract",
+      "UC-06",
+      "WBS 3.1.2 / issue #21"
+    ],
+    "required_interval_on_observation_date": [
+      "2026-11-09",
+      "2026-12-06"
+    ],
+    "confirmed_returned_lesson_dates": [
+      "2026-11-09",
+      "2026-11-21"
+    ],
+    "unconfirmed_later_weeks": [
+      "2026-11-23",
+      "2026-11-30"
+    ],
+    "statement": "The observed public response exposes two teaching weeks. Absence of other public ways to obtain four weeks has not been established. Do not infer empty schedules or repeat observed lessons for unconfirmed dates.",
+    "legitimate_options": [
+      "Find and verify a documented public week-selection endpoint or official public export",
+      "Ask the university for a public export without student credentials",
+      "If no such source exists, agree an explicit scope change before changing the Feature-Parser horizon, UC-06 and issue acceptance criteria; no scope change is made in this research"
+    ]
+  },
+  "validation": {
+    "fixture_contains_only_selected_observed_records": true,
+    "teacher_names_removed": true,
+    "no_active_or_external_resources": true,
+    "raw_vs_fixture_dates_times_disciplines_types_rooms_match": true,
+    "type_missing_case_preserved": true,
+    "parallel_lessons_case_preserved": true
+  }
+}

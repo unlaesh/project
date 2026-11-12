@@ -11,6 +11,7 @@ requires-python = ">=3.12"
 license = { file = "license" }
 authors = [{ name = "Denis Revyagin" }]
 dependencies = [
+    "aiogram>=3.31,<4.0",
     "fastapi>=0.115,<1.0",
     "uvicorn[standard]>=0.30,<1.0",
     "pydantic-settings>=2.4,<3.0",

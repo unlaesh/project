@@ -1,0 +1,855 @@
+{
+  "schema_version": 1,
+  "step": 8,
+  "as_of": "2026-11-12",
+  "verified_at": "2026-11-12T21:15:32+05:00",
+  "timezone": "Asia/Yekaterinburg",
+  "repo": "unlaesh/project",
+  "project_url": "https://github.com/users/unlaesh/projects/1",
+  "project_id": "PVT_kwHOBWtars4BnSDr",
+  "published_before_step": {
+    "main": "389ff5899119e02e5198cee63cf21d16d5afa307",
+    "wiki_master": "296e64df9857616e38c4da06279cff30871452ab"
+  },
+  "sources": [
+    {
+      "path": "docs/estimates-step5.json",
+      "sha256": "243804c6b164a8a1b6737a30b9a4634fc59b43b23c60987978188a4c2dec4f57"
+    },
+    {
+      "path": "docs/durations-step7.json",
+      "sha256": "bc88465006214ad3756c9c4248cd9a61f367e12dca3b0e767e5762624b2460e8"
+    }
+  ],
+  "fields": {
+    "Priority": {
+      "id": "PVTSSF_lAHOBWtars4BnSDrzhl3abQ",
+      "name": "Priority",
+      "dataType": "SINGLE_SELECT",
+      "options": [
+        {
+          "id": "79628723",
+          "name": "must",
+          "color": "RED",
+          "description": "Обязательная работа текущего объёма"
+        },
+        {
+          "id": "0a877460",
+          "name": "should",
+          "color": "ORANGE",
+          "description": "Желательная работа текущего объёма"
+        },
+        {
+          "id": "da944a9c",
+          "name": "could",
+          "color": "YELLOW",
+          "description": "Возможная работа при наличии времени"
+        },
+        {
+          "id": "fd4abbb1",
+          "name": "wont",
+          "color": "GRAY",
+          "description": "Идея вне текущего объёма проекта"
+        }
+      ]
+    },
+    "Estimate": {
+      "id": "PVTF_lAHOBWtars4BnSDrzhl3abY",
+      "name": "Estimate",
+      "dataType": "NUMBER"
+    },
+    "Start date": {
+      "id": "PVTF_lAHOBWtars4BnSDrzhl3abc",
+      "name": "Start date",
+      "dataType": "DATE"
+    },
+    "Target date": {
+      "id": "PVTF_lAHOBWtars4BnSDrzhl3abg",
+      "name": "Target date",
+      "dataType": "DATE"
+    }
+  },
+  "priority_counts": {
+    "must": 31,
+    "should": 19,
+    "could": 8,
+    "wont": 2
+  },
+  "scope": {
+    "total_project_items": 60,
+    "estimated_items": 58,
+    "open_estimated_items": 49,
+    "retrospective_estimated_items": 9,
+    "excluded_issues": [
+      58,
+      59
+    ]
+  },
+  "estimate_unit": "team_person_hours",
+  "estimate_totals": {
+    "all": 515.82,
+    "planned": 448.82,
+    "retrospective": 67
+  },
+  "mutations": {
+    "priority_options_before": [
+      "P0",
+      "P1",
+      "P2"
+    ],
+    "priority_options_after": [
+      "must",
+      "should",
+      "could",
+      "wont"
+    ],
+    "priority_values_set": 60,
+    "issue_labels_added": {
+      "61": [
+        "should"
+      ],
+      "62": [
+        "should"
+      ]
+    },
+    "estimate_values_changed": 0,
+    "date_fields_created": 0,
+    "date_values_set": 0,
+    "new_fields_created": 0
+  },
+  "verification": {
+    "all_60_priorities_match_moscow_labels": true,
+    "all_58_estimates_match_step5": true,
+    "date_fields_have_date_type": true,
+    "date_values_empty_for_60_items": true,
+    "only_planned_item_changes": true,
+    "milestones_unchanged": true,
+    "other_field_definitions_unchanged": true,
+    "six_view_names_filters_layouts_unchanged": true,
+    "label_priority_automatic_sync_configured": false,
+    "deadline_feasibility_confirmed": false,
+    "commits_or_pushes_performed": false
+  },
+  "entries": [
+    {
+      "issue": 2,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq7Dk",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 6.33,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 3,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq7Hg",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 8.67,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 4,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq7MM",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 3.17,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 5,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq7QI",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 12.67,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 6,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq7Vo",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 6.5,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 7,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq7ZM",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 17,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 8,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq7d8",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 35,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 9,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq7gA",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 4,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 10,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq7ig",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 11,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq7l0",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 6.33,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 12,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq7oo",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 13,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 13,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq7qM",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 9,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 14,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq7tc",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 8.67,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 15,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq7wo",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 8.83,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 16,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq7zQ",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 8.5,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 17,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq72Y",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 4.25,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 18,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq74o",
+      "priority": "should",
+      "moscow_label": "should",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 6.67,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 19,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq77U",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 13.33,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 20,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq79I",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 6.33,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 21,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq7-k",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 17,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 22,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq8CI",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 12.67,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 23,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq8Es",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 21.33,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 24,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq8HA",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 8.5,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 25,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq8JI",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 4.17,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 26,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq8LI",
+      "priority": "should",
+      "moscow_label": "should",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 2.08,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 27,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq8Pc",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 8.33,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 28,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq8Sg",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 4.17,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 29,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq8V8",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 6.33,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 30,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq8Y4",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 13,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 31,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq8cI",
+      "priority": "should",
+      "moscow_label": "should",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 4.33,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 32,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq8fE",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 6.33,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 33,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq8j0",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 12.67,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 34,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq8oI",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 8.67,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 35,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq8qs",
+      "priority": "must",
+      "moscow_label": "must",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 6.33,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 36,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq8tg",
+      "priority": "should",
+      "moscow_label": "should",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 4,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 37,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq8vY",
+      "priority": "could",
+      "moscow_label": "could",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 4,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 38,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq8yA",
+      "priority": "could",
+      "moscow_label": "could",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 4,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 39,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq81U",
+      "priority": "should",
+      "moscow_label": "should",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 40,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq84c",
+      "priority": "should",
+      "moscow_label": "should",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 41,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq87Q",
+      "priority": "should",
+      "moscow_label": "should",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 4,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 42,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq89w",
+      "priority": "should",
+      "moscow_label": "should",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 43,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq8_c",
+      "priority": "should",
+      "moscow_label": "should",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 6,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 44,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq9Bc",
+      "priority": "should",
+      "moscow_label": "should",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 45,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq9GE",
+      "priority": "should",
+      "moscow_label": "should",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 46,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq9KY",
+      "priority": "should",
+      "moscow_label": "should",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 12,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 47,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq9Og",
+      "priority": "should",
+      "moscow_label": "should",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 12,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 48,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq9Qk",
+      "priority": "should",
+      "moscow_label": "should",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 49,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq9Tw",
+      "priority": "could",
+      "moscow_label": "could",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 4,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 50,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq9XM",
+      "priority": "could",
+      "moscow_label": "could",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 51,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq9Zo",
+      "priority": "could",
+      "moscow_label": "could",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 52,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq9cE",
+      "priority": "should",
+      "moscow_label": "should",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 8.5,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 53,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq9dU",
+      "priority": "should",
+      "moscow_label": "should",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 8.83,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 54,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq9go",
+      "priority": "could",
+      "moscow_label": "could",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 4.33,
+      "basis": "planned",
+      "milestone": "MVP",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 55,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq9iQ",
+      "priority": "could",
+      "moscow_label": "could",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 16,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 56,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq9lE",
+      "priority": "should",
+      "moscow_label": "should",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 16,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 57,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq9nY",
+      "priority": "could",
+      "moscow_label": "could",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 58,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq9o4",
+      "priority": "wont",
+      "moscow_label": "wont",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": null,
+      "basis": "excluded",
+      "milestone": null,
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 59,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhEq9q8",
+      "priority": "wont",
+      "moscow_label": "wont",
+      "source": "existing issue label from lab 4",
+      "estimate_hours": null,
+      "basis": "excluded",
+      "milestone": null,
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 61,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhIHDl8",
+      "priority": "should",
+      "moscow_label": "should",
+      "source": "F5 notifications priority; added missing label",
+      "estimate_hours": 10,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "start_date": null,
+      "target_date": null
+    },
+    {
+      "issue": 62,
+      "item_id": "PVTI_lAHOBWtars4BnSDrzhIHD-E",
+      "priority": "should",
+      "moscow_label": "should",
+      "source": "F5 notifications priority; added missing label",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "start_date": null,
+      "target_date": null
+    }
+  ]
+}

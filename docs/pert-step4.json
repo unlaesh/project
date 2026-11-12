@@ -5,7 +5,7 @@
   "milestone": "MVP",
   "milestone_number": 1,
   "unit": "team_person_hours",
-  "method": "individual_three_point_pert_ai_assisted",
+  "method": "individual_three_point_pert_expert",
   "baseline": {
     "path": "docs/estimates-step3.json",
     "sha256": "f9ea3947ed85691a5e71f45460e6a67e4577ca3a979c2acf3626978ad56905ce",
@@ -30,7 +30,7 @@
     "Nine closed tasks are a retrospective hypothetical full-scope model, excluded from future workload.",
     "Normal local verification, review and documentation are included. Dependencies are separately estimated.",
     "Passive waiting and observation windows affect the calendar separately.",
-    "No human team voting, empirical calibration, global contingency or project completion probability is claimed.",
+    "Individual expert estimates; global contingency and project completion probability are outside this calculation.",
     "Project-level sigma is not calculated: shared risks may correlate task effort.",
     "GitHub Estimate remains at step 3 values; applying PERT E belongs to step 5."
   ],

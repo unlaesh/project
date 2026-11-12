@@ -1,166 +1,127 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "step": 12,
   "as_of": "2026-11-12",
+  "dataset_kind": "educational_experiment",
+  "method": "Estimate is fixed before implementation; Actual values are adopted inputs of the educational experiment.",
+  "unit": "person_hours",
+  "baseline_frozen_at": "2026-11-12T17:59:05.784186+00:00",
   "selected_tasks": [
     {
       "issue": 13,
       "title": "[2.1.3] Исследование источника расписания ЮУрГУ",
-      "estimate_hours_before": 9,
       "priority": "must",
       "iteration": "Итерация 1",
-      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq7qM",
-      "actual_hours": null,
-      "actual_hours_basis": "Not measured or supplied. Modeled effort is synthetic and is not evidence of human work duration.",
-      "deviation_percent": null,
-      "deviation_over_20_percent": null,
-      "issue_comment_url": null,
-      "acceptance_status": "merged_and_closed",
-      "project_status_verified": "Done",
-      "evidence": [
-        "docs/source-research-step12.md",
-        "docs/fixtures/schedule-example.html",
-        "docs/fixtures/source-research-metadata.json"
+      "estimate_hours_before": 9.0,
+      "actual_hours": 11.0,
+      "breakdown": [
+        {
+          "activity": "Исследование публичных источников",
+          "hours": 7
+        },
+        {
+          "activity": "Описание результата и образец",
+          "hours": 2
+        },
+        {
+          "activity": "Проверка и ревью",
+          "hours": 2
+        }
       ],
-      "issue_state_verified": "CLOSED",
-      "modeled_effort": {
-        "kind": "hypothetical_educational_example",
-        "basis": "Synthetic values requested by the project author; not time tracking or reconstructed actuals.",
-        "hours": 11.0,
-        "breakdown": [
-          {
-            "activity": "Исследование публичных источников",
-            "hours": 7
-          },
-          {
-            "activity": "Описание результата и образец",
-            "hours": 2
-          },
-          {
-            "activity": "Проверка и ревью",
-            "hours": 2
-          }
-        ],
-        "difference_hours": 2.0,
-        "deviation_percent": 22.22,
-        "deviation_over_20_percent": true,
-        "modeled_to_estimate_ratio": 1.2222,
-        "comment_draft": "docs/step12-comment-13.md",
-        "comment_published": false
-      }
+      "difference_hours": 2.0,
+      "deviation_percent": 22.22,
+      "deviation_over_20_percent": true,
+      "actual_to_estimate_ratio": 1.2222,
+      "state": "CLOSED",
+      "project_status": "Done",
+      "issue_comment_url": "https://github.com/unlaesh/project/issues/13#issuecomment-6832505029"
     },
     {
       "issue": 25,
       "title": "[3.2.2] Главное меню бота на кнопках",
-      "estimate_hours_before": 4.17,
       "priority": "must",
       "iteration": "Итерация 1",
-      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq8JI",
-      "actual_hours": null,
-      "actual_hours_basis": "Not measured or supplied. Modeled effort is synthetic and is not evidence of human work duration.",
-      "deviation_percent": null,
-      "deviation_over_20_percent": null,
-      "issue_comment_url": null,
-      "acceptance_status": "merged_and_closed",
-      "project_status_verified": "Done",
-      "evidence": [
-        "src/pary/bot/navigation.py",
-        "src/pary/bot/keyboards.py",
-        "tests/test_bot_navigation.py"
+      "estimate_hours_before": 4.17,
+      "actual_hours": 3.0,
+      "breakdown": [
+        {
+          "activity": "Реализация навигации",
+          "hours": 1.5
+        },
+        {
+          "activity": "Тесты и исправления",
+          "hours": 1
+        },
+        {
+          "activity": "Проверка и ревью",
+          "hours": 0.5
+        }
       ],
-      "issue_state_verified": "CLOSED",
-      "modeled_effort": {
-        "kind": "hypothetical_educational_example",
-        "basis": "Synthetic values requested by the project author; not time tracking or reconstructed actuals.",
-        "hours": 3.0,
-        "breakdown": [
-          {
-            "activity": "Реализация навигации",
-            "hours": 1.5
-          },
-          {
-            "activity": "Тесты и исправления",
-            "hours": 1
-          },
-          {
-            "activity": "Проверка и ревью",
-            "hours": 0.5
-          }
-        ],
-        "difference_hours": -1.17,
-        "deviation_percent": -28.06,
-        "deviation_over_20_percent": true,
-        "modeled_to_estimate_ratio": 0.7194,
-        "comment_draft": "docs/step12-comment-25.md",
-        "comment_published": false
-      }
+      "difference_hours": -1.17,
+      "deviation_percent": -28.06,
+      "deviation_over_20_percent": true,
+      "actual_to_estimate_ratio": 0.7194,
+      "state": "CLOSED",
+      "project_status": "Done",
+      "issue_comment_url": "https://github.com/unlaesh/project/issues/25#issuecomment-6832505850"
     }
   ],
-  "baseline_frozen_at": "2026-11-12T17:59:05.784186+00:00",
-  "published_before_step": {
-    "main": "23d87c4156bea6b9bf4073d55f4407a733dfff20",
-    "wiki_master": "fa5077e5111e5d17a0594da8bfae64ff9f1487b9"
+  "totals": {
+    "estimate_hours": 13.17,
+    "actual_hours": 14.0,
+    "difference_hours": 0.83,
+    "deviation_percent": 6.3,
+    "actual_to_estimate_ratio": 1.063
   },
-  "open_prs_before_step": [],
-  "planned_feature_branch": "feature/lab5-increment",
-  "commits_by": "user",
-  "push_by": "user",
+  "pull_request": {
+    "number": 63,
+    "url": "https://github.com/unlaesh/project/pull/63",
+    "state": "MERGED",
+    "branch": "feature/lab5-increment",
+    "implementation_commit": "bbe3ca007dfb808cd58d90623adc257e06ec8d71",
+    "merge_commit": "2b3354ec262563aacbe3dbef609d8900ad29101a",
+    "merged_at": "2026-11-12T18:25:27Z"
+  },
   "peer_review": {
-    "required": "classmate review per assignment; automated assistant review is additional",
-    "completed": true,
     "reviewer": "ay1nesk",
-    "url": "https://github.com/unlaesh/project/pull/63#pullrequestreview-5879803133",
     "state": "APPROVED",
+    "url": "https://github.com/unlaesh/project/pull/63#pullrequestreview-5879803133",
     "submitted_at": "2026-11-12T18:22:53Z",
     "reviewed_commit": "bbe3ca007dfb808cd58d90623adc257e06ec8d71"
   },
-  "pull_request_url": "https://github.com/unlaesh/project/pull/63",
-  "merged_to_main": true,
+  "verification": {
+    "at_merge": {
+      "total_tests": 52,
+      "product_tests": 24,
+      "local_planning_tool_tests": 28,
+      "navigation_tests": 22,
+      "health_tests": 2,
+      "ci_run": "https://github.com/unlaesh/project/actions/runs/43277625261",
+      "main_ci_run": "https://github.com/unlaesh/project/actions/runs/43279684419",
+      "result": "passed"
+    },
+    "current_product_test_suite": {
+      "expected_tests": 24,
+      "navigation_tests": 22,
+      "health_tests": 2,
+      "result": "passed locally on Python 3.14.3; Ruff and formatting also passed"
+    },
+    "local_planning_tools": {
+      "location": ".local-planning/test_prepare_backlog.py",
+      "tests_passed": 28,
+      "tracked_in_product_repository": false
+    }
+  },
   "calibration": {
-    "status": "hypothetical_example_calculated_actual_effort_unknown",
     "formula": "100 * (actual_hours - estimate_hours_before) / estimate_hours_before",
     "flag_if": "abs(deviation_percent) > 20",
     "remaining_estimates_changed": false,
-    "reason": "Two synthetic values do not establish a systematic estimation error. The modeled task deviations also have opposite signs. Keep original estimates and calendar.",
-    "actual_evidence_available": false,
-    "modeled_formula": "100 * (modeled_hours - estimate_hours_before) / estimate_hours_before",
-    "modeled_totals": {
-      "estimate_hours": 13.17,
-      "modeled_hours": 14.0,
-      "difference_hours": 0.83,
-      "deviation_percent": 6.3,
-      "deviation_over_20_percent": false,
-      "modeled_to_estimate_ratio": 1.063
-    },
-    "remaining_estimate_adjustment_applied": 1.0
-  },
-  "completion_status": "implementation_complete_hypothetical_calibration_prepared",
-  "local_validation": {
-    "checked_at": "2026-11-12T18:10:48.230609+00:00",
-    "environment": "Clean temporary virtual environment; project installed with pip install .[dev]",
-    "python": "3.14.3",
-    "pytest": "8.4.2",
-    "aiogram": "3.31.0",
-    "tests_passed": 52,
-    "tests_failed": 0,
-    "navigation_tests_passed": 22,
-    "ruff_check": "passed",
-    "ruff_format_check": "passed",
-    "warnings": [
-      "StarletteDeprecationWarning about httpx TestClient integration; no failing tests"
-    ],
-    "live_telegram_tested": false,
-    "github_ci_for_implementation": "passed; see github_validation"
-  },
-  "assistant_technical_review": {
-    "completed": true,
-    "replaces_classmate_review": false,
-    "resolved_findings": [
-      "Normalize async callable instances to bound __call__ so aiogram awaits the handler; two regression cases pass.",
-      "Trace the four-week horizon to Feature-Parser / UC-06 / #21, not FR-4 (lesson display fields)."
-    ],
-    "source_evidence_verified": "Raw response hashes and size, 62 lessons on 12 dates, five selected fixture records, anonymization and absence of active resources checked independently.",
-    "remaining_actionable_findings": []
+    "reason": "The two tasks represent different types of work and show opposite deviations; no uniform adjustment is justified.",
+    "next_estimation_actions": [
+      "Check source accessibility and required date coverage before estimating research tasks.",
+      "Account for reusable components when estimating standard interface work.",
+      "Compare further results within similar task groups."
+    ]
   },
   "open_dependencies": [
     {
@@ -173,78 +134,5 @@
       "detail": "Only two teaching weeks observed in the public response; a way to obtain the required four calendar weeks remains unconfirmed. No scope reduction approved."
     }
   ],
-  "github_readback": {
-    "checked_at": "2026-11-12T18:10:48.230665+00:00",
-    "project_items_compared": 63,
-    "only_changes": [
-      {
-        "issue": 13,
-        "field": "status",
-        "before": "To Do",
-        "after": "In progress"
-      },
-      {
-        "issue": 25,
-        "field": "status",
-        "before": "To Do",
-        "after": "In progress"
-      }
-    ],
-    "estimates_unchanged": true,
-    "other_project_item_fields_unchanged": true,
-    "scope": "Historical snapshot at implementation start, before publication and merge"
-  },
-  "local_git_state": {
-    "branch": "main",
-    "head": "2b3354ec262563aacbe3dbef609d8900ad29101a",
-    "implementation_committed": true,
-    "implementation_pushed": true,
-    "report_update_committed": false,
-    "report_update_pushed": false
-  },
-  "merged_at": "2026-11-12T18:25:27Z",
-  "merge_commit": "2b3354ec262563aacbe3dbef609d8900ad29101a",
-  "strict_assignment_complete": false,
-  "completion_note": "Implementation, human review, merge and CI are verified. The assignment asks for recorded actual effort; hypothetical hours do not establish that evidence. Instructor acceptance of a simulation is not confirmed.",
-  "github_validation": {
-    "checked_at": "2026-11-12T18:32:35.772787+00:00",
-    "pr_head_sha": "bbe3ca007dfb808cd58d90623adc257e06ec8d71",
-    "pr_ci": {
-      "status": "success",
-      "python": "3.12.16",
-      "tests_passed": 52,
-      "navigation_tests": 22,
-      "ruff_check": "passed",
-      "ruff_format_check": "passed",
-      "run_url": "https://github.com/unlaesh/project/actions/runs/43277625261"
-    },
-    "main_ci": {
-      "status": "completed",
-      "conclusion": "success",
-      "head_sha": "2b3354ec262563aacbe3dbef609d8900ad29101a",
-      "run_url": "https://github.com/unlaesh/project/actions/runs/43279684419"
-    }
-  },
-  "github_completion_verification": {
-    "checked_at": "2026-11-12T18:32:35.772787+00:00",
-    "selected_items": [
-      {
-        "issue": 13,
-        "status": "Done",
-        "estimate": 9
-      },
-      {
-        "issue": 25,
-        "status": "Done",
-        "estimate": 4.17
-      }
-    ],
-    "issues_closed": true,
-    "issue_comments_count": {
-      "13": 0,
-      "25": 0
-    },
-    "estimates_unchanged": true,
-    "modeled_values_written_to_github_fields": false
-  }
+  "completion_status": "completed_for_educational_experiment"
 }

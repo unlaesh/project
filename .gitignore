@@ -22,5 +22,10 @@ htmlcov/
 # Локальные снимки и планы подготовки GitHub Issues
 .backlog-preparation/
 
-# Claude
-Claude outputs/
+# Локальные инструменты планирования
+.local-planning/
+/scripts/prepare_backlog.py
+/scripts/analyze_calendar.py
+/scripts/validate_calendar.py
+/scripts/backlog_catalog.json
+/docs/backlog-preparation.md

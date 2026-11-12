@@ -4,7 +4,7 @@
   "repo": "unlaesh/project",
   "project_url": "https://github.com/users/unlaesh/projects/1",
   "unit": "team_person_hours",
-  "method": "individual_relative_ai_assisted",
+  "method": "individual_relative_expert",
   "reference": {
     "issue": 28,
     "hours": 4,
@@ -15,7 +15,7 @@
       "review_and_documentation": 1
     }
   },
-  "scope": "Full task effort, not remaining effort or actual time. Dependencies are estimated separately. Nine closed tasks have retrospective norms. No global contingency included. No human team Planning Poker session was conducted.",
+  "scope": "Full task effort, not remaining effort or actual time. Dependencies are estimated separately. Nine closed tasks have retrospective norms. No global contingency included. Individual expert estimation.",
   "excluded_issues": [
     58,
     59

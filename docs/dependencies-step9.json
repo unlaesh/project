@@ -1,0 +1,1984 @@
+{
+  "schema_version": 1,
+  "step": 9,
+  "as_of": "2026-11-12",
+  "repo": "unlaesh/project",
+  "project_id": "PVT_kwHOBWtars4BnSDr",
+  "published_before_step": {
+    "main": "253246581d48462efeecdfcb1ec04ae8566d93a5",
+    "wiki_master": "ace9c08d6f250995265c9c959bf5578d9cde863f"
+  },
+  "sources": [
+    {
+      "path": "scripts/backlog_catalog.json",
+      "sha256": "aa5a51cf5d3eeeecd635471caa5c151b753e6e6fa947a09f2f2fb20a2ad21186"
+    },
+    {
+      "path": "docs/durations-step7.json",
+      "sha256": "bc88465006214ad3756c9c4248cd9a61f367e12dca3b0e767e5762624b2460e8"
+    },
+    {
+      "path": "docs/project-fields-step8.json",
+      "sha256": "d74edcc6cc949f1646e51824c366db96b7ec26410d066d8f521d0e747009e0ac"
+    }
+  ],
+  "semantics": {
+    "FS": "finish-to-start adopted for whole activity in conservative baseline",
+    "FF": "predecessor completion needed before successor completion; earlier preparation allowed; integration tail must be scheduled explicitly",
+    "native_github": "blocked-by expresses issue completion dependency; it does not store FS/FF or lag",
+    "typed_graph_is_complete_calendar": false,
+    "phases_do_not_add_effort": true
+  },
+  "scope": {
+    "all_scoped_issues": 58,
+    "native_edges_planned": 127,
+    "relation_counts": {
+      "FF": 40,
+      "FS": 87
+    },
+    "expected_current_blocked_issue_count": 41,
+    "expected_current_blocked_issues": [
+      10,
+      12,
+      15,
+      16,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      61,
+      62
+    ],
+    "phase_only_issues": [
+      55,
+      56,
+      57
+    ],
+    "excluded_issues": [
+      58,
+      59
+    ]
+  },
+  "edges": [
+    {
+      "predecessor": 8,
+      "successor": 10,
+      "relation": "FF",
+      "basis": "explicit_contract_or_completion_gate",
+      "reason": "Итоговый отчёт содержит результаты всех запланированных итераций; его подготовка начинается заранее.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0Fjw",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0J_w"
+    },
+    {
+      "predecessor": 9,
+      "successor": 10,
+      "relation": "FF",
+      "basis": "explicit_contract_or_completion_gate",
+      "reason": "Итоговые решения контрольной точки включаются в отчёт, без запрета заранее собирать материалы.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0H2Q",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0J_w"
+    },
+    {
+      "predecessor": 35,
+      "successor": 10,
+      "relation": "FF",
+      "basis": "explicit_contract_or_completion_gate",
+      "reason": "Отчёт фиксирует фактический результат MVP; это не обещание завершить все необязательные релизы.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1Wwg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0J_w"
+    },
+    {
+      "predecessor": 13,
+      "successor": 12,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Идентичность группы и занятия, даты и фактический охват модели должны быть проверены по исследованному публичному источнику.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "note": "Общее проектирование сущностей может идти до окончания исследования; отсутствие допустимого источника — отдельный блокирующий результат, а не штатная готовность зависимости.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0UAQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0RlA"
+    },
+    {
+      "predecessor": 14,
+      "successor": 15,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Финальная проверка Nginx и закрытого PostgreSQL использует работающее контейнерное окружение.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "note": "VPS, домен, DNS и TLS можно готовить до окончания Compose; проверка может использовать существующий HTTP-каркас.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0XZQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0aqQ"
+    },
+    {
+      "predecessor": 12,
+      "successor": 16,
+      "relation": "FS",
+      "basis": "explicit_conservative_planning_policy",
+      "reason": "Начальная миграция переносит утверждённую модель MVP, её ключи, очередь и сведения о загруженных периодах.",
+      "cpm_note": "Для утверждённой исходной ветви CPM принят последовательный полный FS: основной объём преемника планируется после готовности предшественника. Это консервативный план, а не запрет теоретической подготовки по контракту; перекрытие потребует отдельного пересчёта.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0RlA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0dtQ"
+    },
+    {
+      "predecessor": 16,
+      "successor": 18,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "CI должен реально применить готовую последовательность миграций к пустой тестовой PostgreSQL.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0dtQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0juQ"
+    },
+    {
+      "predecessor": 17,
+      "successor": 18,
+      "relation": "FS",
+      "basis": "existing_completed_prerequisite",
+      "reason": "Проверки секретов и миграций подключаются к уже готовому основному CI.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0ggg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0juQ"
+    },
+    {
+      "predecessor": 14,
+      "successor": 19,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Нужно доставить и запустить реальные Compose-сервисы с сохранением тома.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "note": "Workflow, обработку ошибок и документацию можно готовить раньше; завершение требует сквозной проверки на готовых зависимостях.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0XZQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0meg"
+    },
+    {
+      "predecessor": 15,
+      "successor": 19,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Нужен подготовленный сервер и защищённый доступ для пробного деплоя.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "note": "Workflow, обработку ошибок и документацию можно готовить раньше; завершение требует сквозной проверки на готовых зависимостях.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0aqQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0meg"
+    },
+    {
+      "predecessor": 16,
+      "successor": 19,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Процесс должен применить реальные миграции и обработать их ошибку.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "note": "Workflow, обработку ошибок и документацию можно готовить раньше; завершение требует сквозной проверки на готовых зависимостях.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0dtQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0meg"
+    },
+    {
+      "predecessor": 18,
+      "successor": 19,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Деплой должен зависеть от полного согласованного набора CI-проверок.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "note": "Workflow, обработку ошибок и документацию можно готовить раньше; завершение требует сквозной проверки на готовых зависимостях.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0juQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0meg"
+    },
+    {
+      "predecessor": 26,
+      "successor": 19,
+      "relation": "FS",
+      "basis": "existing_completed_prerequisite",
+      "reason": "Проверка результата деплоя использует готовый /health.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF07nw",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0meg"
+    },
+    {
+      "predecessor": 12,
+      "successor": 20,
+      "relation": "FS",
+      "basis": "technical_contract",
+      "reason": "Сохранение и поиск групп реализуются по утверждённому контракту таблицы и уникальности.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0RlA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0o-A"
+    },
+    {
+      "predecessor": 13,
+      "successor": 20,
+      "relation": "FS",
+      "basis": "explicit_conservative_planning_policy",
+      "reason": "Нужны подтверждённые публичный способ получения групп и устойчивые идентификаторы.",
+      "cpm_note": "Для утверждённой исходной ветви CPM принят последовательный полный FS: основной объём преемника планируется после готовности предшественника. Это консервативный план, а не запрет теоретической подготовки по контракту; перекрытие потребует отдельного пересчёта.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0UAQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0o-A"
+    },
+    {
+      "predecessor": 16,
+      "successor": 20,
+      "relation": "FS",
+      "basis": "explicit_conservative_planning_policy",
+      "reason": "Нужно проверить обновление справочника без дублей и сохранность при сбое на реальной схеме.",
+      "cpm_note": "Для утверждённой исходной ветви CPM принят последовательный полный FS: основной объём преемника планируется после готовности предшественника. Это консервативный план, а не запрет теоретической подготовки по контракту; перекрытие потребует отдельного пересчёта.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0dtQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0o-A"
+    },
+    {
+      "predecessor": 13,
+      "successor": 21,
+      "relation": "FS",
+      "basis": "explicit_conservative_planning_policy",
+      "reason": "Загрузка четырёх недель и разбор полей опираются на проверенную навигацию, даты и обезличенный образец.",
+      "cpm_note": "Для утверждённой исходной ветви CPM принят последовательный полный FS: основной объём преемника планируется после готовности предшественника. Это консервативный план, а не запрет теоретической подготовки по контракту; перекрытие потребует отдельного пересчёта.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0UAQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0sGQ"
+    },
+    {
+      "predecessor": 12,
+      "successor": 22,
+      "relation": "FS",
+      "basis": "technical_contract",
+      "reason": "Атомарное сравнение и отмена занятий зависят от утверждённой идентичности, ключей и охвата.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0RlA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0u8Q"
+    },
+    {
+      "predecessor": 16,
+      "successor": 22,
+      "relation": "FS",
+      "basis": "explicit_conservative_planning_policy",
+      "reason": "Нужно проверить транзакции, ограничения и атомарное сохранение на реализованной схеме PostgreSQL.",
+      "cpm_note": "Для утверждённой исходной ветви CPM принят последовательный полный FS: основной объём преемника планируется после готовности предшественника. Это консервативный план, а не запрет теоретической подготовки по контракту; перекрытие потребует отдельного пересчёта.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0dtQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0u8Q"
+    },
+    {
+      "predecessor": 21,
+      "successor": 22,
+      "relation": "FS",
+      "basis": "explicit_conservative_planning_policy",
+      "reason": "Сохранение должно принимать настоящий контракт результата разбора, включая пустой и ошибочный результат.",
+      "cpm_note": "Для утверждённой исходной ветви CPM принят последовательный полный FS: основной объём преемника планируется после готовности предшественника. Это консервативный план, а не запрет теоретической подготовки по контракту; перекрытие потребует отдельного пересчёта.",
+      "note": "Репозиторий и сравнение можно разрабатывать по согласованному DTO и фикстурам до готовности загрузчика.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0sGQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0u8Q"
+    },
+    {
+      "predecessor": 12,
+      "successor": 23,
+      "relation": "FS",
+      "basis": "technical_contract",
+      "reason": "Очередь, дедупликация и журнал обхода требуют согласованной модели хранения.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0RlA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0yJQ"
+    },
+    {
+      "predecessor": 20,
+      "successor": 23,
+      "relation": "FS",
+      "basis": "explicit_conservative_planning_policy",
+      "reason": "Цикл обязан первично и периодически обновлять справочник независимо от числа пользователей.",
+      "cpm_note": "Для утверждённой исходной ветви CPM принят последовательный полный FS: основной объём преемника планируется после готовности предшественника. Это консервативный план, а не запрет теоретической подготовки по контракту; перекрытие потребует отдельного пересчёта.",
+      "note": "Планировщик, ограничения времени и обработку очереди можно разрабатывать с подменяемыми функциями; завершение требует интеграции.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0o-A",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0yJQ"
+    },
+    {
+      "predecessor": 21,
+      "successor": 23,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Повторы и изоляция ошибок должны вызывать настоящий загрузчик и разбор.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "note": "Планировщик, ограничения времени и обработку очереди можно разрабатывать с подменяемыми функциями; завершение требует интеграции.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0sGQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0yJQ"
+    },
+    {
+      "predecessor": 22,
+      "successor": 23,
+      "relation": "FS",
+      "basis": "explicit_conservative_planning_policy",
+      "reason": "Успех и сбой цикла должны согласованно сохранять либо сохранять без изменения данные, охват и время обновления.",
+      "cpm_note": "Для утверждённой исходной ветви CPM принят последовательный полный FS: основной объём преемника планируется после готовности предшественника. Это консервативный план, а не запрет теоретической подготовки по контракту; перекрытие потребует отдельного пересчёта.",
+      "note": "Планировщик, ограничения времени и обработку очереди можно разрабатывать с подменяемыми функциями; завершение требует интеграции.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0u8Q",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0yJQ"
+    },
+    {
+      "predecessor": 12,
+      "successor": 24,
+      "relation": "FS",
+      "basis": "conservative_contract_order",
+      "reason": "Учёт последней активности пользователя должен соответствовать готовому контракту таблицы пользователей.",
+      "note": "Подготовка HTTP-маршрута и aiogram может начаться раньше; для выбранного цельного потока полагаемся на согласованную схему.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0RlA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF01Yw"
+    },
+    {
+      "predecessor": 15,
+      "successor": 24,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Регистрация и доставка HTTPS-вебхука проверяются на доступном защищённом маршруте.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "note": "Локальные проверки HTTP-обработчика и секретного заголовка не ждут VPS или DNS.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0aqQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF01Yw"
+    },
+    {
+      "predecessor": 16,
+      "successor": 24,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Запись последней активности должна быть проверена с реальной базой.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0dtQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF01Yw"
+    },
+    {
+      "predecessor": 12,
+      "successor": 27,
+      "relation": "FS",
+      "basis": "technical_contract",
+      "reason": "Регистрация и постановка первого запроса в очередь требуют контракта пользователей, групп и очереди.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0RlA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0-2Q"
+    },
+    {
+      "predecessor": 20,
+      "successor": 27,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Поиск регистрации использует реально загруженный справочник.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "note": "Диалог и обработку ошибочного ввода можно готовить с фикстурами раньше; финальная проверка выполняется на интегрированном результате.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0o-A",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0-2Q"
+    },
+    {
+      "predecessor": 24,
+      "successor": 27,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Полный пользовательский сценарий /start должен пройти через транспорт и обновлять активность.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "note": "Диалог и обработку ошибочного ввода можно готовить с фикстурами раньше; финальная проверка выполняется на интегрированном результате.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF01Yw",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0-2Q"
+    },
+    {
+      "predecessor": 25,
+      "successor": 27,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Успешная и повторная регистрация должны открывать действующее главное меню.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "note": "Диалог и обработку ошибочного ввода можно готовить с фикстурами раньше; финальная проверка выполняется на интегрированном результате.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF04VA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF0-2Q"
+    },
+    {
+      "predecessor": 27,
+      "successor": 28,
+      "relation": "FS",
+      "basis": "technical_contract",
+      "reason": "Смена группы прямо переиспользует поиск и обработку совпадений регистрации, а также сохранение пользователя.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0-2Q",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1C8Q"
+    },
+    {
+      "predecessor": 22,
+      "successor": 29,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Результат должен читаться из реального хранилища с фактическим охватом и временем обновления.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0u8Q",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1FSQ"
+    },
+    {
+      "predecessor": 27,
+      "successor": 29,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Нужно проверить чтение расписания текущей группы зарегистрированного пользователя.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0-2Q",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1FSQ"
+    },
+    {
+      "predecessor": 32,
+      "successor": 29,
+      "relation": "FS",
+      "basis": "conservative_reuse_order",
+      "reason": "Просмотр обязан использовать готовый единый форматировщик, включая различение пустых и незагруженных дат.",
+      "note": "Локальную подготовку обработчика возможно ускорить по согласованному интерфейсу; это отдельный вариант перекрытия работ.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1New",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1FSQ"
+    },
+    {
+      "predecessor": 22,
+      "successor": 30,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Результат должен читаться из реального хранилища с фактическим охватом и временем обновления.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0u8Q",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1IRg"
+    },
+    {
+      "predecessor": 27,
+      "successor": 30,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Нужно проверить чтение расписания текущей группы зарегистрированного пользователя.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0-2Q",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1IRg"
+    },
+    {
+      "predecessor": 32,
+      "successor": 30,
+      "relation": "FS",
+      "basis": "conservative_reuse_order",
+      "reason": "Просмотр обязан использовать готовый единый форматировщик, включая различение пустых и незагруженных дат.",
+      "note": "Локальную подготовку обработчика возможно ускорить по согласованному интерфейсу; это отдельный вариант перекрытия работ.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1New",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1IRg"
+    },
+    {
+      "predecessor": 22,
+      "successor": 31,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Результат должен читаться из реального хранилища с фактическим охватом и временем обновления.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0u8Q",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1Khg"
+    },
+    {
+      "predecessor": 27,
+      "successor": 31,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Нужно проверить чтение расписания текущей группы зарегистрированного пользователя.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0-2Q",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1Khg"
+    },
+    {
+      "predecessor": 32,
+      "successor": 31,
+      "relation": "FS",
+      "basis": "conservative_reuse_order",
+      "reason": "Просмотр обязан использовать готовый единый форматировщик, включая различение пустых и незагруженных дат.",
+      "note": "Локальную подготовку обработчика возможно ускорить по согласованному интерфейсу; это отдельный вариант перекрытия работ.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1New",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1Khg"
+    },
+    {
+      "predecessor": 12,
+      "successor": 32,
+      "relation": "FS",
+      "basis": "conservative_contract_order",
+      "reason": "Форматировщик получает согласованные поля занятия, фактический охват и дату успешного обновления.",
+      "note": "Форматирование не зависит от завершения загрузчика: достаточно DTO и тестовых данных.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0RlA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1New"
+    },
+    {
+      "predecessor": 13,
+      "successor": 33,
+      "relation": "FS",
+      "basis": "technical_contract",
+      "reason": "Автономный набор строится на реальных обезличенных образцах и документированном формате источника.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0UAQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1QHw"
+    },
+    {
+      "predecessor": 20,
+      "successor": 33,
+      "relation": "FF",
+      "basis": "test_completion",
+      "reason": "Проверяется первичная загрузка справочника без пользователей.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "note": "Фикстуры и тестовые сценарии можно писать до завершения соответствующей реализации; зелёный полный набор требует готового поведения.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0o-A",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1QHw"
+    },
+    {
+      "predecessor": 21,
+      "successor": 33,
+      "relation": "FF",
+      "basis": "test_completion",
+      "reason": "Проверяются поля, четыре недели и различение пустого результата и ошибок.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "note": "Фикстуры и тестовые сценарии можно писать до завершения соответствующей реализации; зелёный полный набор требует готового поведения.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0sGQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1QHw"
+    },
+    {
+      "predecessor": 22,
+      "successor": 33,
+      "relation": "FF",
+      "basis": "test_completion",
+      "reason": "Проверяются отсутствие дублей, транзакционность и сохранение прежнего охвата.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "note": "Фикстуры и тестовые сценарии можно писать до завершения соответствующей реализации; зелёный полный набор требует готового поведения.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0u8Q",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1QHw"
+    },
+    {
+      "predecessor": 23,
+      "successor": 33,
+      "relation": "FS",
+      "basis": "explicit_conservative_planning_policy",
+      "reason": "Проверяются продолжение следующей группы, очередь и повторы с подменой времени.",
+      "cpm_note": "Для утверждённой исходной ветви CPM принят последовательный полный FS: основной объём преемника планируется после готовности предшественника. Это консервативный план, а не запрет теоретической подготовки по контракту; перекрытие потребует отдельного пересчёта.",
+      "note": "Фикстуры и тестовые сценарии можно писать до завершения соответствующей реализации; зелёный полный набор требует готового поведения.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0yJQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1QHw"
+    },
+    {
+      "predecessor": 28,
+      "successor": 34,
+      "relation": "FF",
+      "basis": "acceptance_completion",
+      "reason": "Приёмка включает отмену и сохранение смены группы.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "note": "Чеклист готовится раньше; финальный протокол требует выполненных сценариев и перепроверки блокирующих дефектов.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1C8Q",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1Tbw"
+    },
+    {
+      "predecessor": 29,
+      "successor": 34,
+      "relation": "FF",
+      "basis": "acceptance_completion",
+      "reason": "Приёмка включает сегодня/завтра, отсутствие пар и отсутствие данных.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "note": "Чеклист готовится раньше; финальный протокол требует выполненных сценариев и перепроверки блокирующих дефектов.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1FSQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1Tbw"
+    },
+    {
+      "predecessor": 30,
+      "successor": 34,
+      "relation": "FF",
+      "basis": "acceptance_completion",
+      "reason": "Приёмка включает недельную навигацию и частично загруженную неделю.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "note": "Чеклист готовится раньше; финальный протокол требует выполненных сценариев и перепроверки блокирующих дефектов.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1IRg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1Tbw"
+    },
+    {
+      "predecessor": 31,
+      "successor": 34,
+      "relation": "FF",
+      "basis": "acceptance_completion",
+      "reason": "Приёмка включает неверную и допустимую произвольную дату.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "note": "Чеклист готовится раньше; финальный протокол требует выполненных сценариев и перепроверки блокирующих дефектов.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1Khg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1Tbw"
+    },
+    {
+      "predecessor": 33,
+      "successor": 34,
+      "relation": "FS",
+      "basis": "explicit_conservative_planning_policy",
+      "reason": "Основной приёмочный прогон начинается после полного зелёного автономного набора парсера.",
+      "note": "Это принятое правило расчёта, а не запрет заранее подготовить чеклист. Ранний приёмочный прогон — fast tracking с отдельным пересчётом; автоматические и ручные проверки нельзя оценивать повторно.",
+      "cpm_note": "Для утверждённой исходной ветви CPM принят последовательный полный FS: основной объём преемника планируется после готовности предшественника. Это консервативный план, а не запрет теоретической подготовки по контракту; перекрытие потребует отдельного пересчёта.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1QHw",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1Tbw"
+    },
+    {
+      "predecessor": 19,
+      "successor": 35,
+      "relation": "FF",
+      "basis": "explicit_contract_or_completion_gate",
+      "reason": "Рабочий автоматический деплой должен быть готов до фактического запуска внутри #35.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0meg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1Wwg"
+    },
+    {
+      "predecessor": 34,
+      "successor": 35,
+      "relation": "FS",
+      "basis": "explicit_contract_or_completion_gate",
+      "reason": "Основная приёмка MVP должна завершиться до релизного выполнения #35.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1Tbw",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1Wwg"
+    },
+    {
+      "predecessor": 52,
+      "successor": 35,
+      "relation": "FF",
+      "basis": "explicit_contract_or_completion_gate",
+      "reason": "Мониторинг и начальные проверки готовы до запуска; не требуется ждать полного календарного месяца для подтверждения настройки.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF2P3Q",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1Wwg"
+    },
+    {
+      "predecessor": 53,
+      "successor": 35,
+      "relation": "FF",
+      "basis": "explicit_contract_or_completion_gate",
+      "reason": "Семь ежедневных копий и проверенное восстановление должны быть готовы до запуска.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF2SZg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1Wwg"
+    },
+    {
+      "predecessor": 54,
+      "successor": 35,
+      "relation": "FF",
+      "basis": "explicit_contract_or_completion_gate",
+      "reason": "Помощь и рабочий канал обратной связи необходимы до запуска для пользователей.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF2U-g",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1Wwg"
+    },
+    {
+      "predecessor": 16,
+      "successor": 36,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Миграция заметок применяется поверх готовой схемы MVP и проверяется на заполненной базе.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0dtQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1ZXg"
+    },
+    {
+      "predecessor": 22,
+      "successor": 37,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Сохранение отменённых заметок использует таблицу заметок и результат сравнения расписаний.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0u8Q",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1cZQ"
+    },
+    {
+      "predecessor": 36,
+      "successor": 37,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Сохранение отменённых заметок использует таблицу заметок и результат сравнения расписаний.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1ZXg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1cZQ"
+    },
+    {
+      "predecessor": 36,
+      "successor": 38,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Очистка использует существующую таблицу и связи заметок; готовность контракта отмены уточняется отдельно.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1ZXg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1fpQ"
+    },
+    {
+      "predecessor": 37,
+      "successor": 38,
+      "relation": "FF",
+      "basis": "explicit_contract_or_completion_gate",
+      "reason": "Срок хранения использует сохранённое исходное окончание отменённой пары; проверка может готовиться по управляемым данным.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1cZQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1fpQ"
+    },
+    {
+      "predecessor": 25,
+      "successor": 39,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Нужны схема заметок, готовое главное меню и пользователь с выбранной группой. Связи с редактированием/форматом отдельно.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF04VA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1jJw"
+    },
+    {
+      "predecessor": 27,
+      "successor": 39,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Нужны схема заметок, готовое главное меню и пользователь с выбранной группой. Связи с редактированием/форматом отдельно.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0-2Q",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1jJw"
+    },
+    {
+      "predecessor": 36,
+      "successor": 39,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Нужны схема заметок, готовое главное меню и пользователь с выбранной группой. Связи с редактированием/форматом отдельно.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1ZXg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1jJw"
+    },
+    {
+      "predecessor": 40,
+      "successor": 39,
+      "relation": "FF",
+      "basis": "explicit_contract_or_completion_gate",
+      "reason": "Добавление при существующей заметке вызывает готовое редактирование; #40 проверяется на фикстурах без ожидания #39.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1lfA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1jJw"
+    },
+    {
+      "predecessor": 41,
+      "successor": 39,
+      "relation": "FF",
+      "basis": "explicit_contract_or_completion_gate",
+      "reason": "Подтверждение добавления использует готовый вывод личной заметки; #41 проверяется на фикстурах.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1nww",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1jJw"
+    },
+    {
+      "predecessor": 36,
+      "successor": 40,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Для списка, изменения и удаления нужна существующая таблица заметок. Интеграционные контракты отдельно.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1ZXg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1lfA"
+    },
+    {
+      "predecessor": 37,
+      "successor": 40,
+      "relation": "FF",
+      "basis": "explicit_contract_or_completion_gate",
+      "reason": "Контракт сохранения отменённой пары и готовая пометка строки из #37 подключаются в список #40; обратной полной связи нет.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1cZQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1lfA"
+    },
+    {
+      "predecessor": 29,
+      "successor": 41,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Личная заметка встраивается в готовый базовый формат и три готовых вида просмотра расписания.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1FSQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1nww"
+    },
+    {
+      "predecessor": 30,
+      "successor": 41,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Личная заметка встраивается в готовый базовый формат и три готовых вида просмотра расписания.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1IRg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1nww"
+    },
+    {
+      "predecessor": 31,
+      "successor": 41,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Личная заметка встраивается в готовый базовый формат и три готовых вида просмотра расписания.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1Khg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1nww"
+    },
+    {
+      "predecessor": 32,
+      "successor": 41,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Личная заметка встраивается в готовый базовый формат и три готовых вида просмотра расписания.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1New",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1nww"
+    },
+    {
+      "predecessor": 36,
+      "successor": 41,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Личная заметка встраивается в готовый базовый формат и три готовых вида просмотра расписания.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1ZXg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1nww"
+    },
+    {
+      "predecessor": 17,
+      "successor": 42,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Полный дополнительный набор автотестов выполняется на готовых функциях заметок с существующим pytest/CI.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0ggg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1qYg"
+    },
+    {
+      "predecessor": 37,
+      "successor": 42,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Полный дополнительный набор автотестов выполняется на готовых функциях заметок с существующим pytest/CI.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1cZQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1qYg"
+    },
+    {
+      "predecessor": 38,
+      "successor": 42,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Полный дополнительный набор автотестов выполняется на готовых функциях заметок с существующим pytest/CI.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1fpQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1qYg"
+    },
+    {
+      "predecessor": 39,
+      "successor": 42,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Полный дополнительный набор автотестов выполняется на готовых функциях заметок с существующим pytest/CI.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1jJw",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1qYg"
+    },
+    {
+      "predecessor": 40,
+      "successor": 42,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Полный дополнительный набор автотестов выполняется на готовых функциях заметок с существующим pytest/CI.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1lfA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1qYg"
+    },
+    {
+      "predecessor": 41,
+      "successor": 42,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Полный дополнительный набор автотестов выполняется на готовых функциях заметок с существующим pytest/CI.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1nww",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1qYg"
+    },
+    {
+      "predecessor": 37,
+      "successor": 43,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Ручной приёмочный прогон проверяет готовую функциональность 4.1 и 4.2; отдельного обязательного ожидания автотестов #42 нет.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1cZQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1s7A"
+    },
+    {
+      "predecessor": 38,
+      "successor": 43,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Ручной приёмочный прогон проверяет готовую функциональность 4.1 и 4.2; отдельного обязательного ожидания автотестов #42 нет.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1fpQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1s7A"
+    },
+    {
+      "predecessor": 39,
+      "successor": 43,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Ручной приёмочный прогон проверяет готовую функциональность 4.1 и 4.2; отдельного обязательного ожидания автотестов #42 нет.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1jJw",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1s7A"
+    },
+    {
+      "predecessor": 40,
+      "successor": 43,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Ручной приёмочный прогон проверяет готовую функциональность 4.1 и 4.2; отдельного обязательного ожидания автотестов #42 нет.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1lfA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1s7A"
+    },
+    {
+      "predecessor": 41,
+      "successor": 43,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Ручной приёмочный прогон проверяет готовую функциональность 4.1 и 4.2; отдельного обязательного ожидания автотестов #42 нет.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1nww",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1s7A"
+    },
+    {
+      "predecessor": 16,
+      "successor": 44,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Миграция настроек идёт поверх MVP; интерфейс настроек использует меню и зарегистрированного пользователя.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0dtQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1vTA"
+    },
+    {
+      "predecessor": 25,
+      "successor": 44,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Миграция настроек идёт поверх MVP; интерфейс настроек использует меню и зарегистрированного пользователя.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF04VA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1vTA"
+    },
+    {
+      "predecessor": 27,
+      "successor": 44,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Миграция настроек идёт поверх MVP; интерфейс настроек использует меню и зарегистрированного пользователя.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0-2Q",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF1vTA"
+    },
+    {
+      "predecessor": 22,
+      "successor": 45,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Выбор кандидатов использует настройки, журнал успешных отправок и сохранённое расписание.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0u8Q",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF11CA"
+    },
+    {
+      "predecessor": 44,
+      "successor": 45,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Выбор кандидатов использует настройки, журнал успешных отправок и сохранённое расписание.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1vTA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF11CA"
+    },
+    {
+      "predecessor": 61,
+      "successor": 45,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Выбор кандидатов использует настройки, журнал успешных отправок и сохранённое расписание.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABel1wkg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF11CA"
+    },
+    {
+      "predecessor": 36,
+      "successor": 46,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Нужны кандидаты, долговечный журнал и доступ к личным заметкам в существующей схеме; полного UI заметок не требуется.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1ZXg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF16iA"
+    },
+    {
+      "predecessor": 45,
+      "successor": 46,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Нужны кандидаты, долговечный журнал и доступ к личным заметкам в существующей схеме; полного UI заметок не требуется.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF11CA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF16iA"
+    },
+    {
+      "predecessor": 61,
+      "successor": 46,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Нужны кандидаты, долговечный журнал и доступ к личным заметкам в существующей схеме; полного UI заметок не требуется.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABel1wkg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF16iA"
+    },
+    {
+      "predecessor": 17,
+      "successor": 47,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Полный автопрогон проверяет готовые настройки, выбор, журнал, отправку и изменения в существующем pytest/CI.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0ggg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2ARw"
+    },
+    {
+      "predecessor": 44,
+      "successor": 47,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Полный автопрогон проверяет готовые настройки, выбор, журнал, отправку и изменения в существующем pytest/CI.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1vTA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2ARw"
+    },
+    {
+      "predecessor": 45,
+      "successor": 47,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Полный автопрогон проверяет готовые настройки, выбор, журнал, отправку и изменения в существующем pytest/CI.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF11CA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2ARw"
+    },
+    {
+      "predecessor": 46,
+      "successor": 47,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Полный автопрогон проверяет готовые настройки, выбор, журнал, отправку и изменения в существующем pytest/CI.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF16iA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2ARw"
+    },
+    {
+      "predecessor": 61,
+      "successor": 47,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Полный автопрогон проверяет готовые настройки, выбор, журнал, отправку и изменения в существующем pytest/CI.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABel1wkg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2ARw"
+    },
+    {
+      "predecessor": 62,
+      "successor": 47,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Полный автопрогон проверяет готовые настройки, выбор, журнал, отправку и изменения в существующем pytest/CI.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABel2FPA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2ARw"
+    },
+    {
+      "predecessor": 44,
+      "successor": 48,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Для полного ручного прогона и репрезентативного недельного журнала нужен готовый проверяемый вариант 5.1–5.2. #47 может идти параллельно наблюдению.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1vTA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2Czw"
+    },
+    {
+      "predecessor": 45,
+      "successor": 48,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Для полного ручного прогона и репрезентативного недельного журнала нужен готовый проверяемый вариант 5.1–5.2. #47 может идти параллельно наблюдению.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF11CA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2Czw"
+    },
+    {
+      "predecessor": 46,
+      "successor": 48,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Для полного ручного прогона и репрезентативного недельного журнала нужен готовый проверяемый вариант 5.1–5.2. #47 может идти параллельно наблюдению.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF16iA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2Czw"
+    },
+    {
+      "predecessor": 61,
+      "successor": 48,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Для полного ручного прогона и репрезентативного недельного журнала нужен готовый проверяемый вариант 5.1–5.2. #47 может идти параллельно наблюдению.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABel1wkg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2Czw"
+    },
+    {
+      "predecessor": 62,
+      "successor": 48,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Для полного ручного прогона и репрезентативного недельного журнала нужен готовый проверяемый вариант 5.1–5.2. #47 может идти параллельно наблюдению.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABel2FPA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2Czw"
+    },
+    {
+      "predecessor": 24,
+      "successor": 49,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Механизм административного доступа подключается к готовому диспетчеру и меню; проверяется тестовыми командами без ожидания #50/#51.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF01Yw",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2GHQ"
+    },
+    {
+      "predecessor": 25,
+      "successor": 49,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Механизм административного доступа подключается к готовому диспетчеру и меню; проверяется тестовыми командами без ожидания #50/#51.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF04VA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2GHQ"
+    },
+    {
+      "predecessor": 23,
+      "successor": 50,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Команды используют готовый фильтр прав, таблицу заметок, настройки уведомлений, журнал обновлений и записи активности.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0yJQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2JgQ"
+    },
+    {
+      "predecessor": 24,
+      "successor": 50,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Команды используют готовый фильтр прав, таблицу заметок, настройки уведомлений, журнал обновлений и записи активности.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF01Yw",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2JgQ"
+    },
+    {
+      "predecessor": 36,
+      "successor": 50,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Команды используют готовый фильтр прав, таблицу заметок, настройки уведомлений, журнал обновлений и записи активности.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1ZXg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2JgQ"
+    },
+    {
+      "predecessor": 44,
+      "successor": 50,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Команды используют готовый фильтр прав, таблицу заметок, настройки уведомлений, журнал обновлений и записи активности.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1vTA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2JgQ"
+    },
+    {
+      "predecessor": 49,
+      "successor": 50,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Команды используют готовый фильтр прав, таблицу заметок, настройки уведомлений, журнал обновлений и записи активности.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF2GHQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2JgQ"
+    },
+    {
+      "predecessor": 23,
+      "successor": 51,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Команды /update и /log используют фильтр доступа и готовую очередь/журнал парсера.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0yJQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2MkA"
+    },
+    {
+      "predecessor": 49,
+      "successor": 51,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Команды /update и /log используют фильтр доступа и готовую очередь/журнал парсера.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF2GHQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2MkA"
+    },
+    {
+      "predecessor": 15,
+      "successor": 52,
+      "relation": "FS",
+      "basis": "conservative_environment_order",
+      "reason": "Основная настройка и контрольный отказ выполняются для доступного внешнего HTTPS-адреса.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0aqQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2P3Q"
+    },
+    {
+      "predecessor": 26,
+      "successor": 52,
+      "relation": "FS",
+      "basis": "existing_completed_prerequisite",
+      "reason": "Внешний монитор проверяет готовый /health.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF07nw",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2P3Q"
+    },
+    {
+      "predecessor": 29,
+      "successor": 52,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Кроме /health должен быть проверен реальный запрос расписания через Telegram.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "note": "Первоначальную настройку HTTP-монитора можно выполнить раньше; полный календарный месяц наблюдений не считается условием завершения настройки.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF1FSQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2P3Q"
+    },
+    {
+      "predecessor": 15,
+      "successor": 53,
+      "relation": "FS",
+      "basis": "conservative_environment_order",
+      "reason": "Регулярное копирование настраивается для PostgreSQL на подготовленном сервере и внешнего хранилища.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0aqQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2SZg"
+    },
+    {
+      "predecessor": 16,
+      "successor": 53,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Пробное восстановление должно проверить реальные основные таблицы и сохранённые тестовые данные схемы.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "note": "Для репрезентативных тестовых строк не обязательно ждать парсер; пустая база сама по себе не доказывает сохранность данных.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0dtQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2SZg"
+    },
+    {
+      "predecessor": 24,
+      "successor": 54,
+      "relation": "FF",
+      "basis": "integration_acceptance",
+      "reason": "Нужно проверить приём обращения, подтверждение либо ошибку и отмену в работающем боте.",
+      "cpm_note": "Это условие завершения, а не запрет раннего начала. Для CPM выделить завершающую интеграцию/проверку внутри существующих дней преемника либо явно принять консервативный FS. Нулевой FF-лаг сам по себе не доказывает, что проверка после готовности предшественника мгновенна.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF01Yw",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2U-g"
+    },
+    {
+      "predecessor": 25,
+      "successor": 54,
+      "relation": "FS",
+      "basis": "conservative_reuse_order",
+      "reason": "Команды помощи и обратной связи подключаются к общим клавиатурам и возврату в главное меню.",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF04VA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABbF2U-g"
+    },
+    {
+      "predecessor": 16,
+      "successor": 61,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Журнал требует существующей схемы пользователей/занятий и идентификаторов изменений. Его контракт проверяется заглушками без ожидания отправщика.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0dtQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABel1wkg"
+    },
+    {
+      "predecessor": 22,
+      "successor": 61,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Журнал требует существующей схемы пользователей/занятий и идентификаторов изменений. Его контракт проверяется заглушками без ожидания отправщика.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0u8Q",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABel1wkg"
+    },
+    {
+      "predecessor": 22,
+      "successor": 62,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Нужны идентифицированные изменения, завершение планового/внепланового обновления и готовая общая отправка с журналом.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0u8Q",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABel2FPA"
+    },
+    {
+      "predecessor": 23,
+      "successor": 62,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Нужны идентифицированные изменения, завершение планового/внепланового обновления и готовая общая отправка с журналом.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF0yJQ",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABel2FPA"
+    },
+    {
+      "predecessor": 46,
+      "successor": 62,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Нужны идентифицированные изменения, завершение планового/внепланового обновления и готовая общая отправка с журналом.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABbF16iA",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABel2FPA"
+    },
+    {
+      "predecessor": 61,
+      "successor": 62,
+      "relation": "FS",
+      "lag": 0,
+      "reason": "Нужны идентифицированные изменения, завершение планового/внепланового обновления и готовая общая отправка с журналом.",
+      "basis": "conservative_full_component_order",
+      "blocking_issue_id": "I_kwDOUN4LpM8AAAABel1wkg",
+      "blocked_issue_id": "I_kwDOUN4LpM8AAAABel2FPA"
+    }
+  ],
+  "core_cpm_edge_pairs": [
+    [
+      12,
+      16
+    ],
+    [
+      13,
+      20
+    ],
+    [
+      13,
+      21
+    ],
+    [
+      16,
+      20
+    ],
+    [
+      16,
+      22
+    ],
+    [
+      20,
+      23
+    ],
+    [
+      21,
+      22
+    ],
+    [
+      22,
+      23
+    ],
+    [
+      23,
+      33
+    ],
+    [
+      33,
+      34
+    ]
+  ],
+  "phased_tasks": [
+    {
+      "issue": 55,
+      "total_estimate_hours": 16,
+      "active_workdays_step7": 4,
+      "phase_effort_allocation": "not_assigned_here; phase efforts must sum to 16, without copying 16 into each phase",
+      "phases": [
+        {
+          "phase": "55.mvp",
+          "predecessor_finished_issues": [
+            14,
+            24,
+            29,
+            30,
+            32
+          ],
+          "output": "Проверка производительности расписания на воспроизводимом тестовом стенде.",
+          "must_finish_before": "35.launch / фактический запуск MVP",
+          "minimum_run": "5 запросов/с, 10 минут; проверка 15 запросов/с в оговорённых границах. Длительность второго прогона уточняется методикой, не выдумывается."
+        },
+        {
+          "phase": "55.final",
+          "predecessor_finished_issues": [
+            39,
+            44
+          ],
+          "predecessor_finished_phases": [
+            "55.mvp"
+          ],
+          "output": "Полный набор расписание/заметка/настройки, отчёт и необходимая перепроверка.",
+          "must_finish_before": "контроль готовности Release 1.3"
+        }
+      ]
+    },
+    {
+      "issue": 56,
+      "total_estimate_hours": 16,
+      "active_workdays_step7": 4,
+      "phase_effort_allocation": "not_assigned_here; phase efforts must sum to 16",
+      "external_constraint": "Все 6 типов клиентов × 2 версии; отсутствие обязательной комбинации не считается успешной проверкой.",
+      "phases": [
+        {
+          "phase": "56.mvp",
+          "predecessor_finished_issues": [
+            24,
+            25,
+            27,
+            29,
+            32
+          ],
+          "output": "UC-01 и UC-03 на обязательных клиентах.",
+          "must_finish_before": "35.launch / фактический запуск MVP"
+        },
+        {
+          "phase": "56.notes",
+          "predecessor_finished_issues": [
+            39,
+            41
+          ],
+          "output": "UC-08 и требуемая регрессия на обязательных клиентах.",
+          "must_finish_before": "выпуск Release 1.1"
+        },
+        {
+          "phase": "56.notifications",
+          "predecessor_finished_issues": [
+            44
+          ],
+          "output": "UC-10 и окончательное подтверждение всех четырёх сценариев матрицы.",
+          "must_finish_before": "выпуск Release 1.2"
+        }
+      ]
+    },
+    {
+      "issue": 57,
+      "total_estimate_hours": 8,
+      "active_workdays_step7": 2,
+      "external_participant_hours": 2.5,
+      "phase_effort_allocation": "not_assigned_here; team phase efforts must sum to 8, external 2.5 remains separate",
+      "phases": [
+        {
+          "phase": "57.mvp",
+          "predecessor_finished_issues": [
+            24,
+            25,
+            27
+          ],
+          "output": "Пять пользователей проходят UC-01 без подсказок, успех ≥4/5.",
+          "must_finish_before": "35.launch / фактический запуск MVP"
+        },
+        {
+          "phase": "57.notes",
+          "predecessor_finished_issues": [
+            39,
+            41
+          ],
+          "output": "Пять пользователей проходят UC-08 без подсказок, успех ≥4/5 отдельно для UC-08.",
+          "must_finish_before": "выпуск Release 1.1"
+        }
+      ]
+    }
+  ],
+  "mvp_phase_nodes": [
+    {
+      "id": "35.preparation",
+      "owner_issue": 35,
+      "kind": "active_phase",
+      "description": "Версия, инструкция, канал обратной связи и подготовка запуска; часть уже оценённых 2 активных дней."
+    },
+    {
+      "id": "MVP.release_ready",
+      "owner_issue": null,
+      "kind": "zero_effort_gate",
+      "description": "Все необходимые результаты MVP и предусмотренные части этапной QA готовы; это событие, не новая трудоёмкость."
+    },
+    {
+      "id": "35.launch",
+      "owner_issue": 35,
+      "kind": "zero_effort_event_within_issue",
+      "description": "Открытие согласованной версии первым пользователям после проверки готовности."
+    },
+    {
+      "id": "35.observation",
+      "owner_issue": 35,
+      "kind": "calendar_wait",
+      "calendar_hours": 72,
+      "description": "Окно наблюдения из пункта 7; пассивное ожидание без дополнительных человеко-часов."
+    },
+    {
+      "id": "35.final_analysis",
+      "owner_issue": 35,
+      "kind": "active_phase",
+      "description": "Разбор накопленных отзывов и итоговый документ после окна; часть тех же 2 активных дней, а не дополнительная оценка."
+    },
+    {
+      "id": "53.daily_runs",
+      "owner_issue": 53,
+      "kind": "calendar_wait_with_automated_runs",
+      "required_successful_runs": 7,
+      "interval_hours": 24,
+      "minimum_first_to_last_hours": 144,
+      "description": "От первой до седьмой успешной копии на семи датах. Запуск первой копии следует после настройки; затем нужна активная проверка восстановления из уже оценённых 3 дней."
+    },
+    {
+      "id": "55.mvp",
+      "owner_issue": 55,
+      "kind": "partial_acceptance_result",
+      "description": "Нагрузочная проверка реализованных обязательных операций MVP в границах измерения NFR; дальнейшие операции заметок и уведомлений не блокируют MVP."
+    },
+    {
+      "id": "56.mvp",
+      "owner_issue": 56,
+      "kind": "partial_acceptance_result",
+      "description": "Матрица обязательных платформ/версий для регистрации и расписания; заметки и уведомления проверяются позже в той же карточке."
+    },
+    {
+      "id": "57.mvp",
+      "owner_issue": 57,
+      "kind": "partial_acceptance_result",
+      "description": "UC-01 на пяти пользователях, не менее четырёх успешных; UC-08 ожидает заметки и не блокирует MVP."
+    },
+    {
+      "id": "35.finish",
+      "owner_issue": 35,
+      "kind": "zero_effort_completion_event",
+      "description": "Завершение всей карточки #35 после анализа; событие не добавляет активной работы."
+    }
+  ],
+  "mvp_phase_edges": [
+    {
+      "predecessor": 19,
+      "successor": "MVP.release_ready",
+      "relation": "FS",
+      "predecessor_scope": "phase_or_issue_as_named",
+      "native_whole_issue_dependency_candidate": false,
+      "reason": "Есть воспроизводимая доставка согласованной версии."
+    },
+    {
+      "predecessor": 33,
+      "successor": "MVP.release_ready",
+      "relation": "FS",
+      "predecessor_scope": "phase_or_issue_as_named",
+      "native_whole_issue_dependency_candidate": false,
+      "reason": "Пройден автономный набор парсера."
+    },
+    {
+      "predecessor": 34,
+      "successor": "MVP.release_ready",
+      "relation": "FS",
+      "predecessor_scope": "phase_or_issue_as_named",
+      "native_whole_issue_dependency_candidate": false,
+      "reason": "Обязательные UC-01–UC-07 приняты."
+    },
+    {
+      "predecessor": 52,
+      "successor": "MVP.release_ready",
+      "relation": "FS",
+      "predecessor_scope": "phase_or_issue_as_named",
+      "native_whole_issue_dependency_candidate": false,
+      "reason": "Настроены внешний мониторинг и начальная проверка бота, ограничения наблюдения зафиксированы."
+    },
+    {
+      "predecessor": 53,
+      "successor": "MVP.release_ready",
+      "relation": "FS",
+      "predecessor_scope": "phase_or_issue_as_named",
+      "native_whole_issue_dependency_candidate": false,
+      "reason": "Готовы регулярные копии, проверена сохранность и восстановление с учётом окна ежедневных запусков."
+    },
+    {
+      "predecessor": 54,
+      "successor": "MVP.release_ready",
+      "relation": "FS",
+      "predecessor_scope": "phase_or_issue_as_named",
+      "native_whole_issue_dependency_candidate": false,
+      "reason": "Готовы справка и предусмотренный канал обратной связи."
+    },
+    {
+      "predecessor": "55.mvp",
+      "successor": "MVP.release_ready",
+      "relation": "FS",
+      "predecessor_scope": "phase_or_issue_as_named",
+      "native_whole_issue_dependency_candidate": false,
+      "reason": "Пройден относящийся к MVP этап проверки обязательных требований производительности."
+    },
+    {
+      "predecessor": "56.mvp",
+      "successor": "MVP.release_ready",
+      "relation": "FS",
+      "predecessor_scope": "phase_or_issue_as_named",
+      "native_whole_issue_dependency_candidate": false,
+      "reason": "Пройден относящийся к MVP этап межклиентской приёмки."
+    },
+    {
+      "predecessor": "57.mvp",
+      "successor": "MVP.release_ready",
+      "relation": "FS",
+      "predecessor_scope": "phase_or_issue_as_named",
+      "native_whole_issue_dependency_candidate": false,
+      "reason": "Получены фактические результаты юзабилити регистрации."
+    },
+    {
+      "predecessor": "35.preparation",
+      "successor": "35.launch",
+      "relation": "FS",
+      "predecessor_scope": "phase_or_issue_as_named",
+      "native_whole_issue_dependency_candidate": false,
+      "reason": "До запуска подготовлены версия, инструкция и канал отзывов."
+    },
+    {
+      "predecessor": "MVP.release_ready",
+      "successor": "35.launch",
+      "relation": "FS",
+      "predecessor_scope": "phase_or_issue_as_named",
+      "native_whole_issue_dependency_candidate": false,
+      "reason": "Первых пользователей подключают после готовности обязательного результата."
+    },
+    {
+      "predecessor": "35.launch",
+      "successor": "35.observation",
+      "relation": "FS",
+      "predecessor_scope": "phase_or_issue_as_named",
+      "native_whole_issue_dependency_candidate": false,
+      "reason": "72 часа наблюдения отсчитываются от фактического запуска."
+    },
+    {
+      "predecessor": "35.observation",
+      "successor": "35.final_analysis",
+      "relation": "FS",
+      "predecessor_scope": "phase_or_issue_as_named",
+      "native_whole_issue_dependency_candidate": false,
+      "reason": "Итоговый разбор использует наблюдения за согласованное окно."
+    },
+    {
+      "predecessor": "35.final_analysis",
+      "successor": "35.finish",
+      "relation": "FS",
+      "predecessor_scope": "phase_or_issue_as_named",
+      "native_whole_issue_dependency_candidate": false,
+      "reason": "Завершение карточки после анализа и оформления фактического результата."
+    }
+  ],
+  "readiness_conditions": [
+    {
+      "id": "notes_cancelled_presentation",
+      "issues": [
+        37,
+        40
+      ],
+      "condition": "#37 предоставляет сохранённое исходное занятие и маркер отмены; #40 использует их в личном списке. Готовность этого интерфейса нужна началу интеграционной части #40; окончательная проверка отображения нужна завершению обеих карточек.",
+      "avoid_native_edges": [
+        "40->37 и 37->40 одновременно"
+      ],
+      "recommended_resolution": "Отдельная таблица готовности интерфейса; при реализации компонента представления в #37 его можно тестировать на фикстурах. Не создавать новые Issues и не увеличивать Estimate."
+    },
+    {
+      "id": "notes_cleanup_original_end",
+      "issues": [
+        37,
+        38
+      ],
+      "condition": "До завершения #38 должен быть готов контракт исходного времени окончания отменённой пары из #37. Зависимость именно от результата сохранения отмены; ожидать весь пользовательский список не требуется.",
+      "avoid_native_edges": [
+        "Не добавлять обратное 38->37."
+      ]
+    },
+    {
+      "id": "notes_add_edit_render",
+      "issues": [
+        39,
+        40,
+        41
+      ],
+      "condition": "Для завершения #39 нужны готовые редактирование существующей заметки из #40 и отображение после сохранения из #41. #40 показывает вход в добавление; #41 проверяет отражение изменения/удаления. Эти интерфейсы согласуются до интеграции, полный сквозной прогон подтверждается #42/#43.",
+      "avoid_native_edges": [
+        "Не строить взаимный цикл 39->40->39 или 39->41->39."
+      ],
+      "fixture_rule": "Механизмы #40/#41 проверяются на подготовленных данных; создание данных через готовую команду #39 не обязательно для их локальной проверки."
+    },
+    {
+      "id": "admin_filter",
+      "issues": [
+        49,
+        50,
+        51
+      ],
+      "condition": "#49 завершает общий фильтр доступа на тестовых обработчиках; #50/#51 проверяют его применение к собственным реальным командам.",
+      "avoid_native_edges": [
+        "Не требовать завершения #50/#51 для начала общего механизма #49."
+      ]
+    },
+    {
+      "id": "notification_ledger",
+      "issues": [
+        44,
+        45,
+        61,
+        46,
+        62
+      ],
+      "condition": "#61 реализует журнал/ключи и проверяется контролируемыми результатами отправки; #45 читает журнал, #46 записывает результат. #44 не сбрасывает существующий успех при смене интервала и проверяется через согласованный контракт.",
+      "avoid_native_edges": [
+        "Не добавлять 46->61, если уже есть 61->45->46."
+      ],
+      "migration_note": "Параллельная разработка миграций #36/#44/#61/#62 требует согласования Alembic-последовательности; искусственная последовательность релизов для этого не задана."
+    }
+  ],
+  "release_acceptance_conditions": [
+    {
+      "gate": "MVP launch",
+      "ready_phase_results": [
+        "55.mvp",
+        "56.mvp",
+        "57.mvp"
+      ],
+      "target": "событие запуска внутри #35, до окна обратной связи",
+      "warning": "Не использовать целые #55/#56/#57 как предшественников MVP: они содержат поздние фазы."
+    },
+    {
+      "gate": "Release 1.1 acceptance",
+      "ready_whole_issues": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "ready_phase_results": [
+        "56.notes",
+        "57.notes"
+      ]
+    },
+    {
+      "gate": "Release 1.2 acceptance",
+      "ready_whole_issues": [
+        44,
+        45,
+        61,
+        46,
+        62,
+        47,
+        48
+      ],
+      "ready_phase_results": [
+        "56.notifications"
+      ]
+    },
+    {
+      "gate": "Release 1.3 technical acceptance",
+      "ready_whole_issues": [
+        49,
+        50,
+        51
+      ],
+      "ready_phase_results": [
+        "55.final"
+      ],
+      "warning": "Это только техническая часть; отчёт и организационные задачи проверяет общий график."
+    }
+  ],
+  "calendar_and_acceptance_constraints": [
+    {
+      "issue": 38,
+      "kind": "simulated_boundary",
+      "condition": "30 суток хранения проверяются управляемым временем и фикстурами; не добавлять 30 реальных дней в сеть."
+    },
+    {
+      "issue": 48,
+      "kind": "observation",
+      "minimum_calendar_hours": 168,
+      "start_after_finished_issues": [
+        44,
+        45,
+        61,
+        46,
+        62
+      ],
+      "start_condition": "Проверяемый вариант отправки и журнала работоспособен. Подготовка до наблюдения, финальный разбор после; существенные изменения могут требовать нового окна.",
+      "parallel_allowed": [
+        47
+      ],
+      "team_hours_already_in_estimate": 8,
+      "no_fake_labor": "168 часов автоматического наблюдения не превращаются в 168 человеко-часов."
+    },
+    {
+      "issue": 50,
+      "kind": "fixtures_not_wait",
+      "condition": "Счётчики активности за 7/30 дней проверяются данными с заданными датами; месяц ожидания для разработки /stats не требуется."
+    },
+    {
+      "issue": 51,
+      "kind": "runtime_queue_not_labor",
+      "condition": "Часовой интервал парсера — ограничение очереди во время работы продукта; локальные проверки могут управлять временем. Не прибавлять час труда на каждую проверку."
+    },
+    {
+      "issue": 55,
+      "kind": "test_scope",
+      "condition": "Нагрузочный контур измеряет завершение операций с БД и заглушкой Telegram. Существенные изменения приложения — отдельная работа, не ещё одна копия всех 16 часов QA."
+    },
+    {
+      "issue": 56,
+      "kind": "external_client_availability",
+      "condition": "Доступ к конкретным обязательным версиям — внешняя готовность; неподтверждённую доступность не считать выполненной или мгновенной."
+    },
+    {
+      "issue": 57,
+      "kind": "external_participant_availability",
+      "condition": "Два этапа по пять пользователей; календарные слоты согласуются отдельно. Пользователи не увеличивают число исполнителей команды."
+    }
+  ],
+  "deliberately_omitted_edges": [
+    {
+      "edge": "14 -> 16 (FS)",
+      "reason": "Alembic можно реализовать и проверить на отдельной тестовой PostgreSQL; готовность всего Compose не является необходимым условием начала."
+    },
+    {
+      "edge": "20 -> 21 (FS)",
+      "reason": "Загрузчик расписания может использовать идентификатор примерной группы из исследования; полный обновляющийся справочник для его разработки не обязателен."
+    },
+    {
+      "edge": "23 -> 27/28/29 (FS)",
+      "reason": "Постановка запроса в очередь не ждёт выполнения парсера; контракт очереди согласован в #12, интеграция фактической обработки проверяется #33/#34."
+    },
+    {
+      "edge": "24 -> 23 (FS)",
+      "reason": "Исходящая отправка администратору не требует готового входящего вебхука; нужны конфигурация бота и отправитель в объёме #23."
+    },
+    {
+      "edge": "29/30/31 -> 25 (FS)",
+      "reason": "Общую маршрутизацию и клавиатуры можно проверить на обработчиках; полная реализация функций проверяется отдельно. Обратные связи создадут искусственный цикл."
+    },
+    {
+      "edge": "29 -> 30 -> 31 (FS)",
+      "reason": "Разные просмотры используют общий форматировщик и хранилище; последовательность трёх обработчиков — ресурсное решение, не техническая зависимость."
+    },
+    {
+      "edge": "19 -> 34 (FS)",
+      "reason": "Приёмочный тестовый бот может быть развёрнут независимо от готовности автодеплоя; обоим результатам нужно быть готовыми к выпуску."
+    },
+    {
+      "edge": "22 -> 53 (FS)",
+      "reason": "Восстановление можно проверять на представительных тестовых данных утверждённой схемы; ожидание производственного парсинга не обязательно."
+    },
+    {
+      "edge": "55/56/57 (whole) -> 35 or 34",
+      "reason": "Полные карточки включают последующие релизы; для MVP используются только перечисленные фазовые результаты."
+    }
+  ],
+  "plan_checks": {
+    "no_cycles": true,
+    "existing_native_edges": 0,
+    "no_closed_issues_reopened": true,
+    "no_new_issues": true,
+    "no_estimate_priority_milestone_date_or_assignee_mutations": true
+  },
+  "application": {
+    "status": "applied_and_verified",
+    "verified_at": "2026-11-12T21:31:43+05:00",
+    "native_edges_added": 127,
+    "view": {
+      "id": "PVTV_lAHOBWtars4BnSDrzgMh51s",
+      "number": 7,
+      "name": "Blocked Tasks",
+      "url": "https://github.com/users/unlaesh/projects/1/views/7",
+      "layout": "TABLE_LAYOUT",
+      "filter": "is:blocked"
+    },
+    "verification": {
+      "native_edges_exactly_match_plan": true,
+      "native_inverse_links_match": true,
+      "no_cycles": true,
+      "current_open_blocked_issues": [
+        10,
+        12,
+        15,
+        16,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        61,
+        62
+      ],
+      "project_items_unchanged": true,
+      "fields_unchanged": true,
+      "previous_six_views_unchanged": true,
+      "blocked_tasks_filter_saved": "is:blocked",
+      "all_source_hashes_match": true,
+      "all_cpm_models_recalculated": true,
+      "phase_ids_resolved": true,
+      "no_calendar_dates_assigned": true,
+      "no_commits_or_pushes": true,
+      "blocked_search_count": 41,
+      "blocked_search_exactly_matches_native_dependencies": true
+    }
+  },
+  "phase_expansion_rule": {
+    "rule": "For calendar construction replace a whole-issue activity by its phases; never add both whole duration and phase durations. Active allocations remain to be specified and must sum to the original Estimate.",
+    "whole_issue_completion_events": {
+      "35": "35.finish"
+    },
+    "phase_model_is_complete_executable_schedule": false
+  }
+}

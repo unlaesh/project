@@ -1,0 +1,542 @@
+{
+  "schema_version": 1,
+  "step": 9,
+  "as_of": "2026-11-12",
+  "timezone": "Asia/Yekaterinburg",
+  "source": "docs/durations-step7.json",
+  "source_sha256": "bc88465006214ad3756c9c4248cd9a61f367e12dca3b0e767e5762624b2460e8",
+  "scope": "Selected data-and-acceptance branch of MVP: eight key nodes; not a complete project network or a resource-feasible calendar. Other branches must be integrated in step10.",
+  "unit": "working_days",
+  "time_origin": "t=0 at the beginning of the first planned workday; EF is the elapsed-working-day boundary. No task dates assigned.",
+  "method": "FS zero lag, forward and backward passes; backward pass anchored at earliest finish, not forced to deadline.",
+  "adopted_assumptions": [
+    "Implement a component before starting the dependent integration package in this conservative baseline.",
+    "Complete parser regression #33 before main acceptance #34. Early test preparation is a separate fast-tracking scenario.",
+    "Completed prerequisite #11/#17 and other MVP branches are assumed ready at merge points; their resource and calendar limits are not solved here."
+  ],
+  "primary_model": {
+    "nodes": [
+      {
+        "id": "A",
+        "title": "Модель данных и миграция MVP",
+        "issues": [
+          12,
+          16
+        ],
+        "duration_workdays": 7,
+        "predecessors": [],
+        "duration_basis": "#12 → #16: 4 + 3 рабочих дня, последовательная группа.",
+        "ES": 0,
+        "EF": 7,
+        "LF": 8,
+        "LS": 1,
+        "TF": 1,
+        "FF": 0
+      },
+      {
+        "id": "B",
+        "title": "Исследование источника",
+        "issues": [
+          13
+        ],
+        "duration_workdays": 3,
+        "predecessors": [],
+        "ES": 0,
+        "EF": 3,
+        "LF": 3,
+        "LS": 0,
+        "TF": 0,
+        "FF": 0
+      },
+      {
+        "id": "C",
+        "title": "Справочник групп",
+        "issues": [
+          20
+        ],
+        "duration_workdays": 2,
+        "predecessors": [
+          "A",
+          "B"
+        ],
+        "ES": 7,
+        "EF": 9,
+        "LF": 12,
+        "LS": 10,
+        "TF": 3,
+        "FF": 3
+      },
+      {
+        "id": "D",
+        "title": "Загрузка и разбор расписания",
+        "issues": [
+          21
+        ],
+        "duration_workdays": 5,
+        "predecessors": [
+          "B"
+        ],
+        "ES": 3,
+        "EF": 8,
+        "LF": 8,
+        "LS": 3,
+        "TF": 0,
+        "FF": 0
+      },
+      {
+        "id": "E",
+        "title": "Сохранение и выявление изменений",
+        "issues": [
+          22
+        ],
+        "duration_workdays": 4,
+        "predecessors": [
+          "A",
+          "D"
+        ],
+        "ES": 8,
+        "EF": 12,
+        "LF": 12,
+        "LS": 8,
+        "TF": 0,
+        "FF": 0
+      },
+      {
+        "id": "F",
+        "title": "Очередь, расписание запусков и повторы",
+        "issues": [
+          23
+        ],
+        "duration_workdays": 6,
+        "predecessors": [
+          "C",
+          "E"
+        ],
+        "ES": 12,
+        "EF": 18,
+        "LF": 18,
+        "LS": 12,
+        "TF": 0,
+        "FF": 0
+      },
+      {
+        "id": "G",
+        "title": "Автономная регрессия парсера",
+        "issues": [
+          33
+        ],
+        "duration_workdays": 4,
+        "predecessors": [
+          "F"
+        ],
+        "ES": 18,
+        "EF": 22,
+        "LF": 22,
+        "LS": 18,
+        "TF": 0,
+        "FF": 0
+      },
+      {
+        "id": "H",
+        "title": "Приёмка MVP",
+        "issues": [
+          34
+        ],
+        "duration_workdays": 3,
+        "predecessors": [
+          "G"
+        ],
+        "dependency_note": "FS #33 → #34 — явно выбранное плановое правило: законченная автономная регрессия перед итоговой ручной приёмкой. Общий процесс Development требует успешных CI-проверок перед Testing, но сам каталог не доказывает невозможность частичного перекрытия этих двух карточек.",
+        "ES": 22,
+        "EF": 25,
+        "LF": 25,
+        "LS": 22,
+        "TF": 0,
+        "FF": 0
+      }
+    ],
+    "duration_workdays": 25,
+    "critical_paths": [
+      [
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ]
+    ],
+    "buffer_workdays": 2,
+    "duration_with_buffer_workdays": 27
+  },
+  "deadline_check": {
+    "available_workdays": 24,
+    "buffer_inside_available_workdays": 2,
+    "workdays_available_before_buffer": 22,
+    "primary_gap_to_work_target": 3,
+    "primary_fits_deadline_with_buffer": false,
+    "existing_reserved_dates": [
+      "2026-12-14",
+      "2026-12-15"
+    ],
+    "milestone_dates_changed": false
+  },
+  "resource_limits": {
+    "hours_per_person_per_workday": 4,
+    "logical_parallelism_only": true,
+    "most_primary_nodes_share_maksim_and_denis": true,
+    "full_project_capacity_hours": 480,
+    "full_project_budget_hours_with_contingency": 538.82,
+    "full_project_deficit_hours": 58.82,
+    "contingency_hours": 90,
+    "calendar_buffer_is_additional_hours": false
+  },
+  "scenarios_not_applied": {
+    "crashing": {
+      "description": "Split #21 implementation across two qualified workers, keep review sequential; idealized duration ceil(13.6/(2*4)+3.4/4)=3 instead of5, before coordination overhead. Requires reassignment, capacity and estimate review.",
+      "model": {
+        "nodes": [
+          {
+            "id": "A",
+            "title": "Модель данных и миграция MVP",
+            "issues": [
+              12,
+              16
+            ],
+            "duration_workdays": 7,
+            "predecessors": [],
+            "duration_basis": "#12 → #16: 4 + 3 рабочих дня, последовательная группа.",
+            "ES": 0,
+            "EF": 7,
+            "LF": 7,
+            "LS": 0,
+            "TF": 0,
+            "FF": 0
+          },
+          {
+            "id": "B",
+            "title": "Исследование источника",
+            "issues": [
+              13
+            ],
+            "duration_workdays": 3,
+            "predecessors": [],
+            "ES": 0,
+            "EF": 3,
+            "LF": 4,
+            "LS": 1,
+            "TF": 1,
+            "FF": 0
+          },
+          {
+            "id": "C",
+            "title": "Справочник групп",
+            "issues": [
+              20
+            ],
+            "duration_workdays": 2,
+            "predecessors": [
+              "A",
+              "B"
+            ],
+            "ES": 7,
+            "EF": 9,
+            "LF": 11,
+            "LS": 9,
+            "TF": 2,
+            "FF": 2
+          },
+          {
+            "id": "D",
+            "title": "Загрузка и разбор расписания",
+            "issues": [
+              21
+            ],
+            "duration_workdays": 3,
+            "predecessors": [
+              "B"
+            ],
+            "ES": 3,
+            "EF": 6,
+            "LF": 7,
+            "LS": 4,
+            "TF": 1,
+            "FF": 1
+          },
+          {
+            "id": "E",
+            "title": "Сохранение и выявление изменений",
+            "issues": [
+              22
+            ],
+            "duration_workdays": 4,
+            "predecessors": [
+              "A",
+              "D"
+            ],
+            "ES": 7,
+            "EF": 11,
+            "LF": 11,
+            "LS": 7,
+            "TF": 0,
+            "FF": 0
+          },
+          {
+            "id": "F",
+            "title": "Очередь, расписание запусков и повторы",
+            "issues": [
+              23
+            ],
+            "duration_workdays": 6,
+            "predecessors": [
+              "C",
+              "E"
+            ],
+            "ES": 11,
+            "EF": 17,
+            "LF": 17,
+            "LS": 11,
+            "TF": 0,
+            "FF": 0
+          },
+          {
+            "id": "G",
+            "title": "Автономная регрессия парсера",
+            "issues": [
+              33
+            ],
+            "duration_workdays": 4,
+            "predecessors": [
+              "F"
+            ],
+            "ES": 17,
+            "EF": 21,
+            "LF": 21,
+            "LS": 17,
+            "TF": 0,
+            "FF": 0
+          },
+          {
+            "id": "H",
+            "title": "Приёмка MVP",
+            "issues": [
+              34
+            ],
+            "duration_workdays": 3,
+            "predecessors": [
+              "G"
+            ],
+            "dependency_note": "FS #33 → #34 — явно выбранное плановое правило: законченная автономная регрессия перед итоговой ручной приёмкой. Общий процесс Development требует успешных CI-проверок перед Testing, но сам каталог не доказывает невозможность частичного перекрытия этих двух карточек.",
+            "ES": 21,
+            "EF": 24,
+            "LF": 24,
+            "LS": 21,
+            "TF": 0,
+            "FF": 0
+          }
+        ],
+        "duration_workdays": 24,
+        "critical_paths": [
+          [
+            "A",
+            "E",
+            "F",
+            "G",
+            "H"
+          ]
+        ],
+        "buffer_workdays": 2,
+        "duration_with_buffer_workdays": 26
+      },
+      "network_days_saved": 1,
+      "hypothetical_only": true
+    },
+    "fast_tracking": {
+      "description": "After F, run parser regression G and manual acceptance H in parallel; delivery still waits for both. Remove G→H only after agreeing revised phases and resource checks.",
+      "model": {
+        "nodes": [
+          {
+            "id": "A",
+            "title": "Модель данных и миграция MVP",
+            "issues": [
+              12,
+              16
+            ],
+            "duration_workdays": 7,
+            "predecessors": [],
+            "duration_basis": "#12 → #16: 4 + 3 рабочих дня, последовательная группа.",
+            "ES": 0,
+            "EF": 7,
+            "LF": 8,
+            "LS": 1,
+            "TF": 1,
+            "FF": 0
+          },
+          {
+            "id": "B",
+            "title": "Исследование источника",
+            "issues": [
+              13
+            ],
+            "duration_workdays": 3,
+            "predecessors": [],
+            "ES": 0,
+            "EF": 3,
+            "LF": 3,
+            "LS": 0,
+            "TF": 0,
+            "FF": 0
+          },
+          {
+            "id": "C",
+            "title": "Справочник групп",
+            "issues": [
+              20
+            ],
+            "duration_workdays": 2,
+            "predecessors": [
+              "A",
+              "B"
+            ],
+            "ES": 7,
+            "EF": 9,
+            "LF": 12,
+            "LS": 10,
+            "TF": 3,
+            "FF": 3
+          },
+          {
+            "id": "D",
+            "title": "Загрузка и разбор расписания",
+            "issues": [
+              21
+            ],
+            "duration_workdays": 5,
+            "predecessors": [
+              "B"
+            ],
+            "ES": 3,
+            "EF": 8,
+            "LF": 8,
+            "LS": 3,
+            "TF": 0,
+            "FF": 0
+          },
+          {
+            "id": "E",
+            "title": "Сохранение и выявление изменений",
+            "issues": [
+              22
+            ],
+            "duration_workdays": 4,
+            "predecessors": [
+              "A",
+              "D"
+            ],
+            "ES": 8,
+            "EF": 12,
+            "LF": 12,
+            "LS": 8,
+            "TF": 0,
+            "FF": 0
+          },
+          {
+            "id": "F",
+            "title": "Очередь, расписание запусков и повторы",
+            "issues": [
+              23
+            ],
+            "duration_workdays": 6,
+            "predecessors": [
+              "C",
+              "E"
+            ],
+            "ES": 12,
+            "EF": 18,
+            "LF": 18,
+            "LS": 12,
+            "TF": 0,
+            "FF": 0
+          },
+          {
+            "id": "G",
+            "title": "Автономная регрессия парсера",
+            "issues": [
+              33
+            ],
+            "duration_workdays": 4,
+            "predecessors": [
+              "F"
+            ],
+            "ES": 18,
+            "EF": 22,
+            "LF": 22,
+            "LS": 18,
+            "TF": 0,
+            "FF": 0
+          },
+          {
+            "id": "H",
+            "title": "Приёмка MVP",
+            "issues": [
+              34
+            ],
+            "duration_workdays": 3,
+            "predecessors": [
+              "F"
+            ],
+            "dependency_note": "Гипотетическое перекрытие: G и H выполняются параллельно после F; завершение выбранной сети ждёт обе проверки. Базовая FS-связь G→H в этом сценарии снята, на GitHub сохранена до отдельного решения.",
+            "ES": 18,
+            "EF": 21,
+            "LF": 22,
+            "LS": 19,
+            "TF": 1,
+            "FF": 1
+          }
+        ],
+        "duration_workdays": 22,
+        "critical_paths": [
+          [
+            "B",
+            "D",
+            "E",
+            "F",
+            "G"
+          ]
+        ],
+        "buffer_workdays": 2,
+        "duration_with_buffer_workdays": 24
+      },
+      "network_days_saved": 3,
+      "hypothetical_only": true,
+      "confirms_whole_project_deadline": false
+    }
+  },
+  "calendar_constraints_excluded_from_this_branch": [
+    {
+      "issue": 35,
+      "wait_hours": 72,
+      "kind": "new planning assumption; feedback window after launch; final analysis after wait"
+    },
+    {
+      "issue": 48,
+      "wait_hours": 168,
+      "kind": "observation after stable sending/logging, final analysis after wait"
+    },
+    {
+      "issue": 53,
+      "wait_hours": 144,
+      "kind": "six 24h intervals between first and seventh daily backup, plus setup and restore"
+    },
+    {
+      "issue": 52,
+      "kind": "full calendar month for monthly availability; no full month within Nov12-Dec15"
+    }
+  ],
+  "phased_issues": [
+    55,
+    56,
+    57
+  ],
+  "next_step": "Integrate branches, resource constraints and calendar observation windows before assigning dates."
+}

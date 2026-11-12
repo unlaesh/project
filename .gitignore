@@ -1,2 +1,20 @@
 .DS_Store
 project.wiki/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# Инструменты
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Секреты
+.env

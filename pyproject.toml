@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pary"
+version = "0.1.0"
+description = "ЮУрГУ.Пары — Telegram-бот с расписанием пар для студентов ЮУрГУ"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "license" }
+authors = [{ name = "Denis Revyagin" }]
+dependencies = [
+    "fastapi>=0.115,<1.0",
+    "uvicorn[standard]>=0.30,<1.0",
+    "pydantic-settings>=2.4,<3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3,<9.0",
+    "httpx>=0.27,<1.0",
+    "ruff>=0.6,<1.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pary"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+# E/F — базовые ошибки, I — порядок импортов, B — типичные баги,
+# UP — современный синтаксис, SIM — упрощения
+select = ["E", "F", "I", "B", "UP", "SIM"]

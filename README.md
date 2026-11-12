@@ -43,7 +43,25 @@ Telegram-бот с расписанием пар для студентов ЮУ�
 
 ## Запуск
 
-Инструкция по установке и запуску появится вместе с первой рабочей версией MVP.
+Нужен Python 3.12 или новее.
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e ".[dev]"
+cp .env.example .env          # заполнить значения; .env не коммитится
+
+python -m pary.api            # HTTP-сервис на http://127.0.0.1:8000
+curl http://127.0.0.1:8000/health
+```
+
+Проверки, которые запускает CI (GitHub Actions) при каждом push и пул-реквесте:
+
+```bash
+ruff check .
+ruff format --check .
+pytest
+```
 
 ## План работ
 

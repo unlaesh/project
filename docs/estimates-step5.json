@@ -1,0 +1,750 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-12",
+  "verified_at": "2026-11-12T14:52:40.609426+00:00",
+  "repo": "unlaesh/project",
+  "project_url": "https://github.com/users/unlaesh/projects/1",
+  "unit": "team_person_hours",
+  "step": 5,
+  "github_estimate_updated": true,
+  "rounding": {
+    "decimal_places": 2,
+    "method": "ROUND_HALF_UP",
+    "source": "exact PERT fractions per item",
+    "project_totals": "sum of rounded item values",
+    "rounding_note": "MVP planned rows sum to 229.82; the exact PERT sum rounds to 229.83. No item was adjusted to force total equality."
+  },
+  "sources": [
+    {
+      "path": "docs/estimates-step3.json",
+      "sha256": "f9ea3947ed85691a5e71f45460e6a67e4577ca3a979c2acf3626978ad56905ce"
+    },
+    {
+      "path": "docs/pert-step4.json",
+      "sha256": "e00f4a6603adc43a4abee9dd9fdc89b98e3c5a2cdafc96ce90083e8c597f0c41"
+    }
+  ],
+  "published_before_step": {
+    "main": "d2a13ad49024ceba39dcd9e1b60c298d3a8ecefc",
+    "wiki_master": "f1a13a5ed6c6b96ee6b2c7674d906e6425b54e28"
+  },
+  "view": {
+    "id": "PVTV_lAHOBWtars4BnSDrzgMhzxE",
+    "number": 6,
+    "name": "Estimates",
+    "url": "https://github.com/users/unlaesh/projects/1/views/6",
+    "layout": "table",
+    "filter": "estimate:>0",
+    "sort_by": [
+      {
+        "field": "Estimate",
+        "direction": "desc"
+      }
+    ],
+    "visible_fields": [
+      "Title",
+      "Assignees",
+      "Status",
+      "Milestone",
+      "Priority",
+      "Estimate"
+    ],
+    "matching_items_at_verification": 58
+  },
+  "summary_by_milestone": [
+    {
+      "milestone": "MVP",
+      "count": 34,
+      "estimate_hours": 296.82,
+      "planned_hours": 229.82,
+      "retrospective_hours": 67.0
+    },
+    {
+      "milestone": "Release 1.1",
+      "count": 9,
+      "estimate_hours": 54.0,
+      "planned_hours": 54.0,
+      "retrospective_hours": 0.0
+    },
+    {
+      "milestone": "Release 1.2",
+      "count": 8,
+      "estimate_hours": 82.0,
+      "planned_hours": 82.0,
+      "retrospective_hours": 0.0
+    },
+    {
+      "milestone": "Release 1.3",
+      "count": 7,
+      "estimate_hours": 83.0,
+      "planned_hours": 83.0,
+      "retrospective_hours": 0.0
+    }
+  ],
+  "totals": {
+    "count": 58,
+    "planned_count": 49,
+    "retrospective_count": 9,
+    "estimate_hours": 515.82,
+    "planned_hours": 448.82,
+    "retrospective_hours": 67.0
+  },
+  "excluded_issues": [
+    58,
+    59
+  ],
+  "verification": {
+    "pert_items_updated": 34,
+    "other_estimates_unchanged": 24,
+    "excluded_estimates_still_empty": 2,
+    "all_60_items_other_fields_unchanged": true,
+    "five_existing_views_unchanged": true,
+    "all_field_definitions_unchanged": true
+  },
+  "scope_notes": [
+    "Full task effort, not measured remaining effort or actual time.",
+    "Nine closed tasks retain explicitly retrospective estimates, excluded from future workload.",
+    "No contingency, capacity, task dates or critical path has been added in this step."
+  ],
+  "entries": [
+    {
+      "issue": 2,
+      "wbs": [
+        "1.1.1"
+      ],
+      "title": "Описание и оценка идей проекта",
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "estimate_hours": 6.33,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 3,
+      "wbs": [
+        "1.1.2"
+      ],
+      "title": "Концепция, устав и экономика проекта",
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "estimate_hours": 8.67,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 4,
+      "wbs": [
+        "1.1.3"
+      ],
+      "title": "Реестр заинтересованных сторон",
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "estimate_hours": 3.17,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 5,
+      "wbs": [
+        "1.2.1"
+      ],
+      "title": "Функциональные требования и пользовательские сценарии",
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "estimate_hours": 12.67,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 6,
+      "wbs": [
+        "1.2.2"
+      ],
+      "title": "Нефункциональные требования",
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "estimate_hours": 6.5,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 7,
+      "wbs": [
+        "1.2.3"
+      ],
+      "title": "WBS и бэклог GitHub Projects",
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "estimate_hours": 17.0,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 8,
+      "wbs": [
+        "1.3.1"
+      ],
+      "title": "Планирование и обзор недельных итераций",
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "estimate_hours": 35,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 9,
+      "wbs": [
+        "1.3.2"
+      ],
+      "title": "Контроль контрольных точек и сроков",
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "estimate_hours": 4,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 10,
+      "wbs": [
+        "1.3.3"
+      ],
+      "title": "Итоговый отчёт и защита проекта",
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "estimate_hours": 8,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 11,
+      "wbs": [
+        "2.1.1"
+      ],
+      "title": "Высокоуровневая архитектура системы",
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "estimate_hours": 6.33,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 12,
+      "wbs": [
+        "2.1.2"
+      ],
+      "title": "Проектирование схемы базы данных",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 13.0,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 13,
+      "wbs": [
+        "2.1.3"
+      ],
+      "title": "Исследование источника расписания ЮУрГУ",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 9.0,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 14,
+      "wbs": [
+        "2.2.1"
+      ],
+      "title": "Контейнерное окружение Docker Compose",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 8.67,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 15,
+      "wbs": [
+        "2.2.2"
+      ],
+      "title": "VPS, домен, Nginx и TLS",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 8.83,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 16,
+      "wbs": [
+        "2.2.3"
+      ],
+      "title": "Настройка Alembic и начальная миграция для MVP",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 8.5,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 17,
+      "wbs": [
+        "2.3.1"
+      ],
+      "title": "GitHub Actions: линтер и автотесты",
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "estimate_hours": 4.25,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 18,
+      "wbs": [
+        "2.3.2"
+      ],
+      "title": "CI: проверка секретов и миграций",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 6.67,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 19,
+      "wbs": [
+        "2.3.3"
+      ],
+      "title": "Автоматический деплой на сервер",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 13.33,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 20,
+      "wbs": [
+        "3.1.1"
+      ],
+      "title": "Загрузка списка учебных групп",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 6.33,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 21,
+      "wbs": [
+        "3.1.2"
+      ],
+      "title": "Загрузка и разбор расписания группы",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 17.0,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 22,
+      "wbs": [
+        "3.1.3"
+      ],
+      "title": "Сохранение расписания и выявление изменений",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 12.67,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 23,
+      "wbs": [
+        "3.1.4"
+      ],
+      "title": "Плановый запуск парсера, повторы и журнал обновлений",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 21.33,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 24,
+      "wbs": [
+        "3.2.1"
+      ],
+      "title": "Приём вебхука Telegram через FastAPI и aiogram",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 8.5,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 25,
+      "wbs": [
+        "3.2.2"
+      ],
+      "title": "Главное меню бота на кнопках",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 4.17,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 26,
+      "wbs": [
+        "3.2.3"
+      ],
+      "title": "Служебный адрес /health",
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "estimate_hours": 2.08,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 27,
+      "wbs": [
+        "3.3.1"
+      ],
+      "title": "Регистрация: /start и выбор группы",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 8.33,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 28,
+      "wbs": [
+        "3.3.2"
+      ],
+      "title": "Смена учебной группы",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 4.17,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 29,
+      "wbs": [
+        "3.4.1"
+      ],
+      "title": "Просмотр расписания на сегодня и завтра",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 6.33,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 30,
+      "wbs": [
+        "3.4.2"
+      ],
+      "title": "Просмотр расписания на неделю с навигацией",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 13.0,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 31,
+      "wbs": [
+        "3.4.3"
+      ],
+      "title": "Просмотр расписания на произвольную дату",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 4.33,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 32,
+      "wbs": [
+        "3.4.4"
+      ],
+      "title": "Единый формат вывода расписания",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 6.33,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 33,
+      "wbs": [
+        "3.5.1"
+      ],
+      "title": "Автотесты парсера на сохранённых страницах",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 12.67,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 34,
+      "wbs": [
+        "3.5.2"
+      ],
+      "title": "Приёмочная проверка сценариев MVP",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 8.67,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 35,
+      "wbs": [
+        "3.5.3"
+      ],
+      "title": "Релиз MVP для одногруппников и сбор обратной связи",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 6.33,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 36,
+      "wbs": [
+        "4.1.1"
+      ],
+      "title": "Миграция таблицы заметок",
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "estimate_hours": 4,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 37,
+      "wbs": [
+        "4.1.2"
+      ],
+      "title": "Сохранение заметок отменённых пар",
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "estimate_hours": 4,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 38,
+      "wbs": [
+        "4.1.3"
+      ],
+      "title": "Автоматическое удаление старых заметок",
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "estimate_hours": 4,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 39,
+      "wbs": [
+        "4.2.1"
+      ],
+      "title": "Добавление заметки к паре",
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "estimate_hours": 8,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 40,
+      "wbs": [
+        "4.2.2"
+      ],
+      "title": "Список, редактирование и удаление заметок",
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "estimate_hours": 8,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 41,
+      "wbs": [
+        "4.2.3"
+      ],
+      "title": "Вывод личной заметки под парой",
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "estimate_hours": 4,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 42,
+      "wbs": [
+        "4.3.1"
+      ],
+      "title": "Автотесты логики заметок",
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "estimate_hours": 8,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 43,
+      "wbs": [
+        "4.3.2"
+      ],
+      "title": "Ручная проверка сценариев заметок",
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "estimate_hours": 6,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 44,
+      "wbs": [
+        "5.1.1",
+        "5.1.2"
+      ],
+      "title": "Настройка уведомлений: включение, отключение и выбор интервала",
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "estimate_hours": 8,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 45,
+      "wbs": [
+        "5.2.1"
+      ],
+      "title": "Выбор пар для уведомлений с учётом часового пояса",
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "estimate_hours": 8,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 61,
+      "wbs": [
+        "5.2.2"
+      ],
+      "title": "Журнал уведомлений и защита от повторов",
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "estimate_hours": 10,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 46,
+      "wbs": [
+        "5.2.3"
+      ],
+      "title": "Отправка уведомлений и обработка ошибок Telegram",
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "estimate_hours": 12,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 62,
+      "wbs": [
+        "5.2.4"
+      ],
+      "title": "Уведомления об изменениях расписания",
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "estimate_hours": 8,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 47,
+      "wbs": [
+        "5.3.1"
+      ],
+      "title": "Автотесты выбора пар и предотвращения повторов",
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "estimate_hours": 12,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 48,
+      "wbs": [
+        "5.3.2"
+      ],
+      "title": "Ручная проверка уведомлений и замер задержки",
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "estimate_hours": 8,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 49,
+      "wbs": [
+        "6.1.1"
+      ],
+      "title": "Проверка прав администратора по Telegram ID",
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "estimate_hours": 4,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 50,
+      "wbs": [
+        "6.1.2"
+      ],
+      "title": "Команды администратора /users и /stats",
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "estimate_hours": 8,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 51,
+      "wbs": [
+        "6.1.3"
+      ],
+      "title": "Команды администратора /update и /log",
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "estimate_hours": 8,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 52,
+      "wbs": [
+        "6.2.1"
+      ],
+      "title": "Внешний мониторинг доступности",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 8.5,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 53,
+      "wbs": [
+        "6.2.2"
+      ],
+      "title": "Резервное копирование и проверка восстановления",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 8.83,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 54,
+      "wbs": [
+        "6.2.3"
+      ],
+      "title": "Команды /help и /feedback",
+      "basis": "planned",
+      "milestone": "MVP",
+      "estimate_hours": 4.33,
+      "source": "PERT_E"
+    },
+    {
+      "issue": 55,
+      "wbs": [
+        "6.3.1"
+      ],
+      "title": "Нагрузочное тестирование ключевых операций",
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "estimate_hours": 16,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 56,
+      "wbs": [
+        "6.3.2"
+      ],
+      "title": "Проверка совместимости с клиентами Telegram",
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "estimate_hours": 16,
+      "source": "step3_relative"
+    },
+    {
+      "issue": 57,
+      "wbs": [
+        "6.3.3"
+      ],
+      "title": "Юзабилити-тестирование на пяти пользователях",
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "estimate_hours": 8,
+      "source": "step3_relative"
+    }
+  ]
+}

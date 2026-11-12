@@ -1,0 +1,2401 @@
+{
+  "schema_version": 1,
+  "step": 7,
+  "as_of": "2026-11-12",
+  "timezone": "Asia/Yekaterinburg",
+  "repo": "unlaesh/project",
+  "unit_effort": "team_person_hours",
+  "unit_duration": "working_days_unless_calendar_explicit",
+  "sources": [
+    {
+      "path": "docs/estimates-step5.json",
+      "sha256": "243804c6b164a8a1b6737a30b9a4634fc59b43b23c60987978188a4c2dec4f57"
+    },
+    {
+      "path": "docs/reserve-step6.json",
+      "sha256": "0c2436e07bc84d849535b504191c056aec2dd3fb7392ab31078b267a6a9200dc"
+    }
+  ],
+  "published_before_step": {
+    "main": "fe61e141a93d817a31d67312fc844fec8d05fcec",
+    "wiki_master": "ee48c9af2bcf6ad3bb534a70903dfc4ce6a97af2"
+  },
+  "assumptions": {
+    "team_is_educational_model": true,
+    "actual_participation_or_availability_confirmed": false,
+    "hours_per_person_per_workday": 4,
+    "workweek": "Monday-Friday",
+    "start": "2026-11-12",
+    "end": "2026-12-15",
+    "calendar_dates_inclusive": 34,
+    "working_days": 24,
+    "workday_dates": [
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25",
+      "2026-11-26",
+      "2026-11-27",
+      "2026-11-30",
+      "2026-12-01",
+      "2026-12-02",
+      "2026-12-03",
+      "2026-12-04",
+      "2026-12-07",
+      "2026-12-08",
+      "2026-12-09",
+      "2026-12-10",
+      "2026-12-11",
+      "2026-12-14",
+      "2026-12-15"
+    ],
+    "ordinary_tasks_parallel_executors": 1,
+    "ordinary_task_phases": "sequential lead work and review, not automatic two-person speedup",
+    "allocation_rule": "80% lead / 20% reviewer (review rounded HALF_UP to 0.01, remainder lead); exceptions #8/#9/#57 explicit",
+    "rounding_rule": "ceil(H / (n * 4)) to whole active working days; does not increase Estimate",
+    "calendar_dates_assigned_to_technical_tasks": false
+  },
+  "resource_capacity": [
+    {
+      "id": "denis",
+      "name": "Ревягин Денис",
+      "short_name": "Денис",
+      "role": "Владелец продукта, ведущий разработчик",
+      "hours_per_workday": 4,
+      "workdays": 24,
+      "capacity_hours": 96.0,
+      "planned_load_hours": 162.56,
+      "retrospective_hours_excluded": 53.6,
+      "capacity_minus_planned_hours": -66.56,
+      "baseline_overload_hours": 66.56,
+      "load_in_person_days": 40.64
+    },
+    {
+      "id": "alina",
+      "name": "Соколова Алина",
+      "short_name": "Алина",
+      "role": "Scrum-мастер",
+      "hours_per_workday": 4,
+      "workdays": 24,
+      "capacity_hours": 96.0,
+      "planned_load_hours": 11.1,
+      "retrospective_hours_excluded": 7.03,
+      "capacity_minus_planned_hours": 84.9,
+      "baseline_overload_hours": 0.0,
+      "load_in_person_days": 2.775
+    },
+    {
+      "id": "maksim",
+      "name": "Кузнецов Максим",
+      "short_name": "Максим",
+      "role": "Парсер и база данных",
+      "hours_per_workday": 4,
+      "workdays": 24,
+      "capacity_hours": 96.0,
+      "planned_load_hours": 113.87,
+      "retrospective_hours_excluded": 2.54,
+      "capacity_minus_planned_hours": -17.87,
+      "baseline_overload_hours": 17.87,
+      "load_in_person_days": 28.4675
+    },
+    {
+      "id": "artem",
+      "name": "Белов Артём",
+      "short_name": "Артём",
+      "role": "Telegram-бот",
+      "hours_per_workday": 4,
+      "workdays": 24,
+      "capacity_hours": 96.0,
+      "planned_load_hours": 101.08,
+      "retrospective_hours_excluded": 0.0,
+      "capacity_minus_planned_hours": -5.08,
+      "baseline_overload_hours": 5.08,
+      "load_in_person_days": 25.27
+    },
+    {
+      "id": "ekaterina",
+      "name": "Морозова Екатерина",
+      "short_name": "Екатерина",
+      "role": "QA",
+      "hours_per_workday": 4,
+      "workdays": 24,
+      "capacity_hours": 96.0,
+      "planned_load_hours": 60.21,
+      "retrospective_hours_excluded": 3.83,
+      "capacity_minus_planned_hours": 35.79,
+      "baseline_overload_hours": 0.0,
+      "load_in_person_days": 15.0525
+    }
+  ],
+  "team_capacity_check": {
+    "capacity_hours_upper_bound": 480.0,
+    "baseline_open_hours": 448.82,
+    "unallocated_contingency_hours": 90,
+    "budget_with_contingency_hours": 538.82,
+    "capacity_minus_baseline_hours": 31.18,
+    "budget_capacity_deficit_hours": 58.82,
+    "sum_baseline_overloads_by_person_hours": 89.51,
+    "developers_capacity_hours": 288,
+    "developers_planned_hours": 377.51,
+    "full_scope_with_contingency_fits_assumed_capacity": false,
+    "baseline_fits_current_person_assignments": false,
+    "deadline_feasibility_confirmed": false
+  },
+  "planned_load_by_milestone": [
+    {
+      "milestone": "MVP",
+      "planned_hours": 229.82,
+      "planned_hours_by_person": {
+        "denis": 87.76,
+        "alina": 0.0,
+        "maksim": 89.67,
+        "artem": 42.48,
+        "ekaterina": 9.91
+      }
+    },
+    {
+      "milestone": "Release 1.1",
+      "planned_hours": 54.0,
+      "planned_hours_by_person": {
+        "denis": 9.5,
+        "alina": 0.0,
+        "maksim": 9.6,
+        "artem": 23.6,
+        "ekaterina": 11.3
+      }
+    },
+    {
+      "milestone": "Release 1.2",
+      "planned_hours": 82.0,
+      "planned_hours_by_person": {
+        "denis": 43.2,
+        "alina": 0.0,
+        "maksim": 7.6,
+        "artem": 12.0,
+        "ekaterina": 19.2
+      }
+    },
+    {
+      "milestone": "Release 1.3",
+      "planned_hours": 83.0,
+      "planned_hours_by_person": {
+        "denis": 22.1,
+        "alina": 11.1,
+        "maksim": 7.0,
+        "artem": 23.0,
+        "ekaterina": 19.8
+      }
+    }
+  ],
+  "calendar_reserve_check": {
+    "dates": [
+      "2026-12-14",
+      "2026-12-15"
+    ],
+    "already_inside_24_workdays": true,
+    "gross_capacity_hours": 40,
+    "known_org_effort_hours_exact": "14/3",
+    "maximum_remaining_hours_after_known_org_exact": "106/3",
+    "maximum_remaining_hours_after_known_org": 35.333333,
+    "other_final_work_not_deducted": true,
+    "covers_entire_90_hour_contingency": false
+  },
+  "excluded_issues": [
+    58,
+    59
+  ],
+  "entries": [
+    {
+      "issue": 2,
+      "wbs": [
+        "1.1.1"
+      ],
+      "title": "Описание и оценка идей проекта",
+      "estimate_hours": 6.33,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "alina"
+      ],
+      "effort_by_person": {
+        "denis": 5.06,
+        "alina": 1.27
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Продуктовые материалы: Денис готовит содержание, Алина проверяет оформление и связность документации. Закрытая карточка: распределение ретроспективного норматива исключительно для полноты модели; это не фактические затраты и не будущая нагрузка.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 1.5825,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "retrospective_work_model",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 1.265,
+        "alina": 0.3175
+      }
+    },
+    {
+      "issue": 3,
+      "wbs": [
+        "1.1.2"
+      ],
+      "title": "Концепция, устав и экономика проекта",
+      "estimate_hours": 8.67,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "alina"
+      ],
+      "effort_by_person": {
+        "denis": 6.94,
+        "alina": 1.73
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Концепция и экономика: Денис отвечает за продуктовые допущения, Алина проверяет согласованность материалов. Закрытая карточка: распределение ретроспективного норматива исключительно для полноты модели; это не фактические затраты и не будущая нагрузка.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.1675,
+      "active_workdays": 3,
+      "model_duration_workdays": 3,
+      "duration_kind": "retrospective_work_model",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 1.735,
+        "alina": 0.4325
+      }
+    },
+    {
+      "issue": 4,
+      "wbs": [
+        "1.1.3"
+      ],
+      "title": "Реестр заинтересованных сторон",
+      "estimate_hours": 3.17,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "alina"
+      ],
+      "effort_by_person": {
+        "denis": 2.54,
+        "alina": 0.63
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Реестр сторон: Денис формирует содержание, Алина проверяет полноту и связи с процессом. Закрытая карточка: распределение ретроспективного норматива исключительно для полноты модели; это не фактические затраты и не будущая нагрузка.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 0.7925,
+      "active_workdays": 1,
+      "model_duration_workdays": 1,
+      "duration_kind": "retrospective_work_model",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.635,
+        "alina": 0.1575
+      }
+    },
+    {
+      "issue": 5,
+      "wbs": [
+        "1.2.1"
+      ],
+      "title": "Функциональные требования и пользовательские сценарии",
+      "estimate_hours": 12.67,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "ekaterina"
+      ],
+      "effort_by_person": {
+        "denis": 10.14,
+        "ekaterina": 2.53
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Требования: Денис формулирует сценарии, Екатерина проверяет проверяемость критериев. Закрытая карточка: распределение ретроспективного норматива исключительно для полноты модели; это не фактические затраты и не будущая нагрузка.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 3.1675,
+      "active_workdays": 4,
+      "model_duration_workdays": 4,
+      "duration_kind": "retrospective_work_model",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 2.535,
+        "ekaterina": 0.6325
+      }
+    },
+    {
+      "issue": 6,
+      "wbs": [
+        "1.2.2"
+      ],
+      "title": "Нефункциональные требования",
+      "estimate_hours": 6.5,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "ekaterina"
+      ],
+      "effort_by_person": {
+        "denis": 5.2,
+        "ekaterina": 1.3
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Нефункциональные требования: Денис задаёт целевые условия, Екатерина проверяет измеримость. Закрытая карточка: распределение ретроспективного норматива исключительно для полноты модели; это не фактические затраты и не будущая нагрузка.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 1.625,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "retrospective_work_model",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 1.3,
+        "ekaterina": 0.325
+      }
+    },
+    {
+      "issue": 7,
+      "wbs": [
+        "1.2.3"
+      ],
+      "title": "WBS и бэклог GitHub Projects",
+      "estimate_hours": 17.0,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "alina"
+      ],
+      "effort_by_person": {
+        "denis": 13.6,
+        "alina": 3.4
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Бэклог продукта ведёт Денис; Алина проверяет структуру и применение правил доски. Закрытая карточка: распределение ретроспективного норматива исключительно для полноты модели; это не фактические затраты и не будущая нагрузка.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 4.25,
+      "active_workdays": 5,
+      "model_duration_workdays": 5,
+      "duration_kind": "retrospective_work_model",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 3.4,
+        "alina": 0.85
+      }
+    },
+    {
+      "issue": 8,
+      "wbs": [
+        "1.3.1"
+      ],
+      "title": "Планирование и обзор недельных итераций",
+      "estimate_hours": 35,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "responsible": "alina",
+      "participants": [
+        "denis",
+        "alina",
+        "maksim",
+        "artem",
+        "ekaterina"
+      ],
+      "effort_by_person": {
+        "denis": 7.0,
+        "alina": 7.0,
+        "maksim": 7.0,
+        "artem": 7.0,
+        "ekaterina": 7.0
+      },
+      "allocation_note": "Существующий норматив организационных событий: пять участников по 7 чел.-ч, всего 35. Алина координирует; часы других ролей не превращаются в дополнительную разработку. Это план учебной модели, не фактические встречи. Работа распределена по всему проекту; D=ceil(H/4) к этой сквозной задаче не применяется.",
+      "effective_parallel_executors": 5,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 1.75,
+      "active_workdays": 2,
+      "model_duration_workdays": 24,
+      "duration_kind": "recurring_events",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "recurring_events",
+        "note": "Пять итераций и 24 будние сверки: 12.11–15.12, охват 24 рабочих / 34 календарных дня.",
+        "window_start": "2026-11-12",
+        "window_end": "2026-12-15",
+        "window_workdays": 24,
+        "window_calendar_dates": 34,
+        "planning_dates": [
+          "2026-11-12",
+          "2026-11-19",
+          "2026-11-26",
+          "2026-12-03",
+          "2026-12-10"
+        ],
+        "review_retro_dates": [
+          "2026-11-18",
+          "2026-11-25",
+          "2026-12-02",
+          "2026-12-09",
+          "2026-12-15"
+        ],
+        "daily_sync_dates": [
+          "2026-11-12",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-17",
+          "2026-11-18",
+          "2026-11-19",
+          "2026-11-20",
+          "2026-11-23",
+          "2026-11-24",
+          "2026-11-25",
+          "2026-11-26",
+          "2026-11-27",
+          "2026-11-30",
+          "2026-12-01",
+          "2026-12-02",
+          "2026-12-03",
+          "2026-12-04",
+          "2026-12-07",
+          "2026-12-08",
+          "2026-12-09",
+          "2026-12-10",
+          "2026-12-11",
+          "2026-12-14",
+          "2026-12-15"
+        ],
+        "origin": "existing Development event plan"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 1.75,
+        "alina": 1.75,
+        "maksim": 1.75,
+        "artem": 1.75,
+        "ekaterina": 1.75
+      }
+    },
+    {
+      "issue": 9,
+      "wbs": [
+        "1.3.2"
+      ],
+      "title": "Контроль контрольных точек и сроков",
+      "estimate_hours": 4,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "responsible": "alina",
+      "participants": [
+        "denis",
+        "alina"
+      ],
+      "effort_by_person": {
+        "denis": 1.5,
+        "alina": 2.5
+      },
+      "allocation_note": "Существующий норматив трёх контрольных проверок: Денис 1,5 чел.-ч, Алина 2,5, всего 4. Алина ведёт подготовку, контроль сроков и фиксацию решений; Денис участвует как владелец продукта. Это план учебной модели. Проверки привязаны к контрольным датам; их календарный охват не равен ceil(H/4).",
+      "effective_parallel_executors": 2,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 0.5,
+      "active_workdays": 1,
+      "model_duration_workdays": 15,
+      "duration_kind": "distributed_events",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "distributed_events",
+        "note": "Три контрольные проверки: 25.11, 09.12, 15.12; охват 15 рабочих / 21 календарный день, но работа только в трёх событиях.",
+        "event_dates": [
+          "2026-11-25",
+          "2026-12-09",
+          "2026-12-15"
+        ],
+        "window_start": "2026-11-25",
+        "window_end": "2026-12-15",
+        "window_workdays": 15,
+        "window_calendar_dates": 21,
+        "sequential_event_minutes": 50,
+        "team_effort_per_event_minutes": 80,
+        "origin": "existing Development event plan"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.375,
+        "alina": 0.625
+      }
+    },
+    {
+      "issue": 10,
+      "wbs": [
+        "1.3.3"
+      ],
+      "title": "Итоговый отчёт и защита проекта",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "alina"
+      ],
+      "effort_by_person": {
+        "denis": 6.4,
+        "alina": 1.6
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Денис сводит результаты и готовит защиту; Алина проверяет отчёт, ссылки и процессные материалы.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.0,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "phased_with_external_event",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "phased_with_external_event",
+        "note": "Материалы собираются по ходу проекта; дата защиты преподавателю отдельно не подтверждена.",
+        "minimum_calendar_hours": null,
+        "origin": "acceptance scope and milestone plan"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 1.6,
+        "alina": 0.4
+      }
+    },
+    {
+      "issue": 11,
+      "wbs": [
+        "2.1.1"
+      ],
+      "title": "Высокоуровневая архитектура системы",
+      "estimate_hours": 6.33,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 5.06,
+        "maksim": 1.27
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Архитектура принадлежит Денису; Максим проверяет данные и взаимодействие с парсером. Закрытая карточка: распределение ретроспективного норматива исключительно для полноты модели; это не фактические затраты и не будущая нагрузка.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 1.5825,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "retrospective_work_model",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 1.265,
+        "maksim": 0.3175
+      }
+    },
+    {
+      "issue": 12,
+      "wbs": [
+        "2.1.2"
+      ],
+      "title": "Проектирование схемы базы данных",
+      "estimate_hours": 13.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "maksim",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 2.6,
+        "maksim": 10.4
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Область парсера, базы данных или её автономных тестов: ведущий Максим, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 3.25,
+      "active_workdays": 4,
+      "model_duration_workdays": 4,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.65,
+        "maksim": 2.6
+      }
+    },
+    {
+      "issue": 13,
+      "wbs": [
+        "2.1.3"
+      ],
+      "title": "Исследование источника расписания ЮУрГУ",
+      "estimate_hours": 9.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "maksim",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 1.8,
+        "maksim": 7.2
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Область парсера, базы данных или её автономных тестов: ведущий Максим, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.25,
+      "active_workdays": 3,
+      "model_duration_workdays": 3,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.45,
+        "maksim": 1.8
+      }
+    },
+    {
+      "issue": 14,
+      "wbs": [
+        "2.2.1"
+      ],
+      "title": "Контейнерное окружение Docker Compose",
+      "estimate_hours": 8.67,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 6.94,
+        "maksim": 1.73
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Инфраструктура, CI/CD или резервное копирование: ведущий Денис, техническое ревью Максима.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.1675,
+      "active_workdays": 3,
+      "model_duration_workdays": 3,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 1.735,
+        "maksim": 0.4325
+      }
+    },
+    {
+      "issue": 15,
+      "wbs": [
+        "2.2.2"
+      ],
+      "title": "VPS, домен, Nginx и TLS",
+      "estimate_hours": 8.83,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 7.06,
+        "maksim": 1.77
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Инфраструктура, CI/CD или резервное копирование: ведущий Денис, техническое ревью Максима.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.2075,
+      "active_workdays": 3,
+      "model_duration_workdays": 3,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 1.765,
+        "maksim": 0.4425
+      }
+    },
+    {
+      "issue": 16,
+      "wbs": [
+        "2.2.3"
+      ],
+      "title": "Настройка Alembic и начальная миграция для MVP",
+      "estimate_hours": 8.5,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "maksim",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 1.7,
+        "maksim": 6.8
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Область парсера, базы данных или её автономных тестов: ведущий Максим, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.125,
+      "active_workdays": 3,
+      "model_duration_workdays": 3,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.425,
+        "maksim": 1.7
+      }
+    },
+    {
+      "issue": 17,
+      "wbs": [
+        "2.3.1"
+      ],
+      "title": "GitHub Actions: линтер и автотесты",
+      "estimate_hours": 4.25,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 3.4,
+        "maksim": 0.85
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Инфраструктура, CI/CD или резервное копирование: ведущий Денис, техническое ревью Максима. Закрытая карточка: распределение ретроспективного норматива исключительно для полноты модели; это не фактические затраты и не будущая нагрузка.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 1.0625,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "retrospective_work_model",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.85,
+        "maksim": 0.2125
+      }
+    },
+    {
+      "issue": 18,
+      "wbs": [
+        "2.3.2"
+      ],
+      "title": "CI: проверка секретов и миграций",
+      "estimate_hours": 6.67,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 5.34,
+        "maksim": 1.33
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Инфраструктура, CI/CD или резервное копирование: ведущий Денис, техническое ревью Максима.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 1.6675,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 1.335,
+        "maksim": 0.3325
+      }
+    },
+    {
+      "issue": 19,
+      "wbs": [
+        "2.3.3"
+      ],
+      "title": "Автоматический деплой на сервер",
+      "estimate_hours": 13.33,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 10.66,
+        "maksim": 2.67
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Инфраструктура, CI/CD или резервное копирование: ведущий Денис, техническое ревью Максима.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 3.3325,
+      "active_workdays": 4,
+      "model_duration_workdays": 4,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 2.665,
+        "maksim": 0.6675
+      }
+    },
+    {
+      "issue": 20,
+      "wbs": [
+        "3.1.1"
+      ],
+      "title": "Загрузка списка учебных групп",
+      "estimate_hours": 6.33,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "maksim",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 1.27,
+        "maksim": 5.06
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Область парсера, базы данных или её автономных тестов: ведущий Максим, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 1.5825,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.3175,
+        "maksim": 1.265
+      }
+    },
+    {
+      "issue": 21,
+      "wbs": [
+        "3.1.2"
+      ],
+      "title": "Загрузка и разбор расписания группы",
+      "estimate_hours": 17.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "maksim",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 3.4,
+        "maksim": 13.6
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Область парсера, базы данных или её автономных тестов: ведущий Максим, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 4.25,
+      "active_workdays": 5,
+      "model_duration_workdays": 5,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.85,
+        "maksim": 3.4
+      }
+    },
+    {
+      "issue": 22,
+      "wbs": [
+        "3.1.3"
+      ],
+      "title": "Сохранение расписания и выявление изменений",
+      "estimate_hours": 12.67,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "maksim",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 2.53,
+        "maksim": 10.14
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Область парсера, базы данных или её автономных тестов: ведущий Максим, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 3.1675,
+      "active_workdays": 4,
+      "model_duration_workdays": 4,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.6325,
+        "maksim": 2.535
+      }
+    },
+    {
+      "issue": 23,
+      "wbs": [
+        "3.1.4"
+      ],
+      "title": "Плановый запуск парсера, повторы и журнал обновлений",
+      "estimate_hours": 21.33,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "maksim",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 4.27,
+        "maksim": 17.06
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Область парсера, базы данных или её автономных тестов: ведущий Максим, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 5.3325,
+      "active_workdays": 6,
+      "model_duration_workdays": 6,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 1.0675,
+        "maksim": 4.265
+      }
+    },
+    {
+      "issue": 24,
+      "wbs": [
+        "3.2.1"
+      ],
+      "title": "Приём вебхука Telegram через FastAPI и aiogram",
+      "estimate_hours": 8.5,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "artem"
+      ],
+      "effort_by_person": {
+        "denis": 6.8,
+        "artem": 1.7
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Денис реализует HTTP/API-интеграцию, Артём проверяет передачу обновлений в диспетчер бота.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.125,
+      "active_workdays": 3,
+      "model_duration_workdays": 3,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 1.7,
+        "artem": 0.425
+      }
+    },
+    {
+      "issue": 25,
+      "wbs": [
+        "3.2.2"
+      ],
+      "title": "Главное меню бота на кнопках",
+      "estimate_hours": 4.17,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "artem",
+      "participants": [
+        "denis",
+        "artem"
+      ],
+      "effort_by_person": {
+        "denis": 0.83,
+        "artem": 3.34
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Обработчики, интерфейс Telegram-бота или их автономные тесты: ведущий Артём, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 1.0425,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.2075,
+        "artem": 0.835
+      }
+    },
+    {
+      "issue": 26,
+      "wbs": [
+        "3.2.3"
+      ],
+      "title": "Служебный адрес /health",
+      "estimate_hours": 2.08,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 1.66,
+        "maksim": 0.42
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. HTTP-проверка живости: ведущий Денис, техническое ревью Максима. Закрытая карточка: распределение ретроспективного норматива исключительно для полноты модели; это не фактические затраты и не будущая нагрузка.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 0.52,
+      "active_workdays": 1,
+      "model_duration_workdays": 1,
+      "duration_kind": "retrospective_work_model",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.415,
+        "maksim": 0.105
+      }
+    },
+    {
+      "issue": 27,
+      "wbs": [
+        "3.3.1"
+      ],
+      "title": "Регистрация: /start и выбор группы",
+      "estimate_hours": 8.33,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "artem",
+      "participants": [
+        "denis",
+        "artem"
+      ],
+      "effort_by_person": {
+        "denis": 1.67,
+        "artem": 6.66
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Обработчики, интерфейс Telegram-бота или их автономные тесты: ведущий Артём, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.0825,
+      "active_workdays": 3,
+      "model_duration_workdays": 3,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.4175,
+        "artem": 1.665
+      }
+    },
+    {
+      "issue": 28,
+      "wbs": [
+        "3.3.2"
+      ],
+      "title": "Смена учебной группы",
+      "estimate_hours": 4.17,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "artem",
+      "participants": [
+        "denis",
+        "artem"
+      ],
+      "effort_by_person": {
+        "denis": 0.83,
+        "artem": 3.34
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Обработчики, интерфейс Telegram-бота или их автономные тесты: ведущий Артём, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 1.0425,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.2075,
+        "artem": 0.835
+      }
+    },
+    {
+      "issue": 29,
+      "wbs": [
+        "3.4.1"
+      ],
+      "title": "Просмотр расписания на сегодня и завтра",
+      "estimate_hours": 6.33,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "artem",
+      "participants": [
+        "denis",
+        "artem"
+      ],
+      "effort_by_person": {
+        "denis": 1.27,
+        "artem": 5.06
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Обработчики, интерфейс Telegram-бота или их автономные тесты: ведущий Артём, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 1.5825,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.3175,
+        "artem": 1.265
+      }
+    },
+    {
+      "issue": 30,
+      "wbs": [
+        "3.4.2"
+      ],
+      "title": "Просмотр расписания на неделю с навигацией",
+      "estimate_hours": 13.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "artem",
+      "participants": [
+        "denis",
+        "artem"
+      ],
+      "effort_by_person": {
+        "denis": 2.6,
+        "artem": 10.4
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Обработчики, интерфейс Telegram-бота или их автономные тесты: ведущий Артём, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 3.25,
+      "active_workdays": 4,
+      "model_duration_workdays": 4,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.65,
+        "artem": 2.6
+      }
+    },
+    {
+      "issue": 31,
+      "wbs": [
+        "3.4.3"
+      ],
+      "title": "Просмотр расписания на произвольную дату",
+      "estimate_hours": 4.33,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "artem",
+      "participants": [
+        "denis",
+        "artem"
+      ],
+      "effort_by_person": {
+        "denis": 0.87,
+        "artem": 3.46
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Обработчики, интерфейс Telegram-бота или их автономные тесты: ведущий Артём, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 1.0825,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.2175,
+        "artem": 0.865
+      }
+    },
+    {
+      "issue": 32,
+      "wbs": [
+        "3.4.4"
+      ],
+      "title": "Единый формат вывода расписания",
+      "estimate_hours": 6.33,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "artem",
+      "participants": [
+        "denis",
+        "artem"
+      ],
+      "effort_by_person": {
+        "denis": 1.27,
+        "artem": 5.06
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Обработчики, интерфейс Telegram-бота или их автономные тесты: ведущий Артём, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 1.5825,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.3175,
+        "artem": 1.265
+      }
+    },
+    {
+      "issue": 33,
+      "wbs": [
+        "3.5.1"
+      ],
+      "title": "Автотесты парсера на сохранённых страницах",
+      "estimate_hours": 12.67,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "maksim",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 2.53,
+        "maksim": 10.14
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Область парсера, базы данных или её автономных тестов: ведущий Максим, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 3.1675,
+      "active_workdays": 4,
+      "model_duration_workdays": 4,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.6325,
+        "maksim": 2.535
+      }
+    },
+    {
+      "issue": 34,
+      "wbs": [
+        "3.5.2"
+      ],
+      "title": "Приёмочная проверка сценариев MVP",
+      "estimate_hours": 8.67,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "ekaterina",
+      "participants": [
+        "denis",
+        "ekaterina"
+      ],
+      "effort_by_person": {
+        "denis": 1.73,
+        "ekaterina": 6.94
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Екатерина выполняет приёмку MVP, Денис проверяет критерии выпуска и протокол.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.1675,
+      "active_workdays": 3,
+      "model_duration_workdays": 3,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.4325,
+        "ekaterina": 1.735
+      }
+    },
+    {
+      "issue": 35,
+      "wbs": [
+        "3.5.3"
+      ],
+      "title": "Релиз MVP для одногруппников и сбор обратной связи",
+      "estimate_hours": 6.33,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "ekaterina"
+      ],
+      "effort_by_person": {
+        "denis": 5.06,
+        "ekaterina": 1.27
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Денис ведёт выпуск и разбор обратной связи, Екатерина проверяет пользовательский запуск и результаты.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 1.5825,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "feedback_window",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "feedback_window",
+        "note": "Для первичного сбора отзывов принято 72 календарных часа после запуска; это допущение плана, не число из критериев. Итоговый разбор после окна, ожидание не добавляет человеко-часы.",
+        "minimum_calendar_hours": 72,
+        "window_anchor": "after launch to first users",
+        "origin": "new explicit planning assumption"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 1.265,
+        "ekaterina": 0.3175
+      }
+    },
+    {
+      "issue": 36,
+      "wbs": [
+        "4.1.1"
+      ],
+      "title": "Миграция таблицы заметок",
+      "estimate_hours": 4,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "responsible": "maksim",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 0.8,
+        "maksim": 3.2
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Область парсера, базы данных или её автономных тестов: ведущий Максим, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 1.0,
+      "active_workdays": 1,
+      "model_duration_workdays": 1,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.2,
+        "maksim": 0.8
+      }
+    },
+    {
+      "issue": 37,
+      "wbs": [
+        "4.1.2"
+      ],
+      "title": "Сохранение заметок отменённых пар",
+      "estimate_hours": 4,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "responsible": "maksim",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 0.8,
+        "maksim": 3.2
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Область парсера, базы данных или её автономных тестов: ведущий Максим, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 1.0,
+      "active_workdays": 1,
+      "model_duration_workdays": 1,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.2,
+        "maksim": 0.8
+      }
+    },
+    {
+      "issue": 38,
+      "wbs": [
+        "4.1.3"
+      ],
+      "title": "Автоматическое удаление старых заметок",
+      "estimate_hours": 4,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "responsible": "maksim",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 0.8,
+        "maksim": 3.2
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Область парсера, базы данных или её автономных тестов: ведущий Максим, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 1.0,
+      "active_workdays": 1,
+      "model_duration_workdays": 1,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.2,
+        "maksim": 0.8
+      }
+    },
+    {
+      "issue": 39,
+      "wbs": [
+        "4.2.1"
+      ],
+      "title": "Добавление заметки к паре",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "responsible": "artem",
+      "participants": [
+        "denis",
+        "artem"
+      ],
+      "effort_by_person": {
+        "denis": 1.6,
+        "artem": 6.4
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Обработчики, интерфейс Telegram-бота или их автономные тесты: ведущий Артём, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.0,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.4,
+        "artem": 1.6
+      }
+    },
+    {
+      "issue": 40,
+      "wbs": [
+        "4.2.2"
+      ],
+      "title": "Список, редактирование и удаление заметок",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "responsible": "artem",
+      "participants": [
+        "denis",
+        "artem"
+      ],
+      "effort_by_person": {
+        "denis": 1.6,
+        "artem": 6.4
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Обработчики, интерфейс Telegram-бота или их автономные тесты: ведущий Артём, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.0,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.4,
+        "artem": 1.6
+      }
+    },
+    {
+      "issue": 41,
+      "wbs": [
+        "4.2.3"
+      ],
+      "title": "Вывод личной заметки под парой",
+      "estimate_hours": 4,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "responsible": "artem",
+      "participants": [
+        "denis",
+        "artem"
+      ],
+      "effort_by_person": {
+        "denis": 0.8,
+        "artem": 3.2
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Обработчики, интерфейс Telegram-бота или их автономные тесты: ведущий Артём, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 1.0,
+      "active_workdays": 1,
+      "model_duration_workdays": 1,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.2,
+        "artem": 0.8
+      }
+    },
+    {
+      "issue": 42,
+      "wbs": [
+        "4.3.1"
+      ],
+      "title": "Автотесты логики заметок",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "responsible": "artem",
+      "participants": [
+        "denis",
+        "artem"
+      ],
+      "effort_by_person": {
+        "denis": 1.6,
+        "artem": 6.4
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Обработчики, интерфейс Telegram-бота или их автономные тесты: ведущий Артём, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.0,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.4,
+        "artem": 1.6
+      }
+    },
+    {
+      "issue": 43,
+      "wbs": [
+        "4.3.2"
+      ],
+      "title": "Ручная проверка сценариев заметок",
+      "estimate_hours": 6,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "responsible": "ekaterina",
+      "participants": [
+        "artem",
+        "ekaterina"
+      ],
+      "effort_by_person": {
+        "artem": 1.2,
+        "ekaterina": 4.8
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Екатерина выполняет ручную проверку заметок, Артём проверяет сценарии и воспроизведение.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 1.5,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "artem": 0.3,
+        "ekaterina": 1.2
+      }
+    },
+    {
+      "issue": 44,
+      "wbs": [
+        "5.1.1",
+        "5.1.2"
+      ],
+      "title": "Настройка уведомлений: включение, отключение и выбор интервала",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "responsible": "artem",
+      "participants": [
+        "denis",
+        "artem"
+      ],
+      "effort_by_person": {
+        "denis": 1.6,
+        "artem": 6.4
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Объединённая карточка настроек уведомлений, включая сопутствующую миграцию: основной результат — интерфейс бота Артёма; Денис проверяет контракт с рассылкой. Деление не добавляет отдельной оценки за миграцию.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.0,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.4,
+        "artem": 1.6
+      }
+    },
+    {
+      "issue": 45,
+      "wbs": [
+        "5.2.1"
+      ],
+      "title": "Выбор пар для уведомлений с учётом часового пояса",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 6.4,
+        "maksim": 1.6
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. API/уведомления Дениса с техническим ревью Максима.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.0,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 1.6,
+        "maksim": 0.4
+      }
+    },
+    {
+      "issue": 61,
+      "wbs": [
+        "5.2.2"
+      ],
+      "title": "Журнал уведомлений и защита от повторов",
+      "estimate_hours": 10,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 8.0,
+        "maksim": 2.0
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. API/уведомления Дениса с техническим ревью Максима.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.5,
+      "active_workdays": 3,
+      "model_duration_workdays": 3,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 2.0,
+        "maksim": 0.5
+      }
+    },
+    {
+      "issue": 46,
+      "wbs": [
+        "5.2.3"
+      ],
+      "title": "Отправка уведомлений и обработка ошибок Telegram",
+      "estimate_hours": 12,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "artem"
+      ],
+      "effort_by_person": {
+        "denis": 9.6,
+        "artem": 2.4
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. API/уведомления Дениса с техническим ревью Артёма.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 3.0,
+      "active_workdays": 3,
+      "model_duration_workdays": 3,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 2.4,
+        "artem": 0.6
+      }
+    },
+    {
+      "issue": 62,
+      "wbs": [
+        "5.2.4"
+      ],
+      "title": "Уведомления об изменениях расписания",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 6.4,
+        "maksim": 1.6
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. API/уведомления Дениса с техническим ревью Максима.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.0,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 1.6,
+        "maksim": 0.4
+      }
+    },
+    {
+      "issue": 47,
+      "wbs": [
+        "5.3.1"
+      ],
+      "title": "Автотесты выбора пар и предотвращения повторов",
+      "estimate_hours": 12,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 9.6,
+        "maksim": 2.4
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. API/уведомления Дениса с техническим ревью Максима.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 3.0,
+      "active_workdays": 3,
+      "model_duration_workdays": 3,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 2.4,
+        "maksim": 0.6
+      }
+    },
+    {
+      "issue": 48,
+      "wbs": [
+        "5.3.2"
+      ],
+      "title": "Ручная проверка уведомлений и замер задержки",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "responsible": "ekaterina",
+      "participants": [
+        "denis",
+        "ekaterina"
+      ],
+      "effort_by_person": {
+        "denis": 1.6,
+        "ekaterina": 6.4
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Екатерина проверяет уведомления и задержки, Денис проверяет технические результаты рассылки.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.0,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "observation_window",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "observation_window",
+        "note": "Минимум 168 календарных часов работоспособной рассылки и журнала; подготовка до окна, итоговый анализ после. Значимое исправление может потребовать нового наблюдения.",
+        "minimum_calendar_hours": 168,
+        "window_anchor": "after sending and logging are operational",
+        "origin": "acceptance criterion"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.4,
+        "ekaterina": 1.6
+      }
+    },
+    {
+      "issue": 49,
+      "wbs": [
+        "6.1.1"
+      ],
+      "title": "Проверка прав администратора по Telegram ID",
+      "estimate_hours": 4,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "responsible": "artem",
+      "participants": [
+        "denis",
+        "artem"
+      ],
+      "effort_by_person": {
+        "denis": 0.8,
+        "artem": 3.2
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Обработчики, интерфейс Telegram-бота или их автономные тесты: ведущий Артём, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 1.0,
+      "active_workdays": 1,
+      "model_duration_workdays": 1,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.2,
+        "artem": 0.8
+      }
+    },
+    {
+      "issue": 50,
+      "wbs": [
+        "6.1.2"
+      ],
+      "title": "Команды администратора /users и /stats",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "responsible": "artem",
+      "participants": [
+        "denis",
+        "artem"
+      ],
+      "effort_by_person": {
+        "denis": 1.6,
+        "artem": 6.4
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Обработчики, интерфейс Telegram-бота или их автономные тесты: ведущий Артём, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.0,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.4,
+        "artem": 1.6
+      }
+    },
+    {
+      "issue": 51,
+      "wbs": [
+        "6.1.3"
+      ],
+      "title": "Команды администратора /update и /log",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "responsible": "artem",
+      "participants": [
+        "denis",
+        "artem"
+      ],
+      "effort_by_person": {
+        "denis": 1.6,
+        "artem": 6.4
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Обработчики, интерфейс Telegram-бота или их автономные тесты: ведущий Артём, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.0,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.4,
+        "artem": 1.6
+      }
+    },
+    {
+      "issue": 52,
+      "wbs": [
+        "6.2.1"
+      ],
+      "title": "Внешний мониторинг доступности",
+      "estimate_hours": 8.5,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "ekaterina"
+      ],
+      "effort_by_person": {
+        "denis": 6.8,
+        "ekaterina": 1.7
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Денис настраивает внешний мониторинг, Екатерина проверяет обнаружение отказа и восстановления.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.125,
+      "active_workdays": 3,
+      "model_duration_workdays": 3,
+      "duration_kind": "setup_then_observation",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "setup_then_observation",
+        "note": "Активная работа покрывает настройку и начальный отчёт. Месячная доступность требует полного календарного месяца; неполный период не подтверждает 99,5%.",
+        "minimum_calendar_hours": null,
+        "observation_period": "one full calendar month for the monthly metric",
+        "origin": "NFR-10 and acceptance scope"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 1.7,
+        "ekaterina": 0.425
+      }
+    },
+    {
+      "issue": 53,
+      "wbs": [
+        "6.2.2"
+      ],
+      "title": "Резервное копирование и проверка восстановления",
+      "estimate_hours": 8.83,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "denis",
+      "participants": [
+        "denis",
+        "maksim"
+      ],
+      "effort_by_person": {
+        "denis": 7.06,
+        "maksim": 1.77
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Инфраструктура, CI/CD или резервное копирование: ведущий Денис, техническое ревью Максима.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.2075,
+      "active_workdays": 3,
+      "model_duration_workdays": 3,
+      "duration_kind": "daily_runs_window",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "daily_runs_window",
+        "note": "Семь успешных ежедневных копий на семи датах. При запуске раз в 24 ч между первой и седьмой копией 144 ч; затем проверка сохранности и восстановления.",
+        "required_successful_runs": 7,
+        "interval_hours": 24,
+        "minimum_hours_first_to_last_run": 144,
+        "origin": "acceptance criterion; daily cadence calculation"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 1.765,
+        "maksim": 0.4425
+      }
+    },
+    {
+      "issue": 54,
+      "wbs": [
+        "6.2.3"
+      ],
+      "title": "Команды /help и /feedback",
+      "estimate_hours": 4.33,
+      "basis": "planned",
+      "milestone": "MVP",
+      "responsible": "artem",
+      "participants": [
+        "denis",
+        "artem"
+      ],
+      "effort_by_person": {
+        "denis": 0.87,
+        "artem": 3.46
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Обработчики, интерфейс Telegram-бота или их автономные тесты: ведущий Артём, техническое ревью Дениса.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 1.0825,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "sequential_work",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "sequential_work",
+        "note": "После готовности зависимостей; доступность ведущего и проверяющего учитывается при календарном размещении.",
+        "origin": "conversion model"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.2175,
+        "artem": 0.865
+      }
+    },
+    {
+      "issue": 55,
+      "wbs": [
+        "6.3.1"
+      ],
+      "title": "Нагрузочное тестирование ключевых операций",
+      "estimate_hours": 16,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "responsible": "ekaterina",
+      "participants": [
+        "denis",
+        "ekaterina"
+      ],
+      "effort_by_person": {
+        "denis": 3.2,
+        "ekaterina": 12.8
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Екатерина ведёт нагрузочную проверку, Денис проверяет метод измерения и выводы.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 4.0,
+      "active_workdays": 4,
+      "model_duration_workdays": 4,
+      "duration_kind": "phased_verification",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "phased_verification",
+        "note": "Расписание проверяется до MVP, окончательный набор — после заметок и настроек. Четыре дня активного эквивалента распределяются между этапами.",
+        "minimum_calendar_hours": null,
+        "phases": [
+          "schedule before MVP",
+          "complete operation set after notes and notification settings"
+        ],
+        "origin": "milestone plan"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.8,
+        "ekaterina": 3.2
+      }
+    },
+    {
+      "issue": 56,
+      "wbs": [
+        "6.3.2"
+      ],
+      "title": "Проверка совместимости с клиентами Telegram",
+      "estimate_hours": 16,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "responsible": "ekaterina",
+      "participants": [
+        "artem",
+        "ekaterina"
+      ],
+      "effort_by_person": {
+        "artem": 3.2,
+        "ekaterina": 12.8
+      },
+      "allocation_note": "Новое плановое допущение для учебной модели: 80% полного Estimate ведущему исполнителю и 20% второму участнику на проверку/ревью; доля проверки округлена до 0,01 чел.-ч ROUND_HALF_UP, остаток отдан ведущему. Этапы последовательны; D=ceil(H/4) не делится на число участников. Назначения не подтверждают фактическое участие. Екатерина выполняет межклиентскую проверку, Артём проверяет дефекты интерфейса и результаты.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 4.0,
+      "active_workdays": 4,
+      "model_duration_workdays": 4,
+      "duration_kind": "phased_verification",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "phased_verification",
+        "note": "Проверки соответствующих функций перед MVP, 1.1 и 1.2; доступ к обязательным версиям клиентов — отдельное ограничение.",
+        "minimum_calendar_hours": null,
+        "phases": [
+          "registration and schedule before MVP",
+          "notes before Release 1.1",
+          "notification settings before Release 1.2"
+        ],
+        "origin": "acceptance scope and milestone plan"
+      },
+      "per_person_effort_day_equivalents": {
+        "artem": 0.8,
+        "ekaterina": 3.2
+      }
+    },
+    {
+      "issue": 57,
+      "wbs": [
+        "6.3.3"
+      ],
+      "title": "Юзабилити-тестирование на пяти пользователях",
+      "estimate_hours": 8,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "responsible": "ekaterina",
+      "participants": [
+        "denis",
+        "ekaterina"
+      ],
+      "effort_by_person": {
+        "denis": 1.5,
+        "ekaterina": 6.5
+      },
+      "allocation_note": "Особое плановое распределение без изменения прежних 8 командных часов: подготовка 1,5 — Екатерина; модерация 2,5 — Екатерина; анализ 2 — Екатерина 1 и Денис 1; протокол 2 — Екатерина 1,5 и Денис 0,5. Итого Екатерина 6,5, Денис 1,5. Дополнительные 2,5 чел.-ч внешних бета-пользователей исключены из ёмкости команды. Последовательный расчёт D=ceil(8/4)=2 рабочих дня не сокращается из-за второго участника; ожидание пользователей может увеличить календарный срок. Назначения условные, не факт участия.",
+      "effective_parallel_executors": 1,
+      "hours_per_day_per_executor": 4,
+      "raw_effort_days": 2.0,
+      "active_workdays": 2,
+      "model_duration_workdays": 2,
+      "duration_kind": "phased_user_study",
+      "is_final_calendar_duration": false,
+      "calendar_constraint": {
+        "kind": "phased_user_study",
+        "note": "UC-01 до MVP, UC-08 до 1.1: две сессии с пятью внешними пользователями. Их 2,5 часа не входят в n или часы команды.",
+        "minimum_calendar_hours": null,
+        "external_participant_hours": 2.5,
+        "phases": [
+          "UC-01 before MVP",
+          "UC-08 before Release 1.1"
+        ],
+        "origin": "acceptance scope and step3 effort breakdown"
+      },
+      "per_person_effort_day_equivalents": {
+        "denis": 0.375,
+        "ekaterina": 1.625
+      }
+    }
+  ],
+  "verification": {
+    "live_estimates_and_milestones_match_step5": true,
+    "49_open_9_closed_confirmed": true,
+    "github_mutations_performed": false,
+    "new_github_assignees_or_dates_set": false
+  }
+}

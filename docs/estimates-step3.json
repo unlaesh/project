@@ -1,0 +1,783 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-12",
+  "repo": "unlaesh/project",
+  "project_url": "https://github.com/users/unlaesh/projects/1",
+  "unit": "team_person_hours",
+  "method": "individual_relative_ai_assisted",
+  "reference": {
+    "issue": 28,
+    "hours": 4,
+    "breakdown": {
+      "clarification": 0.5,
+      "implementation": 1.5,
+      "local_tests": 1,
+      "review_and_documentation": 1
+    }
+  },
+  "scope": "Full task effort, not remaining effort or actual time. Dependencies are estimated separately. Nine closed tasks have retrospective norms. No global contingency included. No human team Planning Poker session was conducted.",
+  "excluded_issues": [
+    58,
+    59
+  ],
+  "external_participant_hours": {
+    "issue_57_beta_users": 2.5
+  },
+  "entries": [
+    {
+      "issue": 2,
+      "wbs": [
+        "1.1.1"
+      ],
+      "title": "Описание и оценка идей проекта",
+      "estimate_hours": 6,
+      "reference_multiple": 1.5,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "rationale": "Три идеи, сравнение, проверка расчётов и аргументации.",
+      "risk": "Несогласованные критерии и исходные предположения."
+    },
+    {
+      "issue": 3,
+      "wbs": [
+        "1.1.2"
+      ],
+      "title": "Концепция, устав и экономика проекта",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "rationale": "Устав, границы, бюджет, точка безубыточности и NPV.",
+      "risk": "Смешение условной модели и подтверждённых данных."
+    },
+    {
+      "issue": 4,
+      "wbs": [
+        "1.1.3"
+      ],
+      "title": "Реестр заинтересованных сторон",
+      "estimate_hours": 3,
+      "reference_multiple": 0.75,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "rationale": "Реестр сторон, матрица влияния и проверка согласованности.",
+      "risk": "Пропуск внешних зависимостей."
+    },
+    {
+      "issue": 5,
+      "wbs": [
+        "1.2.1"
+      ],
+      "title": "Функциональные требования и пользовательские сценарии",
+      "estimate_hours": 12,
+      "reference_multiple": 3.0,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "rationale": "Требования, 14 сценариев, альтернативы и связи с функциями.",
+      "risk": "Противоречия сценариев и границ релизов."
+    },
+    {
+      "issue": 6,
+      "wbs": [
+        "1.2.2"
+      ],
+      "title": "Нефункциональные требования",
+      "estimate_hours": 6,
+      "reference_multiple": 1.5,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "rationale": "Измеримые NFR, условия проверки и привязка к релизам.",
+      "risk": "Непроверяемые пороги и неверные границы измерения."
+    },
+    {
+      "issue": 7,
+      "wbs": [
+        "1.2.3"
+      ],
+      "title": "WBS и бэклог GitHub Projects",
+      "estimate_hours": 16,
+      "reference_multiple": 4.0,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "rationale": "58 карточек, декомпозиция, покрытие 59 листьев WBS и размещение на доске.",
+      "risk": "Пропуски, дублирование и пересечение критериев."
+    },
+    {
+      "issue": 8,
+      "wbs": [
+        "1.3.1"
+      ],
+      "title": "Планирование и обзор недельных итераций",
+      "estimate_hours": 35,
+      "reference_multiple": 8.75,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "rationale": "Пять итераций и 24 сверки для пяти участников по принятому расчёту.",
+      "risk": "События превышают согласованные нормативы."
+    },
+    {
+      "issue": 9,
+      "wbs": [
+        "1.3.2"
+      ],
+      "title": "Контроль контрольных точек и сроков",
+      "estimate_hours": 4,
+      "reference_multiple": 1.0,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "rationale": "Три контроля по 80 человеко-минут команды.",
+      "risk": "Дополнительные проверки при отставании."
+    },
+    {
+      "issue": 10,
+      "wbs": [
+        "1.3.3"
+      ],
+      "title": "Итоговый отчёт и защита проекта",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "rationale": "Сведение результатов, сценарий демонстрации, ссылки, подготовка и защита.",
+      "risk": "Недостаточные свидетельства готовности."
+    },
+    {
+      "issue": 11,
+      "wbs": [
+        "2.1.1"
+      ],
+      "title": "Высокоуровневая архитектура системы",
+      "estimate_hours": 6,
+      "reference_multiple": 1.5,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "rationale": "Компоненты, потоки данных, исходник схемы и проверка согласованности.",
+      "risk": "Расхождение архитектуры и способов взаимодействия."
+    },
+    {
+      "issue": 12,
+      "wbs": [
+        "2.1.2"
+      ],
+      "title": "Проектирование схемы базы данных",
+      "estimate_hours": 12,
+      "reference_multiple": 3.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Полная модель данных, идентичность занятий, очередь, охват и ключи уведомлений.",
+      "risk": "Ошибочные инварианты потребуют переделки схемы."
+    },
+    {
+      "issue": 13,
+      "wbs": [
+        "2.1.3"
+      ],
+      "title": "Исследование источника расписания ЮУрГУ",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Исследование доступа, формата, идентификаторов, недель и сохранение примера.",
+      "risk": "Источник закрыт авторизацией или неоднозначен."
+    },
+    {
+      "issue": 14,
+      "wbs": [
+        "2.2.1"
+      ],
+      "title": "Контейнерное окружение Docker Compose",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Упаковка сервисов, сеть, том БД, готовность, перезапуски и воспроизводимость.",
+      "risk": "Различия локальной и серверной сред."
+    },
+    {
+      "issue": 15,
+      "wbs": [
+        "2.2.2"
+      ],
+      "title": "VPS, домен, Nginx и TLS",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "VPS, DNS, Nginx, TLS, продление, изоляция БД и инструкция.",
+      "risk": "Ошибки DNS, сертификатов и сетевых правил."
+    },
+    {
+      "issue": 16,
+      "wbs": [
+        "2.2.3"
+      ],
+      "title": "Настройка Alembic и начальная миграция для MVP",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Alembic и миграция готовой схемы MVP, ограничения и проверка пустой БД.",
+      "risk": "Модель и миграция расходятся."
+    },
+    {
+      "issue": 17,
+      "wbs": [
+        "2.3.1"
+      ],
+      "title": "GitHub Actions: линтер и автотесты",
+      "estimate_hours": 4,
+      "reference_multiple": 1.0,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "rationale": "Чистое окружение CI, Ruff, pytest, негативная проверка и документация.",
+      "risk": "Несовпадение локального и CI окружений."
+    },
+    {
+      "issue": 18,
+      "wbs": [
+        "2.3.2"
+      ],
+      "title": "CI: проверка секретов и миграций",
+      "estimate_hours": 6,
+      "reference_multiple": 1.5,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Сканер секретов, тестовая PostgreSQL, готовые миграции и негативные проверки.",
+      "risk": "Ложные срабатывания или ошибки конфигурации CI."
+    },
+    {
+      "issue": 19,
+      "wbs": [
+        "2.3.3"
+      ],
+      "title": "Автоматический деплой на сервер",
+      "estimate_hours": 12,
+      "reference_multiple": 3.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Доставка версии после CI, миграции, перезапуск, здоровье и восстановление.",
+      "risk": "Частичное обновление и несовместимость схемы."
+    },
+    {
+      "issue": 20,
+      "wbs": [
+        "3.1.1"
+      ],
+      "title": "Загрузка списка учебных групп",
+      "estimate_hours": 6,
+      "reference_multiple": 1.5,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Справочник, устойчивые ID, обновление без дублей и сохранение при ошибке.",
+      "risk": "Неоднородные названия и идентификаторы."
+    },
+    {
+      "issue": 21,
+      "wbs": [
+        "3.1.2"
+      ],
+      "title": "Загрузка и разбор расписания группы",
+      "estimate_hours": 16,
+      "reference_multiple": 4.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Четыре недели, извлечение полей, время, охват и различение пустоты и ошибки.",
+      "risk": "Различия разметки и неполная загрузка."
+    },
+    {
+      "issue": 22,
+      "wbs": [
+        "3.1.3"
+      ],
+      "title": "Сохранение расписания и выявление изменений",
+      "estimate_hours": 12,
+      "reference_multiple": 3.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Транзакционное сравнение, отмены, идемпотентность и атомарные метаданные.",
+      "risk": "Ошибка идентификации пары повредит связи."
+    },
+    {
+      "issue": 23,
+      "wbs": [
+        "3.1.4"
+      ],
+      "title": "Плановый запуск парсера, повторы и журнал обновлений",
+      "estimate_hours": 20,
+      "reference_multiple": 5.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Плановые обходы, очередь, дедупликация, частота, повторы, журнал и сигнал админу.",
+      "risk": "Взаимодействие очереди, повторов и часового ограничения."
+    },
+    {
+      "issue": 24,
+      "wbs": [
+        "3.2.1"
+      ],
+      "title": "Приём вебхука Telegram через FastAPI и aiogram",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "FastAPI/aiogram, секрет вебхука, неверные запросы, активность и инструкция.",
+      "risk": "Жизненный цикл асинхронных компонентов."
+    },
+    {
+      "issue": 25,
+      "wbs": [
+        "3.2.2"
+      ],
+      "title": "Главное меню бота на кнопках",
+      "estimate_hours": 4,
+      "reference_multiple": 1.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Клавиатуры, маршрутизация, возврат и только доступные функции.",
+      "risk": "Несогласованные состояния диалога."
+    },
+    {
+      "issue": 26,
+      "wbs": [
+        "3.2.3"
+      ],
+      "title": "Служебный адрес /health",
+      "estimate_hours": 2,
+      "reference_multiple": 0.5,
+      "basis": "retrospective",
+      "milestone": "MVP",
+      "rationale": "Endpoint живости, схема ответа, два теста и границы проверки.",
+      "risk": "Подмена живости проверкой всех зависимостей."
+    },
+    {
+      "issue": 27,
+      "wbs": [
+        "3.3.1"
+      ],
+      "title": "Регистрация: /start и выбор группы",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Регистрация, варианты поиска, сохранение, повторный start и очередь загрузки.",
+      "risk": "Дубли пользователей и неверные состояния."
+    },
+    {
+      "issue": 28,
+      "wbs": [
+        "3.3.2"
+      ],
+      "title": "Смена учебной группы",
+      "estimate_hours": 4,
+      "reference_multiple": 1.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "База: 0,5 ч уточнение, 1,5 ч реализация, 1 ч локальные тесты, 1 ч ревью и документация.",
+      "risk": "Готовые поиск, репозиторий и очередь обязательны."
+    },
+    {
+      "issue": 29,
+      "wbs": [
+        "3.4.1"
+      ],
+      "title": "Просмотр расписания на сегодня и завтра",
+      "estimate_hours": 6,
+      "reference_multiple": 1.5,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Сегодня и завтра, локальная дата, охват, пустота и запрос обновления.",
+      "risk": "Неверная трактовка загруженного периода."
+    },
+    {
+      "issue": 30,
+      "wbs": [
+        "3.4.2"
+      ],
+      "title": "Просмотр расписания на неделю с навигацией",
+      "estimate_hours": 12,
+      "reference_multiple": 3.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Недели, частичный охват, длинный вывод и согласованное обновление частей.",
+      "risk": "Старые сообщения остаются после навигации."
+    },
+    {
+      "issue": 31,
+      "wbs": [
+        "3.4.3"
+      ],
+      "title": "Просмотр расписания на произвольную дату",
+      "estimate_hours": 4,
+      "reference_multiple": 1.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Ввод даты, календарь и год, повтор ввода и готовый вывод дня.",
+      "risk": "Переход года и високосные даты."
+    },
+    {
+      "issue": 32,
+      "wbs": [
+        "3.4.4"
+      ],
+      "title": "Единый формат вывода расписания",
+      "estimate_hours": 6,
+      "reference_multiple": 1.5,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Общий формат, сортировка, выделение текущей пары и время обновления.",
+      "risk": "Временные границы и экранирование текста."
+    },
+    {
+      "issue": 33,
+      "wbs": [
+        "3.5.1"
+      ],
+      "title": "Автотесты парсера на сохранённых страницах",
+      "estimate_hours": 12,
+      "reference_multiple": 3.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Фикстуры и регрессия цепочки парсера, БД, очереди, отказов и времени.",
+      "risk": "Недостоверные фикстуры или имитации транзакций."
+    },
+    {
+      "issue": 34,
+      "wbs": [
+        "3.5.2"
+      ],
+      "title": "Приёмочная проверка сценариев MVP",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Чеклист UC-01–UC-07, данные, прогоны, дефекты, повтор и протокол.",
+      "risk": "Дополнительные циклы из-за блокирующих ошибок."
+    },
+    {
+      "issue": 35,
+      "wbs": [
+        "3.5.3"
+      ],
+      "title": "Релиз MVP для одногруппников и сбор обратной связи",
+      "estimate_hours": 6,
+      "reference_multiple": 1.5,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Версия, инструкция, запуск первой группы, первичный сбор и разбор отзывов.",
+      "risk": "Календарное ожидание ответов пользователей."
+    },
+    {
+      "issue": 36,
+      "wbs": [
+        "4.1.1"
+      ],
+      "title": "Миграция таблицы заметок",
+      "estimate_hours": 4,
+      "reference_multiple": 1.0,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "rationale": "Миграция по готовой модели, связи, уникальность и проверки БД.",
+      "risk": "Удаление занятия уничтожает заметку."
+    },
+    {
+      "issue": 37,
+      "wbs": [
+        "4.1.2"
+      ],
+      "title": "Сохранение заметок отменённых пар",
+      "estimate_hours": 4,
+      "reference_multiple": 1.0,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "rationale": "Связь и сведения отменённой пары, пометка и повторная синхронизация.",
+      "risk": "Идентификация исчезнувшего занятия."
+    },
+    {
+      "issue": 38,
+      "wbs": [
+        "4.1.3"
+      ],
+      "title": "Автоматическое удаление старых заметок",
+      "estimate_hours": 4,
+      "reference_multiple": 1.0,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "rationale": "Очистка, точный срок, запуск, журнал и локальная проверка.",
+      "risk": "Часовой пояс и окончание отменённой пары."
+    },
+    {
+      "issue": 39,
+      "wbs": [
+        "4.2.1"
+      ],
+      "title": "Добавление заметки к паре",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "rationale": "Выбор даты и пары, текст, отмена, лимит и повторное добавление.",
+      "risk": "Не уложиться в пять действий."
+    },
+    {
+      "issue": 40,
+      "wbs": [
+        "4.2.2"
+      ],
+      "title": "Список, редактирование и удаление заметок",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "rationale": "Личный список, редактирование, удаление и контроль владельца.",
+      "risk": "Подставленный callback открывает чужую запись."
+    },
+    {
+      "issue": 41,
+      "wbs": [
+        "4.2.3"
+      ],
+      "title": "Вывод личной заметки под парой",
+      "estimate_hours": 4,
+      "reference_multiple": 1.0,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "rationale": "Личные заметки в выводе дня, недели и даты через общий форматтер.",
+      "risk": "Утечка чужих заметок или дубли вывода."
+    },
+    {
+      "issue": 42,
+      "wbs": [
+        "4.3.1"
+      ],
+      "title": "Автотесты логики заметок",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "rationale": "Регрессия CRUD, прав, длины, отмены, смены группы и очистки.",
+      "risk": "Воспроизводимость данных и времени."
+    },
+    {
+      "issue": 43,
+      "wbs": [
+        "4.3.2"
+      ],
+      "title": "Ручная проверка сценариев заметок",
+      "estimate_hours": 6,
+      "reference_multiple": 1.5,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "rationale": "Чеклист, ручные сценарии, протокол, дефекты и один повторный прогон.",
+      "risk": "Потребуются дополнительные циклы проверки."
+    },
+    {
+      "issue": 44,
+      "wbs": [
+        "5.1.1",
+        "5.1.2"
+      ],
+      "title": "Настройка уведомлений: включение, отключение и выбор интервала",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "rationale": "Настройки и миграция, включение, интервалы, отмена и время активации.",
+      "risk": "Ретроспективные уведомления при неверной активации."
+    },
+    {
+      "issue": 45,
+      "wbs": [
+        "5.2.1"
+      ],
+      "title": "Выбор пар для уведомлений с учётом часового пояса",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "rationale": "Минутный цикл, кандидаты, границы времени и проверка актуальности.",
+      "risk": "Изменение настроек между этапами."
+    },
+    {
+      "issue": 61,
+      "wbs": [
+        "5.2.2"
+      ],
+      "title": "Журнал уведомлений и защита от повторов",
+      "estimate_hours": 10,
+      "reference_multiple": 2.5,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "rationale": "Журнал, ключи успеха и изменений, попытки, ошибки и перезапуск.",
+      "risk": "Сбой между Telegram и записью результата."
+    },
+    {
+      "issue": 46,
+      "wbs": [
+        "5.2.3"
+      ],
+      "title": "Отправка уведомлений и обработка ошибок Telegram",
+      "estimate_hours": 12,
+      "reference_multiple": 3.0,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "rationale": "Отправка с заметкой, лимиты, актуальность, блокировки, ошибки и результат.",
+      "risk": "Задержки и сбои Telegram."
+    },
+    {
+      "issue": 62,
+      "wbs": [
+        "5.2.4"
+      ],
+      "title": "Уведомления об изменениях расписания",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "rationale": "Готовые изменения, получатели, три типа события и идемпотентность.",
+      "risk": "Потеря отмены последней пары или смешение ключей."
+    },
+    {
+      "issue": 47,
+      "wbs": [
+        "5.3.1"
+      ],
+      "title": "Автотесты выбора пар и предотвращения повторов",
+      "estimate_hours": 12,
+      "reference_multiple": 3.0,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "rationale": "Регрессия интервалов, границ, настроек, повторов и ключей с подменённым Telegram.",
+      "risk": "Много сочетаний состояния и времени."
+    },
+    {
+      "issue": 48,
+      "wbs": [
+        "5.3.2"
+      ],
+      "title": "Ручная проверка уведомлений и замер задержки",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "rationale": "Ручные сценарии, недельное наблюдение, журнал, задержки и протокол.",
+      "risk": "Изменения потребуют повторного наблюдения."
+    },
+    {
+      "issue": 49,
+      "wbs": [
+        "6.1.1"
+      ],
+      "title": "Проверка прав администратора по Telegram ID",
+      "estimate_hours": 4,
+      "reference_multiple": 1.0,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "rationale": "Конфигурация, общий фильтр прав, callback и отказ доступа.",
+      "risk": "Непроверенный путь обходит защиту."
+    },
+    {
+      "issue": 50,
+      "wbs": [
+        "6.1.2"
+      ],
+      "title": "Команды администратора /users и /stats",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "rationale": "Пагинация пользователей, агрегаты, статусы и права.",
+      "risk": "Несогласованные определения активности."
+    },
+    {
+      "issue": 51,
+      "wbs": [
+        "6.1.3"
+      ],
+      "title": "Команды администратора /update и /log",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "rationale": "Готовая очередь, статусы, асинхронный результат и журнал.",
+      "risk": "Сопоставление результата запросу администратора."
+    },
+    {
+      "issue": 52,
+      "wbs": [
+        "6.2.1"
+      ],
+      "title": "Внешний мониторинг доступности",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Внешняя проверка, пользовательский сценарий, отказ, восстановление и отчёт.",
+      "risk": "Живой health при неработающем боте."
+    },
+    {
+      "issue": 53,
+      "wbs": [
+        "6.2.2"
+      ],
+      "title": "Резервное копирование и проверка восстановления",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Внешний backup, ротация, ошибки, тест восстановления, RPO/RTO и инструкция.",
+      "risk": "Непригодная копия и долгое восстановление."
+    },
+    {
+      "issue": 54,
+      "wbs": [
+        "6.2.3"
+      ],
+      "title": "Команды /help и /feedback",
+      "estimate_hours": 4,
+      "reference_multiple": 1.0,
+      "basis": "planned",
+      "milestone": "MVP",
+      "rationale": "Справка, обращение, отмена, пересылка и корректные ответы.",
+      "risk": "Ложное подтверждение доставки обращения."
+    },
+    {
+      "issue": 55,
+      "wbs": [
+        "6.3.1"
+      ],
+      "title": "Нагрузочное тестирование ключевых операций",
+      "estimate_hours": 16,
+      "reference_multiple": 4.0,
+      "basis": "planned",
+      "milestone": "Release 1.3",
+      "rationale": "Locust, данные, три операции, два уровня нагрузки, анализ и повтор.",
+      "risk": "Измерение раннего ответа вместо завершения операции."
+    },
+    {
+      "issue": 56,
+      "wbs": [
+        "6.3.2"
+      ],
+      "title": "Проверка совместимости с клиентами Telegram",
+      "estimate_hours": 16,
+      "reference_multiple": 4.0,
+      "basis": "planned",
+      "milestone": "Release 1.2",
+      "rationale": "12 сочетаний клиента и версии, 48 со сценариями, этапы и повторные проверки.",
+      "risk": "Недоступность предыдущих версий клиентов."
+    },
+    {
+      "issue": 57,
+      "wbs": [
+        "6.3.3"
+      ],
+      "title": "Юзабилити-тестирование на пяти пользователях",
+      "estimate_hours": 8,
+      "reference_multiple": 2.0,
+      "basis": "planned",
+      "milestone": "Release 1.1",
+      "rationale": "Команда: подготовка 1,5 ч, модерация 2,5 ч, анализ 2 ч, протокол 2 ч.",
+      "risk": "Набор пользователей и повтор после изменения интерфейса."
+    }
+  ]
+}

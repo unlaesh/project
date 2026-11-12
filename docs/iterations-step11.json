@@ -1,0 +1,1942 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-12",
+  "source": "docs/calendar-step10.json",
+  "source_sha256": "cb36bf7e6a982780b1e4db93459a99f2d6000e7ed7dbc090b609d9d0ee2d2398",
+  "status": "verified",
+  "iteration_semantics": "Initial planning cycle is the cycle containing the first actual scheduled work segment. Iteration is a single active planning assignment, not a guarantee that the whole Issue finishes within this cycle. Exact work per cycle derives from existing segments.",
+  "rationale": [
+    "Keep 3 nearest weekly iterations in GitHub now, matching the first 3 of 5 documented cycles. Later 2 remain calendar context until next rolling planning update.",
+    "Use iteration:@current for Current sprint; initial board matches 12–18 November. Work scheduled in this cycle includes early preparation for larger cards.",
+    "At each review, close only actually completed work. For unfinished cards, assign the next iteration with actual planned work, using active_iterations. Add later iterations before planning work beyond the third. Do not automatically carry a waiting card through weeks with zero work.",
+    "Iteration values can be changed at review while preserving Start date, Target date, Estimate, Plan and native dependencies unless an explicit replan is required.",
+    "A current-sprint sum of full Estimate is not sprint effort for multiweek cards; read the per-iteration hours table instead. No duplicated phase Estimate."
+  ],
+  "cycles": [
+    {
+      "number": 1,
+      "title": "Итерация 1",
+      "start_date": "2026-11-12",
+      "end_date": "2026-11-18",
+      "duration_days": 7,
+      "create_in_github_now": true,
+      "workdays": 5,
+      "capacity_per_person_hours": 20,
+      "base_hours_by_person": {
+        "denis": 20.0,
+        "maksim": 15.5,
+        "artem": 19.18,
+        "ekaterina": 14.35,
+        "alina": 3.4166666666666665
+      },
+      "reserve_hours_by_person": {
+        "denis": 0.0,
+        "maksim": 0.0,
+        "artem": 0.0,
+        "ekaterina": 0.0,
+        "alina": 0.0
+      },
+      "unused_hours_by_person": {
+        "denis": 0.0,
+        "maksim": 4.5,
+        "artem": 0.82,
+        "ekaterina": 5.65,
+        "alina": 16.58333333
+      },
+      "base_total_hours": 72.44666666666667,
+      "reserve_total_hours": 0.0,
+      "capacity_total_hours": 100,
+      "initial_assigned_issues": [
+        8,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        21,
+        25,
+        32,
+        33,
+        34,
+        54
+      ],
+      "initial_assigned_draft_phases": [
+        55,
+        56,
+        57
+      ],
+      "active_rows": [
+        {
+          "kind": "Issue",
+          "issue": 8,
+          "hours": 7.083333333333333
+        },
+        {
+          "kind": "Issue",
+          "issue": 12,
+          "hours": 13.0
+        },
+        {
+          "kind": "Issue",
+          "issue": 13,
+          "hours": 9.0
+        },
+        {
+          "kind": "Issue",
+          "issue": 14,
+          "hours": 8.67
+        },
+        {
+          "kind": "Issue",
+          "issue": 15,
+          "hours": 2.4133333333333336
+        },
+        {
+          "kind": "Issue",
+          "issue": 16,
+          "hours": 5.583333333333333
+        },
+        {
+          "kind": "Issue",
+          "issue": 18,
+          "hours": 4.27
+        },
+        {
+          "kind": "Issue",
+          "issue": 21,
+          "hours": 1.4
+        },
+        {
+          "kind": "Issue",
+          "issue": 25,
+          "hours": 4.17
+        },
+        {
+          "kind": "Issue",
+          "issue": 32,
+          "hours": 3.8533333333333335
+        },
+        {
+          "kind": "Issue",
+          "issue": 33,
+          "hours": 4.0
+        },
+        {
+          "kind": "Issue",
+          "issue": 34,
+          "hours": 3.0
+        },
+        {
+          "kind": "Issue",
+          "issue": 54,
+          "hours": 2.77
+        },
+        {
+          "kind": "DraftPhase",
+          "issue": 55,
+          "hours": 0.6833333333333333
+        },
+        {
+          "kind": "DraftPhase",
+          "issue": 56,
+          "hours": 1.8
+        },
+        {
+          "kind": "DraftPhase",
+          "issue": 57,
+          "hours": 0.75
+        }
+      ],
+      "scheduled_full_issue_completions": [
+        12,
+        13,
+        14,
+        25
+      ],
+      "active_work_from_earlier_initial_assignments": [],
+      "sum_full_estimates_of_initial_rows_hours": 142.84,
+      "goal": "Согласовать источник и модель данных, подготовить контейнерное окружение и главное меню; начать проверки и инфраструктурные работы.",
+      "github_iteration_id": "1f453695"
+    },
+    {
+      "number": 2,
+      "title": "Итерация 2",
+      "start_date": "2026-11-19",
+      "end_date": "2026-11-25",
+      "duration_days": 7,
+      "create_in_github_now": true,
+      "workdays": 5,
+      "capacity_per_person_hours": 20,
+      "base_hours_by_person": {
+        "denis": 20.0,
+        "maksim": 20.0,
+        "artem": 20.0,
+        "ekaterina": 4.733333333333333,
+        "alina": 2.25
+      },
+      "reserve_hours_by_person": {
+        "denis": 0.0,
+        "maksim": 0.0,
+        "artem": 0.0,
+        "ekaterina": 0.0,
+        "alina": 0.0
+      },
+      "unused_hours_by_person": {
+        "denis": 0.0,
+        "maksim": 0.0,
+        "artem": 0.0,
+        "ekaterina": 15.26666667,
+        "alina": 17.75
+      },
+      "base_total_hours": 66.98333333333333,
+      "reserve_total_hours": 0.0,
+      "capacity_total_hours": 100,
+      "initial_assigned_issues": [
+        9,
+        22,
+        23,
+        24,
+        27,
+        30,
+        31,
+        53
+      ],
+      "initial_assigned_draft_phases": [],
+      "active_rows": [
+        {
+          "kind": "Issue",
+          "issue": 8,
+          "hours": 7.083333333333333
+        },
+        {
+          "kind": "Issue",
+          "issue": 15,
+          "hours": 6.416666666666667
+        },
+        {
+          "kind": "Issue",
+          "issue": 16,
+          "hours": 2.9166666666666665
+        },
+        {
+          "kind": "Issue",
+          "issue": 18,
+          "hours": 2.4
+        },
+        {
+          "kind": "Issue",
+          "issue": 21,
+          "hours": 15.6
+        },
+        {
+          "kind": "Issue",
+          "issue": 32,
+          "hours": 2.4766666666666666
+        },
+        {
+          "kind": "DraftPhase",
+          "issue": 55,
+          "hours": 3.316666666666667
+        },
+        {
+          "kind": "Issue",
+          "issue": 9,
+          "hours": 1.3333333333333333
+        },
+        {
+          "kind": "Issue",
+          "issue": 22,
+          "hours": 1.7666666666666666
+        },
+        {
+          "kind": "Issue",
+          "issue": 23,
+          "hours": 3.4
+        },
+        {
+          "kind": "Issue",
+          "issue": 24,
+          "hours": 8.5
+        },
+        {
+          "kind": "Issue",
+          "issue": 27,
+          "hours": 5.33
+        },
+        {
+          "kind": "Issue",
+          "issue": 30,
+          "hours": 1.3366666666666667
+        },
+        {
+          "kind": "Issue",
+          "issue": 31,
+          "hours": 2.77
+        },
+        {
+          "kind": "Issue",
+          "issue": 53,
+          "hours": 2.3366666666666664
+        }
+      ],
+      "scheduled_full_issue_completions": [
+        15,
+        16,
+        18,
+        21,
+        32,
+        24
+      ],
+      "active_work_from_earlier_initial_assignments": [
+        8,
+        15,
+        16,
+        18,
+        21,
+        32,
+        55
+      ],
+      "sum_full_estimates_of_initial_rows_hours": 80.99,
+      "goal": "Завершить фундамент: миграции, CI и сервер; получить разбор расписания, общий формат и вебхук; продолжить регистрацию и очередь.",
+      "github_iteration_id": "178ba6a5"
+    },
+    {
+      "number": 3,
+      "title": "Итерация 3",
+      "start_date": "2026-11-26",
+      "end_date": "2026-12-02",
+      "duration_days": 7,
+      "create_in_github_now": true,
+      "workdays": 5,
+      "capacity_per_person_hours": 20,
+      "base_hours_by_person": {
+        "denis": 20.0,
+        "maksim": 20.0,
+        "artem": 20.0,
+        "ekaterina": 6.916666666666667,
+        "alina": 10.916666666666666
+      },
+      "reserve_hours_by_person": {
+        "denis": 0.0,
+        "maksim": 0.0,
+        "artem": 0.0,
+        "ekaterina": 0.0,
+        "alina": 0.0
+      },
+      "unused_hours_by_person": {
+        "denis": 0.0,
+        "maksim": 0.0,
+        "artem": 0.0,
+        "ekaterina": 13.08333333,
+        "alina": 9.08333333
+      },
+      "base_total_hours": 77.83333333333333,
+      "reserve_total_hours": 0.0,
+      "capacity_total_hours": 100,
+      "initial_assigned_issues": [
+        10,
+        19,
+        20,
+        28,
+        29,
+        35,
+        52
+      ],
+      "initial_assigned_draft_phases": [],
+      "active_rows": [
+        {
+          "kind": "Issue",
+          "issue": 8,
+          "hours": 7.083333333333333
+        },
+        {
+          "kind": "DraftPhase",
+          "issue": 57,
+          "hours": 2.5
+        },
+        {
+          "kind": "Issue",
+          "issue": 22,
+          "hours": 10.903333333333334
+        },
+        {
+          "kind": "Issue",
+          "issue": 23,
+          "hours": 10.71
+        },
+        {
+          "kind": "Issue",
+          "issue": 27,
+          "hours": 3.0
+        },
+        {
+          "kind": "Issue",
+          "issue": 30,
+          "hours": 6.983333333333333
+        },
+        {
+          "kind": "Issue",
+          "issue": 53,
+          "hours": 2.1633333333333336
+        },
+        {
+          "kind": "Issue",
+          "issue": 10,
+          "hours": 6.0
+        },
+        {
+          "kind": "Issue",
+          "issue": 19,
+          "hours": 6.15
+        },
+        {
+          "kind": "Issue",
+          "issue": 20,
+          "hours": 6.33
+        },
+        {
+          "kind": "Issue",
+          "issue": 28,
+          "hours": 4.17
+        },
+        {
+          "kind": "Issue",
+          "issue": 29,
+          "hours": 4.4
+        },
+        {
+          "kind": "Issue",
+          "issue": 35,
+          "hours": 2.0
+        },
+        {
+          "kind": "Issue",
+          "issue": 52,
+          "hours": 5.44
+        }
+      ],
+      "scheduled_full_issue_completions": [
+        22,
+        27,
+        20,
+        28
+      ],
+      "active_work_from_earlier_initial_assignments": [
+        8,
+        57,
+        22,
+        23,
+        27,
+        30,
+        53
+      ],
+      "sum_full_estimates_of_initial_rows_hours": 52.989999999999995,
+      "goal": "Завершить загрузку групп, сохранение расписания, регистрацию и смену группы; продолжить бот, деплой и эксплуатационные проверки.",
+      "github_iteration_id": "5449697e"
+    },
+    {
+      "number": 4,
+      "title": "Итерация 4",
+      "start_date": "2026-12-03",
+      "end_date": "2026-12-09",
+      "duration_days": 7,
+      "create_in_github_now": false,
+      "workdays": 5,
+      "capacity_per_person_hours": 20,
+      "base_hours_by_person": {
+        "denis": 18.296666666666667,
+        "maksim": 13.406666666666666,
+        "artem": 17.716666666666665,
+        "ekaterina": 14.056666666666667,
+        "alina": 2.25
+      },
+      "reserve_hours_by_person": {
+        "denis": 0.0,
+        "maksim": 0.0,
+        "artem": 0.0,
+        "ekaterina": 0.0,
+        "alina": 0.0
+      },
+      "unused_hours_by_person": {
+        "denis": 1.70333333,
+        "maksim": 6.59333333,
+        "artem": 2.28333333,
+        "ekaterina": 5.94333333,
+        "alina": 17.75
+      },
+      "base_total_hours": 65.72666666666667,
+      "reserve_total_hours": 0.0,
+      "capacity_total_hours": 100,
+      "initial_assigned_issues": [],
+      "initial_assigned_draft_phases": [],
+      "active_rows": [
+        {
+          "kind": "Issue",
+          "issue": 8,
+          "hours": 7.083333333333333
+        },
+        {
+          "kind": "Issue",
+          "issue": 33,
+          "hours": 8.67
+        },
+        {
+          "kind": "Issue",
+          "issue": 34,
+          "hours": 5.67
+        },
+        {
+          "kind": "Issue",
+          "issue": 54,
+          "hours": 1.56
+        },
+        {
+          "kind": "DraftPhase",
+          "issue": 55,
+          "hours": 4.0
+        },
+        {
+          "kind": "DraftPhase",
+          "issue": 56,
+          "hours": 6.2
+        },
+        {
+          "kind": "DraftPhase",
+          "issue": 57,
+          "hours": 0.75
+        },
+        {
+          "kind": "Issue",
+          "issue": 9,
+          "hours": 1.3333333333333333
+        },
+        {
+          "kind": "Issue",
+          "issue": 23,
+          "hours": 7.22
+        },
+        {
+          "kind": "Issue",
+          "issue": 30,
+          "hours": 4.68
+        },
+        {
+          "kind": "Issue",
+          "issue": 31,
+          "hours": 1.56
+        },
+        {
+          "kind": "Issue",
+          "issue": 53,
+          "hours": 4.33
+        },
+        {
+          "kind": "Issue",
+          "issue": 19,
+          "hours": 7.18
+        },
+        {
+          "kind": "Issue",
+          "issue": 29,
+          "hours": 1.93
+        },
+        {
+          "kind": "Issue",
+          "issue": 35,
+          "hours": 0.5
+        },
+        {
+          "kind": "Issue",
+          "issue": 52,
+          "hours": 3.06
+        }
+      ],
+      "scheduled_full_issue_completions": [
+        33,
+        34,
+        54,
+        23,
+        30,
+        31,
+        53,
+        19,
+        29,
+        52
+      ],
+      "active_work_from_earlier_initial_assignments": [
+        8,
+        33,
+        34,
+        54,
+        55,
+        56,
+        57,
+        9,
+        23,
+        30,
+        31,
+        53,
+        19,
+        29,
+        35,
+        52
+      ],
+      "sum_full_estimates_of_initial_rows_hours": 0,
+      "goal": "Завершить обязательные функции, пройти проверки и запустить MVP 9 декабря."
+    },
+    {
+      "number": 5,
+      "title": "Итерация 5",
+      "start_date": "2026-12-10",
+      "end_date": "2026-12-15",
+      "duration_days": 6,
+      "create_in_github_now": false,
+      "workdays": 4,
+      "capacity_per_person_hours": 16,
+      "base_hours_by_person": {
+        "denis": 6.3933333333333335,
+        "maksim": 1.3333333333333333,
+        "artem": 1.3333333333333333,
+        "ekaterina": 2.6033333333333335,
+        "alina": 2.1666666666666665
+      },
+      "reserve_hours_by_person": {
+        "denis": 8.0,
+        "maksim": 14.0,
+        "artem": 13.0,
+        "ekaterina": 13.0,
+        "alina": 12.0
+      },
+      "unused_hours_by_person": {
+        "denis": 1.60666667,
+        "maksim": 0.66666667,
+        "artem": 1.66666667,
+        "ekaterina": 0.39666667,
+        "alina": 1.83333333
+      },
+      "base_total_hours": 13.83,
+      "reserve_total_hours": 60.0,
+      "capacity_total_hours": 80,
+      "initial_assigned_issues": [],
+      "initial_assigned_draft_phases": [],
+      "active_rows": [
+        {
+          "kind": "Issue",
+          "issue": 8,
+          "hours": 6.666666666666667
+        },
+        {
+          "kind": "Issue",
+          "issue": 9,
+          "hours": 1.3333333333333333
+        },
+        {
+          "kind": "Issue",
+          "issue": 10,
+          "hours": 2.0
+        },
+        {
+          "kind": "Issue",
+          "issue": 35,
+          "hours": 3.83
+        }
+      ],
+      "scheduled_full_issue_completions": [
+        8,
+        9,
+        10,
+        35
+      ],
+      "active_work_from_earlier_initial_assignments": [
+        8,
+        9,
+        10,
+        35
+      ],
+      "sum_full_estimates_of_initial_rows_hours": 0,
+      "goal": "Разобрать обратную связь, устранить обнаруженные проблемы в пределах резерва и подготовить итоговые материалы."
+    }
+  ],
+  "rows": [
+    {
+      "kind": "Issue",
+      "issue": 8,
+      "title": "Планирование и обзор недельных итераций",
+      "plan": "MVP",
+      "start_date": "2026-11-12",
+      "target_date": "2026-12-15",
+      "estimate_hours": 35,
+      "current_scope_hours": 35,
+      "initial_iteration_number": 1,
+      "initial_iteration_title": "Итерация 1",
+      "initial_iteration_start_date": "2026-11-12",
+      "initial_iteration_end_date": "2026-11-18",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 7.083333333333333,
+        "2": 7.083333333333333,
+        "3": 7.083333333333333,
+        "4": 7.083333333333333,
+        "5": 6.666666666666667
+      },
+      "active_iterations": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "complete_in_iteration": 5,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq7d8",
+      "github_iteration_id": "1f453695"
+    },
+    {
+      "kind": "Issue",
+      "issue": 12,
+      "title": "Проектирование схемы базы данных",
+      "plan": "MVP",
+      "start_date": "2026-11-12",
+      "target_date": "2026-11-17",
+      "estimate_hours": 13.0,
+      "current_scope_hours": 13.0,
+      "initial_iteration_number": 1,
+      "initial_iteration_title": "Итерация 1",
+      "initial_iteration_start_date": "2026-11-12",
+      "initial_iteration_end_date": "2026-11-18",
+      "crosses_initial_iteration_end": false,
+      "hours_by_iteration": {
+        "1": 13.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "active_iterations": [
+        1
+      ],
+      "complete_in_iteration": 1,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq7oo",
+      "github_iteration_id": "1f453695"
+    },
+    {
+      "kind": "Issue",
+      "issue": 13,
+      "title": "Исследование источника расписания ЮУрГУ",
+      "plan": "MVP",
+      "start_date": "2026-11-12",
+      "target_date": "2026-11-16",
+      "estimate_hours": 9.0,
+      "current_scope_hours": 9.0,
+      "initial_iteration_number": 1,
+      "initial_iteration_title": "Итерация 1",
+      "initial_iteration_start_date": "2026-11-12",
+      "initial_iteration_end_date": "2026-11-18",
+      "crosses_initial_iteration_end": false,
+      "hours_by_iteration": {
+        "1": 9.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "active_iterations": [
+        1
+      ],
+      "complete_in_iteration": 1,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq7qM",
+      "github_iteration_id": "1f453695"
+    },
+    {
+      "kind": "Issue",
+      "issue": 14,
+      "title": "Контейнерное окружение Docker Compose",
+      "plan": "MVP",
+      "start_date": "2026-11-16",
+      "target_date": "2026-11-18",
+      "estimate_hours": 8.67,
+      "current_scope_hours": 8.67,
+      "initial_iteration_number": 1,
+      "initial_iteration_title": "Итерация 1",
+      "initial_iteration_start_date": "2026-11-12",
+      "initial_iteration_end_date": "2026-11-18",
+      "crosses_initial_iteration_end": false,
+      "hours_by_iteration": {
+        "1": 8.67,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "active_iterations": [
+        1
+      ],
+      "complete_in_iteration": 1,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq7tc",
+      "github_iteration_id": "1f453695"
+    },
+    {
+      "kind": "Issue",
+      "issue": 15,
+      "title": "VPS, домен, Nginx и TLS",
+      "plan": "MVP",
+      "start_date": "2026-11-18",
+      "target_date": "2026-11-23",
+      "estimate_hours": 8.83,
+      "current_scope_hours": 8.83,
+      "initial_iteration_number": 1,
+      "initial_iteration_title": "Итерация 1",
+      "initial_iteration_start_date": "2026-11-12",
+      "initial_iteration_end_date": "2026-11-18",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 2.4133333333333336,
+        "2": 6.416666666666667,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "active_iterations": [
+        1,
+        2
+      ],
+      "complete_in_iteration": 2,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq7wo",
+      "github_iteration_id": "1f453695"
+    },
+    {
+      "kind": "Issue",
+      "issue": 16,
+      "title": "Настройка Alembic и начальная миграция для MVP",
+      "plan": "MVP",
+      "start_date": "2026-11-17",
+      "target_date": "2026-11-19",
+      "estimate_hours": 8.5,
+      "current_scope_hours": 8.5,
+      "initial_iteration_number": 1,
+      "initial_iteration_title": "Итерация 1",
+      "initial_iteration_start_date": "2026-11-12",
+      "initial_iteration_end_date": "2026-11-18",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 5.583333333333333,
+        "2": 2.9166666666666665,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "active_iterations": [
+        1,
+        2
+      ],
+      "complete_in_iteration": 2,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq7zQ",
+      "github_iteration_id": "1f453695"
+    },
+    {
+      "kind": "Issue",
+      "issue": 18,
+      "title": "CI: проверка секретов и миграций",
+      "plan": "MVP",
+      "start_date": "2026-11-12",
+      "target_date": "2026-11-23",
+      "estimate_hours": 6.67,
+      "current_scope_hours": 6.67,
+      "initial_iteration_number": 1,
+      "initial_iteration_title": "Итерация 1",
+      "initial_iteration_start_date": "2026-11-12",
+      "initial_iteration_end_date": "2026-11-18",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 4.27,
+        "2": 2.4,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "active_iterations": [
+        1,
+        2
+      ],
+      "complete_in_iteration": 2,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq74o",
+      "github_iteration_id": "1f453695"
+    },
+    {
+      "kind": "Issue",
+      "issue": 21,
+      "title": "Загрузка и разбор расписания группы",
+      "plan": "MVP",
+      "start_date": "2026-11-16",
+      "target_date": "2026-11-25",
+      "estimate_hours": 17.0,
+      "current_scope_hours": 17.0,
+      "initial_iteration_number": 1,
+      "initial_iteration_title": "Итерация 1",
+      "initial_iteration_start_date": "2026-11-12",
+      "initial_iteration_end_date": "2026-11-18",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 1.4,
+        "2": 15.6,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "active_iterations": [
+        1,
+        2
+      ],
+      "complete_in_iteration": 2,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq7-k",
+      "github_iteration_id": "1f453695"
+    },
+    {
+      "kind": "Issue",
+      "issue": 25,
+      "title": "Главное меню бота на кнопках",
+      "plan": "MVP",
+      "start_date": "2026-11-12",
+      "target_date": "2026-11-16",
+      "estimate_hours": 4.17,
+      "current_scope_hours": 4.17,
+      "initial_iteration_number": 1,
+      "initial_iteration_title": "Итерация 1",
+      "initial_iteration_start_date": "2026-11-12",
+      "initial_iteration_end_date": "2026-11-18",
+      "crosses_initial_iteration_end": false,
+      "hours_by_iteration": {
+        "1": 4.17,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "active_iterations": [
+        1
+      ],
+      "complete_in_iteration": 1,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq8JI",
+      "github_iteration_id": "1f453695"
+    },
+    {
+      "kind": "Issue",
+      "issue": 32,
+      "title": "Единый формат вывода расписания",
+      "plan": "MVP",
+      "start_date": "2026-11-17",
+      "target_date": "2026-11-20",
+      "estimate_hours": 6.33,
+      "current_scope_hours": 6.33,
+      "initial_iteration_number": 1,
+      "initial_iteration_title": "Итерация 1",
+      "initial_iteration_start_date": "2026-11-12",
+      "initial_iteration_end_date": "2026-11-18",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 3.8533333333333335,
+        "2": 2.4766666666666666,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "active_iterations": [
+        1,
+        2
+      ],
+      "complete_in_iteration": 2,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq8fE",
+      "github_iteration_id": "1f453695"
+    },
+    {
+      "kind": "Issue",
+      "issue": 33,
+      "title": "Автотесты парсера на сохранённых страницах",
+      "plan": "MVP",
+      "start_date": "2026-11-16",
+      "target_date": "2026-12-09",
+      "estimate_hours": 12.67,
+      "current_scope_hours": 12.67,
+      "initial_iteration_number": 1,
+      "initial_iteration_title": "Итерация 1",
+      "initial_iteration_start_date": "2026-11-12",
+      "initial_iteration_end_date": "2026-11-18",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 4.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 8.67,
+        "5": 0.0
+      },
+      "active_iterations": [
+        1,
+        4
+      ],
+      "complete_in_iteration": 4,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq8j0",
+      "github_iteration_id": "1f453695"
+    },
+    {
+      "kind": "Issue",
+      "issue": 34,
+      "title": "Приёмочная проверка сценариев MVP",
+      "plan": "MVP",
+      "start_date": "2026-11-17",
+      "target_date": "2026-12-09",
+      "estimate_hours": 8.67,
+      "current_scope_hours": 8.67,
+      "initial_iteration_number": 1,
+      "initial_iteration_title": "Итерация 1",
+      "initial_iteration_start_date": "2026-11-12",
+      "initial_iteration_end_date": "2026-11-18",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 3.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 5.67,
+        "5": 0.0
+      },
+      "active_iterations": [
+        1,
+        4
+      ],
+      "complete_in_iteration": 4,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq8oI",
+      "github_iteration_id": "1f453695"
+    },
+    {
+      "kind": "Issue",
+      "issue": 54,
+      "title": "Команды /help и /feedback",
+      "plan": "MVP",
+      "start_date": "2026-11-16",
+      "target_date": "2026-12-08",
+      "estimate_hours": 4.33,
+      "current_scope_hours": 4.33,
+      "initial_iteration_number": 1,
+      "initial_iteration_title": "Итерация 1",
+      "initial_iteration_start_date": "2026-11-12",
+      "initial_iteration_end_date": "2026-11-18",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 2.77,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 1.56,
+        "5": 0.0
+      },
+      "active_iterations": [
+        1,
+        4
+      ],
+      "complete_in_iteration": 4,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq9go",
+      "github_iteration_id": "1f453695"
+    },
+    {
+      "kind": "DraftPhase",
+      "issue": 55,
+      "title": "MVP · #55: нагрузочная проверка",
+      "plan": "Phase",
+      "start_date": "2026-11-18",
+      "target_date": "2026-12-08",
+      "estimate_hours": null,
+      "current_scope_hours": 8,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhIOPLA",
+      "initial_iteration_number": 1,
+      "initial_iteration_title": "Итерация 1",
+      "initial_iteration_start_date": "2026-11-12",
+      "initial_iteration_end_date": "2026-11-18",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 0.6833333333333333,
+        "2": 3.316666666666667,
+        "3": 0.0,
+        "4": 4.0,
+        "5": 0.0
+      },
+      "active_iterations": [
+        1,
+        2,
+        4
+      ],
+      "complete_in_iteration": 4,
+      "github_iteration_id": "1f453695"
+    },
+    {
+      "kind": "DraftPhase",
+      "issue": 56,
+      "title": "MVP · #56: проверка клиентов",
+      "plan": "Phase",
+      "start_date": "2026-11-12",
+      "target_date": "2026-12-09",
+      "estimate_hours": null,
+      "current_scope_hours": 8,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhIOPR4",
+      "initial_iteration_number": 1,
+      "initial_iteration_title": "Итерация 1",
+      "initial_iteration_start_date": "2026-11-12",
+      "initial_iteration_end_date": "2026-11-18",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 1.8,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 6.2,
+        "5": 0.0
+      },
+      "active_iterations": [
+        1,
+        4
+      ],
+      "complete_in_iteration": 4,
+      "github_iteration_id": "1f453695"
+    },
+    {
+      "kind": "DraftPhase",
+      "issue": 57,
+      "title": "MVP · #57: юзабилити UC-01",
+      "plan": "Phase",
+      "start_date": "2026-11-12",
+      "target_date": "2026-12-04",
+      "estimate_hours": null,
+      "current_scope_hours": 4,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhIOPYI",
+      "initial_iteration_number": 1,
+      "initial_iteration_title": "Итерация 1",
+      "initial_iteration_start_date": "2026-11-12",
+      "initial_iteration_end_date": "2026-11-18",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 0.75,
+        "2": 0.0,
+        "3": 2.5,
+        "4": 0.75,
+        "5": 0.0
+      },
+      "active_iterations": [
+        1,
+        3,
+        4
+      ],
+      "complete_in_iteration": 4,
+      "github_iteration_id": "1f453695"
+    },
+    {
+      "kind": "Issue",
+      "issue": 9,
+      "title": "Контроль контрольных точек и сроков",
+      "plan": "MVP",
+      "start_date": "2026-11-25",
+      "target_date": "2026-12-15",
+      "estimate_hours": 4,
+      "current_scope_hours": 4,
+      "initial_iteration_number": 2,
+      "initial_iteration_title": "Итерация 2",
+      "initial_iteration_start_date": "2026-11-19",
+      "initial_iteration_end_date": "2026-11-25",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 0.0,
+        "2": 1.3333333333333333,
+        "3": 0.0,
+        "4": 1.3333333333333333,
+        "5": 1.3333333333333333
+      },
+      "active_iterations": [
+        2,
+        4,
+        5
+      ],
+      "complete_in_iteration": 5,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq7gA",
+      "github_iteration_id": "178ba6a5"
+    },
+    {
+      "kind": "Issue",
+      "issue": 22,
+      "title": "Сохранение расписания и выявление изменений",
+      "plan": "MVP",
+      "start_date": "2026-11-25",
+      "target_date": "2026-12-01",
+      "estimate_hours": 12.67,
+      "current_scope_hours": 12.67,
+      "initial_iteration_number": 2,
+      "initial_iteration_title": "Итерация 2",
+      "initial_iteration_start_date": "2026-11-19",
+      "initial_iteration_end_date": "2026-11-25",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 0.0,
+        "2": 1.7666666666666666,
+        "3": 10.903333333333334,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "active_iterations": [
+        2,
+        3
+      ],
+      "complete_in_iteration": 3,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq8CI",
+      "github_iteration_id": "178ba6a5"
+    },
+    {
+      "kind": "Issue",
+      "issue": 23,
+      "title": "Плановый запуск парсера, повторы и журнал обновлений",
+      "plan": "MVP",
+      "start_date": "2026-11-24",
+      "target_date": "2026-12-07",
+      "estimate_hours": 21.33,
+      "current_scope_hours": 21.33,
+      "initial_iteration_number": 2,
+      "initial_iteration_title": "Итерация 2",
+      "initial_iteration_start_date": "2026-11-19",
+      "initial_iteration_end_date": "2026-11-25",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 0.0,
+        "2": 3.4,
+        "3": 10.71,
+        "4": 7.22,
+        "5": 0.0
+      },
+      "active_iterations": [
+        2,
+        3,
+        4
+      ],
+      "complete_in_iteration": 4,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq8Es",
+      "github_iteration_id": "178ba6a5"
+    },
+    {
+      "kind": "Issue",
+      "issue": 24,
+      "title": "Приём вебхука Telegram через FastAPI и aiogram",
+      "plan": "MVP",
+      "start_date": "2026-11-23",
+      "target_date": "2026-11-25",
+      "estimate_hours": 8.5,
+      "current_scope_hours": 8.5,
+      "initial_iteration_number": 2,
+      "initial_iteration_title": "Итерация 2",
+      "initial_iteration_start_date": "2026-11-19",
+      "initial_iteration_end_date": "2026-11-25",
+      "crosses_initial_iteration_end": false,
+      "hours_by_iteration": {
+        "1": 0.0,
+        "2": 8.5,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "active_iterations": [
+        2
+      ],
+      "complete_in_iteration": 2,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq8HA",
+      "github_iteration_id": "178ba6a5"
+    },
+    {
+      "kind": "Issue",
+      "issue": 27,
+      "title": "Регистрация: /start и выбор группы",
+      "plan": "MVP",
+      "start_date": "2026-11-19",
+      "target_date": "2026-12-01",
+      "estimate_hours": 8.33,
+      "current_scope_hours": 8.33,
+      "initial_iteration_number": 2,
+      "initial_iteration_title": "Итерация 2",
+      "initial_iteration_start_date": "2026-11-19",
+      "initial_iteration_end_date": "2026-11-25",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 0.0,
+        "2": 5.33,
+        "3": 3.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "active_iterations": [
+        2,
+        3
+      ],
+      "complete_in_iteration": 3,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq8Pc",
+      "github_iteration_id": "178ba6a5"
+    },
+    {
+      "kind": "Issue",
+      "issue": 30,
+      "title": "Просмотр расписания на неделю с навигацией",
+      "plan": "MVP",
+      "start_date": "2026-11-24",
+      "target_date": "2026-12-04",
+      "estimate_hours": 13.0,
+      "current_scope_hours": 13.0,
+      "initial_iteration_number": 2,
+      "initial_iteration_title": "Итерация 2",
+      "initial_iteration_start_date": "2026-11-19",
+      "initial_iteration_end_date": "2026-11-25",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 0.0,
+        "2": 1.3366666666666667,
+        "3": 6.983333333333333,
+        "4": 4.68,
+        "5": 0.0
+      },
+      "active_iterations": [
+        2,
+        3,
+        4
+      ],
+      "complete_in_iteration": 4,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq8Y4",
+      "github_iteration_id": "178ba6a5"
+    },
+    {
+      "kind": "Issue",
+      "issue": 31,
+      "title": "Просмотр расписания на произвольную дату",
+      "plan": "MVP",
+      "start_date": "2026-11-20",
+      "target_date": "2026-12-08",
+      "estimate_hours": 4.33,
+      "current_scope_hours": 4.33,
+      "initial_iteration_number": 2,
+      "initial_iteration_title": "Итерация 2",
+      "initial_iteration_start_date": "2026-11-19",
+      "initial_iteration_end_date": "2026-11-25",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 0.0,
+        "2": 2.77,
+        "3": 0.0,
+        "4": 1.56,
+        "5": 0.0
+      },
+      "active_iterations": [
+        2,
+        4
+      ],
+      "complete_in_iteration": 4,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq8cI",
+      "github_iteration_id": "178ba6a5"
+    },
+    {
+      "kind": "Issue",
+      "issue": 53,
+      "title": "Резервное копирование и проверка восстановления",
+      "plan": "MVP",
+      "start_date": "2026-11-25",
+      "target_date": "2026-12-09",
+      "estimate_hours": 8.83,
+      "current_scope_hours": 8.83,
+      "initial_iteration_number": 2,
+      "initial_iteration_title": "Итерация 2",
+      "initial_iteration_start_date": "2026-11-19",
+      "initial_iteration_end_date": "2026-11-25",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 0.0,
+        "2": 2.3366666666666664,
+        "3": 2.1633333333333336,
+        "4": 4.33,
+        "5": 0.0
+      },
+      "active_iterations": [
+        2,
+        3,
+        4
+      ],
+      "complete_in_iteration": 4,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq9dU",
+      "github_iteration_id": "178ba6a5"
+    },
+    {
+      "kind": "Issue",
+      "issue": 10,
+      "title": "Итоговый отчёт и защита проекта",
+      "plan": "MVP",
+      "start_date": "2026-11-30",
+      "target_date": "2026-12-15",
+      "estimate_hours": 8,
+      "current_scope_hours": 8,
+      "initial_iteration_number": 3,
+      "initial_iteration_title": "Итерация 3",
+      "initial_iteration_start_date": "2026-11-26",
+      "initial_iteration_end_date": "2026-12-02",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 6.0,
+        "4": 0.0,
+        "5": 2.0
+      },
+      "active_iterations": [
+        3,
+        5
+      ],
+      "complete_in_iteration": 5,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq7ig",
+      "github_iteration_id": "5449697e"
+    },
+    {
+      "kind": "Issue",
+      "issue": 19,
+      "title": "Автоматический деплой на сервер",
+      "plan": "MVP",
+      "start_date": "2026-11-30",
+      "target_date": "2026-12-07",
+      "estimate_hours": 13.33,
+      "current_scope_hours": 13.33,
+      "initial_iteration_number": 3,
+      "initial_iteration_title": "Итерация 3",
+      "initial_iteration_start_date": "2026-11-26",
+      "initial_iteration_end_date": "2026-12-02",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 6.15,
+        "4": 7.18,
+        "5": 0.0
+      },
+      "active_iterations": [
+        3,
+        4
+      ],
+      "complete_in_iteration": 4,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq77U",
+      "github_iteration_id": "5449697e"
+    },
+    {
+      "kind": "Issue",
+      "issue": 20,
+      "title": "Загрузка списка учебных групп",
+      "plan": "MVP",
+      "start_date": "2026-11-26",
+      "target_date": "2026-11-30",
+      "estimate_hours": 6.33,
+      "current_scope_hours": 6.33,
+      "initial_iteration_number": 3,
+      "initial_iteration_title": "Итерация 3",
+      "initial_iteration_start_date": "2026-11-26",
+      "initial_iteration_end_date": "2026-12-02",
+      "crosses_initial_iteration_end": false,
+      "hours_by_iteration": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 6.33,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "active_iterations": [
+        3
+      ],
+      "complete_in_iteration": 3,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq79I",
+      "github_iteration_id": "5449697e"
+    },
+    {
+      "kind": "Issue",
+      "issue": 28,
+      "title": "Смена учебной группы",
+      "plan": "MVP",
+      "start_date": "2026-12-01",
+      "target_date": "2026-12-02",
+      "estimate_hours": 4.17,
+      "current_scope_hours": 4.17,
+      "initial_iteration_number": 3,
+      "initial_iteration_title": "Итерация 3",
+      "initial_iteration_start_date": "2026-11-26",
+      "initial_iteration_end_date": "2026-12-02",
+      "crosses_initial_iteration_end": false,
+      "hours_by_iteration": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 4.17,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "active_iterations": [
+        3
+      ],
+      "complete_in_iteration": 3,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq8Sg",
+      "github_iteration_id": "5449697e"
+    },
+    {
+      "kind": "Issue",
+      "issue": 29,
+      "title": "Просмотр расписания на сегодня и завтра",
+      "plan": "MVP",
+      "start_date": "2026-11-27",
+      "target_date": "2026-12-03",
+      "estimate_hours": 6.33,
+      "current_scope_hours": 6.33,
+      "initial_iteration_number": 3,
+      "initial_iteration_title": "Итерация 3",
+      "initial_iteration_start_date": "2026-11-26",
+      "initial_iteration_end_date": "2026-12-02",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 4.4,
+        "4": 1.93,
+        "5": 0.0
+      },
+      "active_iterations": [
+        3,
+        4
+      ],
+      "complete_in_iteration": 4,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq8V8",
+      "github_iteration_id": "5449697e"
+    },
+    {
+      "kind": "Issue",
+      "issue": 35,
+      "title": "Релиз MVP для одногруппников и сбор обратной связи",
+      "plan": "MVP",
+      "start_date": "2026-12-01",
+      "target_date": "2026-12-14",
+      "estimate_hours": 6.33,
+      "current_scope_hours": 6.33,
+      "initial_iteration_number": 3,
+      "initial_iteration_title": "Итерация 3",
+      "initial_iteration_start_date": "2026-11-26",
+      "initial_iteration_end_date": "2026-12-02",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 2.0,
+        "4": 0.5,
+        "5": 3.83
+      },
+      "active_iterations": [
+        3,
+        4,
+        5
+      ],
+      "complete_in_iteration": 5,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq8qs",
+      "github_iteration_id": "5449697e"
+    },
+    {
+      "kind": "Issue",
+      "issue": 52,
+      "title": "Внешний мониторинг доступности",
+      "plan": "MVP",
+      "start_date": "2026-11-27",
+      "target_date": "2026-12-07",
+      "estimate_hours": 8.5,
+      "current_scope_hours": 8.5,
+      "initial_iteration_number": 3,
+      "initial_iteration_title": "Итерация 3",
+      "initial_iteration_start_date": "2026-11-26",
+      "initial_iteration_end_date": "2026-12-02",
+      "crosses_initial_iteration_end": true,
+      "hours_by_iteration": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 5.44,
+        "4": 3.06,
+        "5": 0.0
+      },
+      "active_iterations": [
+        3,
+        4
+      ],
+      "complete_in_iteration": 4,
+      "project_item_id": "PVTI_lAHOBWtars4BnSDrzhEq9cE",
+      "github_iteration_id": "5449697e"
+    }
+  ],
+  "unassigned_classes": [
+    "History",
+    "Deferred",
+    "Excluded"
+  ],
+  "counts": {
+    "original_mvp_issues": 28,
+    "phase_drafts": 3,
+    "initial_assignments_by_iteration": {
+      "1": 16,
+      "2": 8,
+      "3": 7,
+      "4": 0,
+      "5": 0
+    }
+  },
+  "daily_base_hours": [
+    {
+      "date": "2026-11-12",
+      "denis": 4.0,
+      "maksim": 4.0,
+      "artem": 4.0,
+      "ekaterina": 3.1333333333333333,
+      "alina": 0.5833333333333334
+    },
+    {
+      "date": "2026-11-13",
+      "denis": 4.0,
+      "maksim": 1.1666666666666667,
+      "artem": 4.0,
+      "ekaterina": 2.783333333333333,
+      "alina": 0.08333333333333333
+    },
+    {
+      "date": "2026-11-16",
+      "denis": 4.0,
+      "maksim": 2.3333333333333335,
+      "artem": 4.0,
+      "ekaterina": 2.3333333333333335,
+      "alina": 2.0833333333333335
+    },
+    {
+      "date": "2026-11-17",
+      "denis": 4.0,
+      "maksim": 4.0,
+      "artem": 3.18,
+      "ekaterina": 4.0,
+      "alina": 0.08333333333333333
+    },
+    {
+      "date": "2026-11-18",
+      "denis": 4.0,
+      "maksim": 4.0,
+      "artem": 4.0,
+      "ekaterina": 2.1,
+      "alina": 0.5833333333333334
+    },
+    {
+      "date": "2026-11-19",
+      "denis": 4.0,
+      "maksim": 4.0,
+      "artem": 4.0,
+      "ekaterina": 3.9,
+      "alina": 0.5833333333333334
+    },
+    {
+      "date": "2026-11-20",
+      "denis": 4.0,
+      "maksim": 4.0,
+      "artem": 4.0,
+      "ekaterina": 0.08333333333333333,
+      "alina": 0.08333333333333333
+    },
+    {
+      "date": "2026-11-23",
+      "denis": 4.0,
+      "maksim": 4.0,
+      "artem": 4.0,
+      "ekaterina": 0.08333333333333333,
+      "alina": 0.08333333333333333
+    },
+    {
+      "date": "2026-11-24",
+      "denis": 4.0,
+      "maksim": 4.0,
+      "artem": 4.0,
+      "ekaterina": 0.08333333333333333,
+      "alina": 0.08333333333333333
+    },
+    {
+      "date": "2026-11-25",
+      "denis": 4.0,
+      "maksim": 4.0,
+      "artem": 4.0,
+      "ekaterina": 0.5833333333333334,
+      "alina": 1.4166666666666667
+    },
+    {
+      "date": "2026-11-26",
+      "denis": 4.0,
+      "maksim": 4.0,
+      "artem": 4.0,
+      "ekaterina": 0.5833333333333334,
+      "alina": 2.0833333333333335
+    },
+    {
+      "date": "2026-11-27",
+      "denis": 4.0,
+      "maksim": 4.0,
+      "artem": 4.0,
+      "ekaterina": 0.08333333333333333,
+      "alina": 0.08333333333333333
+    },
+    {
+      "date": "2026-11-30",
+      "denis": 4.0,
+      "maksim": 4.0,
+      "artem": 4.0,
+      "ekaterina": 3.0833333333333335,
+      "alina": 4.0
+    },
+    {
+      "date": "2026-12-01",
+      "denis": 4.0,
+      "maksim": 4.0,
+      "artem": 4.0,
+      "ekaterina": 2.5833333333333335,
+      "alina": 4.0
+    },
+    {
+      "date": "2026-12-02",
+      "denis": 4.0,
+      "maksim": 4.0,
+      "artem": 4.0,
+      "ekaterina": 0.5833333333333334,
+      "alina": 0.75
+    },
+    {
+      "date": "2026-12-03",
+      "denis": 4.0,
+      "maksim": 4.0,
+      "artem": 4.0,
+      "ekaterina": 2.07,
+      "alina": 0.5833333333333334
+    },
+    {
+      "date": "2026-12-04",
+      "denis": 4.0,
+      "maksim": 4.0,
+      "artem": 4.0,
+      "ekaterina": 3.68,
+      "alina": 0.08333333333333333
+    },
+    {
+      "date": "2026-12-07",
+      "denis": 4.0,
+      "maksim": 1.8,
+      "artem": 4.0,
+      "ekaterina": 3.7,
+      "alina": 0.08333333333333333
+    },
+    {
+      "date": "2026-12-08",
+      "denis": 2.9833333333333334,
+      "maksim": 2.66,
+      "artem": 4.0,
+      "ekaterina": 3.59,
+      "alina": 0.08333333333333333
+    },
+    {
+      "date": "2026-12-09",
+      "denis": 3.3133333333333335,
+      "maksim": 0.9466666666666667,
+      "artem": 1.7166666666666666,
+      "ekaterina": 1.0166666666666666,
+      "alina": 1.4166666666666667
+    },
+    {
+      "date": "2026-12-10",
+      "denis": 0.5833333333333334,
+      "maksim": 0.5833333333333334,
+      "artem": 0.5833333333333334,
+      "ekaterina": 0.5833333333333334,
+      "alina": 0.5833333333333334
+    },
+    {
+      "date": "2026-12-11",
+      "denis": 0.08333333333333333,
+      "maksim": 0.08333333333333333,
+      "artem": 0.08333333333333333,
+      "ekaterina": 0.08333333333333333,
+      "alina": 0.08333333333333333
+    },
+    {
+      "date": "2026-12-14",
+      "denis": 2.6433333333333335,
+      "maksim": 0.08333333333333333,
+      "artem": 0.08333333333333333,
+      "ekaterina": 1.3533333333333333,
+      "alina": 0.08333333333333333
+    },
+    {
+      "date": "2026-12-15",
+      "denis": 3.0833333333333335,
+      "maksim": 0.5833333333333334,
+      "artem": 0.5833333333333334,
+      "ekaterina": 0.5833333333333334,
+      "alina": 1.4166666666666667
+    }
+  ],
+  "next_step12_candidate_issues": [
+    {
+      "issue": 25,
+      "hours": 4.17,
+      "reason": "Small first-cycle deliverable: menu buttons; prerequisite bot skeleton is historically closed. Verify existing keyboard scaffold before choosing implementation."
+    },
+    {
+      "issue": 13,
+      "hours": 9,
+      "reason": "First-cycle research and reproducible fixture/documentation deliverable; prerequisite for parser and model review. Live source format must be checked, not inferred from old fixture."
+    },
+    {
+      "issue": 14,
+      "hours": 8.67,
+      "reason": "First-cycle infrastructure deliverable independently testable with Docker Compose; real Docker availability and criteria should be checked before committing to it."
+    }
+  ],
+  "step12_limits": "These are candidates only. Do not claim implementation, external review, actual hours, participation or completion. User still performs commits/pushes.",
+  "step": 11,
+  "project_url": "https://github.com/users/unlaesh/projects/1",
+  "assignment_source": {
+    "file": "lab05-estimation-scheduling.pdf",
+    "page": 6,
+    "version": "0",
+    "requirements": [
+      "Iteration field with 2–3 cycles",
+      "Assign nearest work to iterations",
+      "Board view Текущий спринт filtered by iteration"
+    ],
+    "questions": [
+      "Sprint versus milestone",
+      "Sprint relationship to Roadmap"
+    ]
+  },
+  "official_iteration_docs": "https://docs.github.com/en/issues/planning-and-tracking-with-projects/understanding-fields/about-iteration-fields",
+  "published_before_step": {
+    "main": "d73c3447d158039ead9070e786de577eaff1c280",
+    "wiki_master": "fd08a877881e7e6d7a1d9b6ddba0dc11882ad647"
+  },
+  "github": {
+    "iteration_field": {
+      "id": "PVTIF_lAHOBWtars4BnSDrzhppWMo",
+      "name": "Iteration",
+      "configuration": {
+        "duration": 7,
+        "startDay": 4,
+        "iterations": [
+          {
+            "id": "1f453695",
+            "title": "Итерация 1",
+            "startDate": "2026-11-12",
+            "duration": 7
+          },
+          {
+            "id": "178ba6a5",
+            "title": "Итерация 2",
+            "startDate": "2026-11-19",
+            "duration": 7
+          },
+          {
+            "id": "5449697e",
+            "title": "Итерация 3",
+            "startDate": "2026-11-26",
+            "duration": 7
+          }
+        ],
+        "completedIterations": []
+      }
+    },
+    "view": {
+      "id": "PVTV_lAHOBWtars4BnSDrzgMh-A4",
+      "number": 8,
+      "name": "Текущий спринт",
+      "layout": "BOARD_LAYOUT",
+      "filter": "iteration:@current plan:MVP,Phase",
+      "groupByFields": {
+        "nodes": []
+      },
+      "url": "https://github.com/users/unlaesh/projects/1/views/8",
+      "verticalGroupByFields": {
+        "nodes": [
+          {
+            "id": "PVTSSF_lAHOBWtars4BnSDrzhl3Z1U",
+            "name": "Status"
+          }
+        ]
+      },
+      "fields": {
+        "nodes": [
+          {
+            "id": "PVTF_lAHOBWtars4BnSDrzhl3Z1M",
+            "name": "Title"
+          },
+          {
+            "id": "PVTF_lAHOBWtars4BnSDrzhl3Z1Q",
+            "name": "Assignees"
+          },
+          {
+            "id": "PVTSSF_lAHOBWtars4BnSDrzhl3Z1U",
+            "name": "Status"
+          },
+          {
+            "id": "PVTSSF_lAHOBWtars4BnSDrzhl3abQ",
+            "name": "Priority"
+          },
+          {
+            "id": "PVTF_lAHOBWtars4BnSDrzhl3abY",
+            "name": "Estimate"
+          },
+          {
+            "id": "PVTF_lAHOBWtars4BnSDrzhl3abc",
+            "name": "Start date"
+          },
+          {
+            "id": "PVTF_lAHOBWtars4BnSDrzhl3abg",
+            "name": "Target date"
+          },
+          {
+            "id": "PVTSSF_lAHOBWtars4BnSDrzhppQRA",
+            "name": "Plan"
+          },
+          {
+            "id": "PVTIF_lAHOBWtars4BnSDrzhppWMo",
+            "name": "Iteration"
+          }
+        ]
+      }
+    },
+    "verification": {
+      "verified_at": "2026-11-12T17:47:50.890242+00:00",
+      "iteration_field_type": "ITERATION",
+      "created_cycles": 3,
+      "assigned_project_rows": 31,
+      "assignment_counts": {
+        "1": 16,
+        "2": 8,
+        "3": 7
+      },
+      "current_as_of": "2026-11-12",
+      "current_iteration": "Итерация 1",
+      "current_board_rows": 16,
+      "current_work_hours": 72.446667,
+      "current_full_estimate_sum_not_sprint_effort": 142.84,
+      "board_layout": "BOARD_LAYOUT",
+      "board_group": "Status",
+      "board_filter": "iteration:@current plan:MVP,Phase",
+      "original_project_rows_unchanged": 63,
+      "all_statuses_estimates_priorities_plan_dates_bodies_milestones_preserved": true,
+      "estimate_sum_58_original_issues": 515.82,
+      "date_pairs_preserved": 31,
+      "native_edges_preserved": 127,
+      "calendar_source_hash_unchanged": true,
+      "per_cycle_person_capacity_passed": true,
+      "published_step10_commits_verified": true
+    },
+    "status": "verified",
+    "draft_status_change": "All 63 statuses preserved; three MVP phase drafts were already To Do."
+  },
+  "local_validation": {
+    "independent_iteration_audit": "passed: all 31 rows and phase hours agree with step 10; all per-role weekly capacities respected",
+    "calendar_validator": "passed: 296.82 base hours + 60 scheduled reserve unchanged",
+    "source_calendar_sha256_unchanged": true,
+    "local_markdown_links": "passed",
+    "git_diff_check": "passed for main and wiki",
+    "commits_created": false,
+    "git_push_performed": false
+  }
+}

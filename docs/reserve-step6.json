@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "step": 6,
+  "as_of": "2026-11-12",
+  "verified_at": "2026-11-12T15:00:16.603916+00:00",
+  "repo": "unlaesh/project",
+  "unit": "team_person_hours",
+  "source": {
+    "path": "docs/estimates-step5.json",
+    "sha256": "243804c6b164a8a1b6737a30b9a4634fc59b43b23c60987978188a4c2dec4f57",
+    "project_url": "https://github.com/users/unlaesh/projects/1",
+    "view_url": "https://github.com/users/unlaesh/projects/1/views/6",
+    "totals_from": "sum of saved two-decimal GitHub Estimate values"
+  },
+  "published_before_step": {
+    "main": "b8e1a71a001c5a6459492599cbc7d07e6c7bb6ec",
+    "wiki_master": "8989a6ed6a50edb9ecab4bae446c58f775bb0674"
+  },
+  "baseline": {
+    "scope_count": 58,
+    "planned_count": 49,
+    "retrospective_count": 9,
+    "all_hours": 515.82,
+    "planned_hours": 448.82,
+    "retrospective_hours": 67.0,
+    "excluded_issues": [
+      58,
+      59
+    ]
+  },
+  "baseline_by_milestone": [
+    {
+      "milestone": "MVP",
+      "count": 34,
+      "estimate_hours": 296.82,
+      "planned_hours": 229.82,
+      "retrospective_hours": 67.0
+    },
+    {
+      "milestone": "Release 1.1",
+      "count": 9,
+      "estimate_hours": 54.0,
+      "planned_hours": 54.0,
+      "retrospective_hours": 0.0
+    },
+    {
+      "milestone": "Release 1.2",
+      "count": 8,
+      "estimate_hours": 82.0,
+      "planned_hours": 82.0,
+      "retrospective_hours": 0.0
+    },
+    {
+      "milestone": "Release 1.3",
+      "count": 7,
+      "estimate_hours": 83.0,
+      "planned_hours": 83.0,
+      "retrospective_hours": 0.0
+    }
+  ],
+  "contingency": {
+    "basis": "full effort estimates of 49 open issues; closed retrospective work excluded",
+    "target_rate_percent": 20,
+    "raw_hours_exact": "89.764",
+    "rounding": "ceiling to one whole team-person-hour",
+    "hours": 90,
+    "effective_rate_of_planned_percent": 20.052582,
+    "effective_rate_of_all_scope_percent": 17.447947,
+    "pool": "one shared pool, not allocated to milestones or added to Estimate",
+    "allocated_hours": 0,
+    "unallocated_hours": 90,
+    "statistical_confidence_claim": null
+  },
+  "budget_with_contingency": {
+    "future_work_hours": 538.82,
+    "whole_scope_including_retrospective_hours": 605.82,
+    "is_expected_effort": false,
+    "is_actual_effort": false,
+    "is_guaranteed_maximum": false
+  },
+  "calendar_reserve": {
+    "dates": [
+      "2026-12-14",
+      "2026-12-15"
+    ],
+    "weekdays": 2,
+    "already_inside_plan": true,
+    "remaining_plan_weekdays": 24,
+    "automatic_hours_equivalence": null,
+    "sufficiency_verified": false
+  },
+  "risk_register": [
+    {
+      "id": "R6-1",
+      "issues": [
+        13,
+        20,
+        21,
+        33
+      ],
+      "risk": "Изменение ранее проверенного формата источника расписания",
+      "trigger": "Сохранённые примеры проходят проверки, но новые доступные страницы изменили разметку или параметры и нарушают согласованный контракт.",
+      "possible_extra_work": "Дополнительная адаптация загрузчика, парсера и связанных фикстур сверх базового прогноза.",
+      "already_in_baseline": "Исследование источника, обычные варианты разметки, повторные попытки, локальные тесты и исходный регрессионный набор.",
+      "boundary": "Неустранимая недоступность публичного источника требует решения об объёме или допустимой альтернативе; резерв не гарантирует её устранение."
+    },
+    {
+      "id": "R6-2",
+      "issues": [
+        12,
+        22,
+        36,
+        37,
+        44,
+        61,
+        62
+      ],
+      "risk": "Несогласованность данных при интеграции компонентов",
+      "trigger": "Сквозной прогон выявляет конфликт идентичности занятия, отмен, связей заметок или ключей уведомлений между компонентами.",
+      "possible_extra_work": "Дополнительная согласованная доработка нескольких компонентов и проверка связности сверх уже предусмотренных циклов.",
+      "already_in_baseline": "Проектирование схемы, реализация функций, нормальная доработка своего результата и запланированные интеграционные проверки.",
+      "boundary": "Учитывается только дополнительный прогноз труда, а не повторная стоимость всей разработки или приёмки."
+    },
+    {
+      "id": "R6-3",
+      "issues": [
+        55
+      ],
+      "risk": "Недостаточная производительность в предусмотренных условиях",
+      "trigger": "Нагрузочный прогон по критериям #55 показывает нарушение требований после выполнения обычной реализации.",
+      "possible_extra_work": "Дополнительная оптимизация запросов, индексов или обработки и необходимая перепроверка сверх базовых оценок.",
+      "already_in_baseline": "Стенд, данные, предусмотренные прогоны, анализ и отчёт #55; обычные локальные исправления технических задач.",
+      "boundary": "Существенная оптимизация выделяется отдельно; часы стенда или исходного прогона второй раз не начисляются."
+    },
+    {
+      "id": "R6-4",
+      "issues": [
+        30,
+        32,
+        56
+      ],
+      "risk": "Дефекты вывода и навигации в обязательных клиентах Telegram",
+      "trigger": "Запланированная проверка предусмотренного клиента воспроизводимо выявляет дефект отображения или переходов.",
+      "possible_extra_work": "Дополнительная адаптация интерфейса и целевая регрессия сверх принятого прогноза.",
+      "already_in_baseline": "Реализация вывода и навигации, полная матрица клиентов и запланированные повторные проверки #56.",
+      "boundary": "Ожидание доступа к клиенту не превращается в рабочие часы; расширение матрицы или функций требует отдельного решения."
+    }
+  ],
+  "allocation_rule": {
+    "additional_request": "max(0, revised full-effort forecast - original baseline - previously allocated reserve)",
+    "invariant": "448.82 + allocated reserve + unallocated reserve = 538.82",
+    "ledger_fields": [
+      "date",
+      "risk_id",
+      "issues",
+      "evidence",
+      "original_baseline",
+      "revised_forecast",
+      "previously_allocated",
+      "new_allocation",
+      "decision",
+      "confirmed_actual_after_work",
+      "remaining_pool"
+    ],
+    "ledger": []
+  },
+  "assumptions": [
+    "Reserve percentage is a planning judgement, not P90 or an independence-based sigma calculation.",
+    "Existing PERT E, local fixes, review and planned QA remain in baseline; reserve covers only incremental forecast above it.",
+    "Organizational work 35+4 hours is already inside 448.82 hours.",
+    "External beta-user effort of 2.5 hours is outside the team pool.",
+    "Capacity, per-task duration, dependencies and feasibility by 15 December are not yet calculated."
+  ],
+  "verification": {
+    "all_58_estimates_match_live_github": true,
+    "49_open_9_closed_confirmed": true,
+    "github_mutations_performed": false,
+    "estimate_values_changed": false
+  }
+}
